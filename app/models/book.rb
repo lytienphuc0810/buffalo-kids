@@ -9,5 +9,5 @@ class Book < ActiveRecord::Base
 	validates :title, :book_code, :image_url, :uniqueness => true
 	validates :title, :book_code, :presence => true
 
-	has_many :book_instances
+	has_many :book_instances, :dependent => :destroy
 end

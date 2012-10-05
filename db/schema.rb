@@ -27,9 +27,11 @@ ActiveRecord::Schema.define(:version => 20121005154915) do
     t.string   "book_code"
     t.string   "description"
     t.string   "author"
-    t.string   "image_url"
+    t.string   "category"
     t.date     "release_date"
+    t.string   "image_url"
     t.string   "rating"
+    t.boolean  "available"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20121005154915) do
     t.string   "content"
     t.date     "date_created"
     t.date     "date_updated"
+    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
