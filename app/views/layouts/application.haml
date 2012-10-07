@@ -1,0 +1,29 @@
+!!!
+%html
+	%head
+		%title Buffalo-Kids
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		.body-container
+			#header
+				#header-container
+					#header-theme
+					#menu-bar
+						#menu-link.left
+							= link_to "BOOKS", ""
+						#menu-link.left
+							= link_to "USERS", ""
+						#menu-link.left
+							= link_to "NOTICES", ""
+						#menu-link.left
+							= link_to "FAQ", ""
+						#menu-link.left
+							= link_to "CONTACT", ""
+			#main{:class => controller_name}
+				.interesting-stuff
+				.container
+			#footer
+				#footer-container
+

@@ -1,0 +1,105 @@
+body {
+	margin: 0px;
+}
+.body-container{
+	background-image: url("stripes.png");
+	background-repeat: repeat;
+	height: auto;
+}
+#header-container{
+	height: 150px;
+	width: 968px;
+	margin: 0 auto;
+	#header-theme{
+		height: 100%;
+		width: 955px;
+		background-color: #A84A5C;
+		margin: 0 auto;
+	}
+	#menu-bar{
+		height: 63px;
+		width: 968px;
+		background-image:url("menu_bar.png");
+		background-repeat: no-repeat;
+		position: relative;
+		bottom: 55px;
+		#menu-link{
+			position: relative;			
+			top: 22px;
+			a{
+				font-family: Helvetica;
+				font-weight: bold;
+				font-size: 20px;
+				text-decoration: none;
+				color: white;
+				margin-left: 50px;
+			}
+			a:hover{
+				color: #A84A5C;		
+				background-color: #F9E3CB;
+				border-width: 5px;
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+#main{
+	height: 1200px;
+	width: 940px;
+	background-color: #AD7460;	
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 10px;
+	.interesting-stuff{
+		height: 300px;
+		width: auto;
+		background-color: white;
+		margin-bottom: 10px;
+	}
+	.container{
+		height: 890px;
+		width: auto;
+		border-radius: 5px;
+		background-color: #F9E3CB;
+	}
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+.clearboth{
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
