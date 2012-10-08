@@ -1,105 +1,110 @@
-body {
+body  {
 	margin: 0px;
 }
-.body-container{
-	background-image: url("stripes.png");
+.body-container {
+	background-image: url("pattern.png");
 	background-repeat: repeat;
 	height: auto;
+	padding: 15px;
 }
-#header-container{
-	height: 150px;
-	width: 968px;
+
+#header-container {
+	height: auto;
+	width: 926px;
+	background-color: #00BCD1; 	
 	margin: 0 auto;
-	#header-theme{
-		height: 100%;
-		width: 955px;
-		background-color: #A84A5C;
+	border-radius: 5px;
+	padding: 12px 18px 12px 18px;
+	#header-theme {
+		height: 80px;
+		width: auto;
+		padding: 10px;
+		background-color: #FEF9F0;
+		border-radius: 5px;
 		margin: 0 auto;
+		a {
+			font-family: Helvetica;
+			font-size: 14px;
+			text-decoration: none;
+			color: #76D3DE;
+		}
+		a:hover {
+			color: #00BCD1;
+		}
 	}
-	#menu-bar{
-		height: 63px;
-		width: 968px;
-		background-image:url("menu_bar.png");
-		background-repeat: no-repeat;
-		position: relative;
-		bottom: 55px;
-		#menu-link{
-			position: relative;			
-			top: 22px;
-			a{
+	#hcmut-logo {
+		margin-left: 10px;
+	}
+	#hcmut-name{
+		color: #00BCD1;
+		font-family: helvetica;
+		font-size: 50px;
+		font-weight: bold;
+		margin-left: 40px;
+		margin-top: 20px;
+	}
+
+	#login-info {
+		margin-right: 15px;
+	}
+	#menu-bar {
+		height: 45px;
+		width: auto;
+		background-color: #FEF9F0;
+		border-radius: 5px;
+		margin-top: 12px;
+		#menu-link {
+			margin-top: 10px; 
+			margin-left: 45px;
+			a {
 				font-family: Helvetica;
 				font-weight: bold;
 				font-size: 20px;
 				text-decoration: none;
 				color: white;
-				margin-left: 50px;
+				padding: 5px;
+				background-color: #76D3DE;
+				border-radius: 5px;	
 			}
-			a:hover{
-				color: #A84A5C;		
-				background-color: #F9E3CB;
-				border-width: 5px;
-				border-radius: 3px;
+			a:hover {
+				color: #FEF9F0;
+				background-color: #00BCD1;
+				border-radius: 5px;	
 			}
 		}
 	}
 }
 
-#main{
+#main {
 	height: 1200px;
-	width: 940px;
-	background-color: #AD7460;	
+	width: 938px;
+	background-color: #76D3DE; 	
 	margin: 0 auto;
 	margin-top: 15px;
 	border-radius: 5px;
-	padding: 10px;
-	.interesting-stuff{
+	padding: 12px;
+	.interesting-stuff {
 		height: 300px;
 		width: auto;
-		background-color: white;
+		background-color: #FEF9F0;
 		margin-bottom: 10px;
 	}
-	.container{
-		height: 890px;
+	.container {
+		height: 880px;
 		width: auto;
 		border-radius: 5px;
-		background-color: #F9E3CB;
+		background-color: #FEF9F0;
 	}
 }
 
-.right{
+.right {
 	float: right;
 }
 
-.left{
+.left {
 	float: left;
 }
 
-.clearboth{
+.clearboth {
 	clear: both;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
