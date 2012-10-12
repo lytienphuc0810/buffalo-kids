@@ -24,8 +24,8 @@ class User < ActiveRecord::Base
 	]
 
 	before_validation :default_role
-	validates :username, :role, :presence => true
-	validates :username, :uniqueness => true
+	# validates :username, :role, :presence => true
+	# validates :username, :uniqueness => true
 	validates :role, :inclusion => {:in => ROLES}
 
 	ROLES.each do |role|
