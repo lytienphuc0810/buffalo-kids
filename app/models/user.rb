@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 								  :remember_me,
 								  :username,
 								  :role
-
+								  							  
 	has_many :book_instances
 	has_many :books, :through => :book_instances
 	has_many :notices
@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
 			self.role == role
 		end		
 	end
-
+	 
 	private
 	  def default_role
 	    self.role = USER if self.role.blank?

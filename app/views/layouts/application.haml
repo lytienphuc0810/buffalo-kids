@@ -21,16 +21,22 @@
 						#hcmut-name.left= "HCMUT LIBRARY"
 					.clearboth
 					#menu-bar
-						#menu-link.left
-							= link_to "BOOKS", ""
-						#menu-link.left
-							= link_to "USERS", ""
-						#menu-link.left
-							= link_to "NOTICES", ""
-						#menu-link.left
-							= link_to "FAQ", ""
-						#menu-link.left
-							= link_to "CONTACT", ""
+						- if current_user
+							- if current_user.user?	
+								#menu-link.left= link_to "BOOKS", ""
+								#menu-link.left= link_to "PHOTO", ""
+							- if current_user.librarian?
+								#menu-link.left= link_to "BOOKS", ""
+								#menu-link.left= link_to "PHOTO", ""
+								#menu-link.left= link_to "NOTICES", ""
+							- if current_user.admin?
+								#menu-link.left= link_to "USERS", ""
+								#menu-link.left= link_to "BOOKS", ""
+								#menu-link.left= link_to "PHOTO", ""	
+								#menu-link.left= link_to "NOTICES", ""
+						#menu-link.left= link_to "NOTICES", ""
+						#menu-link.left= link_to "FAQ", ""
+						#menu-link.left= link_to "CONTACT", ""
 			#main{:class => controller_name}
 				.interesting-stuff
 				.container

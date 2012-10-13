@@ -26,7 +26,6 @@ group :test, :development do
   gem 'debugger', '1.2.0'
 end
 
-
 group :test do
   gem 'rspec', '2.11.0'
   gem 'rspec-rails', '2.11.0'
