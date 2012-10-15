@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
 								  :username,
 								  :role
 								  							  
-	has_many :book_instances
+	has_many :book_reservations
+	has_many :photo_registrations
+	has_many :book_instances, :through => :book_reservations
 	has_many :books, :through => :book_instances
 	has_many :notices
 

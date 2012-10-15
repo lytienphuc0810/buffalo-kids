@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121005154915) do
+ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "book_instances", :force => true do |t|
     t.date     "begin_date"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(:version => 20121005154915) do
     t.integer  "book_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "book_reservations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "book_instance_id"
+    t.date     "start_date"
+    t.date     "due_date"
+    t.integer  "extention_days"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "books", :force => true do |t|
@@ -44,6 +54,15 @@ ActiveRecord::Schema.define(:version => 20121005154915) do
     t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "photo_registrations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "book_instance_id"
+    t.date     "finish_date"
+    t.string   "quality"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|
