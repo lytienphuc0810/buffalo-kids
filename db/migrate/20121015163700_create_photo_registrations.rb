@@ -4,7 +4,7 @@ class CreatePhotoRegistrations < ActiveRecord::Migration
     	t.integer :user_id
     	t.integer :book_instance_id
     	t.date 		:finish_date
-    	t.string  :quality
+    	t.string  :quantity
       t.timestamps
     end
   end

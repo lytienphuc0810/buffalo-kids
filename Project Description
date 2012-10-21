@@ -1,0 +1,40 @@
+- User Page
+  + Tab book: 
+  	hien thi index tat ca cac hang cua bang book
+  	o moi hang cua bang book co mot tac vu create cua book reservation
+  	link toi index cua bang book reservation
+  	o page index cua bang book reservation co 2 tac vu: show, delete
+  + Tab photo:
+    hien thi index tat ca cac hang cua bang book
+    o moi hang cua bang book co mot tac vu create cua photo registration
+    link toi index cua bang photo registration
+    o page index cua bang photo registration co 2 tac vu: show, delete
+  + Tab notices:
+  	hien thi index tat ca notice
+  	o page index cua bang notice co 1 tac vu: show
+  + Tab FAQ + Contact:
+    Lam bang Content management system
+
+- Admin Page
+  + Tab User:
+    hien thi index tat ca cac hang cua user
+    o page co mot tac vu create
+    o moi hang cua bang user co 3 tac vu: show, edit, delete
+    o trang show co: 
+    	. login as ...
+  + Tab Configuration:
+  	hieu chinh cac thong so thoi gian
+  	. thoi gian khi user khong den nhan book reservation se bi huy
+    . thoi gian dat sach, khong den photo se bi huy
+
+- Librarian Page
+  + Tab Book:
+    hien thi index tat ca cac hang cua bang book
+    o page index cua bang book co mot tac vu create de tao book
+    o moi hang cua bang book co 5 tac vu: show, edit, delete, link toi book reservation cua sach do, link toi photo registration
+  + Tab Notices
+    hien thi index tat ca cac hang cua bang notice
+    o page index cua bang notice co mot tac vu create de tao notice
+    o moi hang cua bang book co 3 tac vu: show, edit, delete
+  + Tab FAQ + Contact:
+    Lam bang Content management system

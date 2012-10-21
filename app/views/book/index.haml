@@ -1,0 +1,10 @@
+- @book_array.each do |book|
+	.content
+		.title= book.title
+		.book_code= book.book_code
+		.description= book.description
+		.author= book.author
+		.image_url= book.image_url
+		.release_date= book.release_date
+		.rating= book.rating
+		.create_new_reservation= link_to "Reserve it", "book_reservation/new/" + book.id.to_s
