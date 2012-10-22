@@ -1,7 +1,10 @@
 BuffaloKids::Application.routes.draw do
   devise_for :users
-
-  match "/book_reservation/new/:book_id" => "book_reservation#new"
+  get "books/index" => "books#index"
+  post "book_reservations/new/:book_id" => "book_reservations#new"
+  post "book_reservations/delete/:book_reservation_id" => "book_reservations#delete"  
+  get "book_reservations/index" => "book_reservations#index"
+  get "book_reservations/show/:book_reservation_id" => "book_reservations#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +55,7 @@ BuffaloKids::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'book#index'
+  root :to => 'books#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -11,10 +11,10 @@ class Book < ActiveRecord::Base
 
 	has_many :book_instances, :dependent => :destroy
 
-	def free_instance_to_reserve
+	def free_instance_to_get
 		result = nil
 		self.book_instances.each do |book_inst|
-			if book_inst.book_reservations.empty?
+			if book_inst.book_reservations.empty? && book_inst.photo_registrations.empty?
 				result ||= book_inst
 			end
 		end

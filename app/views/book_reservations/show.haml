@@ -1,0 +1,9 @@
+#link= link_to "Back to Book Reservations index", "/book_reservations/index"
+.content
+	.title= @book.title
+	.book_code= @book.book_code
+	.description= @book.description
+	.author= @book.author
+	.start_date= @book_reservation.start_date.to_s
+	.due_date= @book_reservation.due_date.to_s
+	.delete= link_to "Delete it", "/book_reservations/delete/#{@book_reservation.id}", :method => "post"

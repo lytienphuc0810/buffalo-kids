@@ -1,0 +1,10 @@
+#link= link_to "BACK", "/"
+- @book_reservations.each do |book_reservation|
+	- book = book_reservation.book_instance.book
+	.content
+		.title= link_to "#{book.title}", "/book_reservations/show/#{book_reservation.id}"
+		.book_code= book.book_code
+		.description= book.description
+		.author= book.author
+		.start_date= book_reservation.start_date.to_s
+		.due_date= book_reservation.due_date.to_s

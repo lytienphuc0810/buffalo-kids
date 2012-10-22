@@ -23,7 +23,7 @@
 					#menu-bar
 						- if current_user
 							- if current_user.user?	
-								#menu-link.left= link_to "BOOKS", ""
+								#menu-link.left= link_to "BOOKS", "/books/index"
 								#menu-link.left= link_to "PHOTO", ""
 							- if current_user.librarian?
 								#menu-link.left= link_to "BOOKS", ""
