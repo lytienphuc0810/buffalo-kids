@@ -5,6 +5,8 @@ class CreateBookInstances < ActiveRecord::Migration
 			t.date :expired_date
 			t.integer :user_id
 			t.integer :book_id
+			t.integer :book_reservation_id
+			t.integer :photo_registration_id
       t.timestamps
     end
   end

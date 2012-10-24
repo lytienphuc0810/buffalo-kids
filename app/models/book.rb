@@ -10,11 +10,13 @@ class Book < ActiveRecord::Base
 	validates :title, :book_code, :presence => true
 
 	has_many :book_instances, :dependent => :destroy
+	has_many :book_reservations, :through => :book_instances
+	has_many :photo_registrations, :through => :book_instances
 
 	def free_instance_to_get
 		result = nil
 		self.book_instances.each do |book_inst|
-			if book_inst.book_reservations.empty? && book_inst.photo_registrations.empty?
+			if book_inst.book_reservation.nil? && book_inst.photo_registration.nil?
 				result ||= book_inst
 			end
 		end

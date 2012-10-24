@@ -5,7 +5,13 @@ BuffaloKids::Application.routes.draw do
   post "book_reservations/delete/:book_reservation_id" => "book_reservations#delete"  
   get "book_reservations/index" => "book_reservations#index"
   get "book_reservations/show/:book_reservation_id" => "book_reservations#show"
+  get "book_reservations/home" => "book_reservations#home"
 
+  post "photo_registrations/new/:book_id" => "photo_registrations#new"
+  post "photo_registrations/delete/:photo_registration_id" => "photo_registrations#delete"  
+  get "photo_registrations/index" => "photo_registrations#index"
+  get "photo_registrations/show/:photo_registration_id" => "photo_registrations#show"
+  get "photo_registrations/home" => "photo_registrations#home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +61,7 @@ BuffaloKids::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'books#index'
+  root :to => 'book_reservations#home'
 
   # See how all your routes lay out with "rake routes"
 

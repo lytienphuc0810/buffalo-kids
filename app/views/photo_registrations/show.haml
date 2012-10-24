@@ -1,0 +1,8 @@
+#link= link_to "Back to Photo Registration index", "/photo_registrations/index"
+.content
+	.title= @book.title
+	.book_code= @book.book_code
+	.description= @book.description
+	.author= @book.author
+	.finish_date= @photo_registration.finish_date.to_s
+	.delete= link_to "Delete it", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post"
