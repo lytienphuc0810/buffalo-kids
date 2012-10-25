@@ -22,14 +22,14 @@ class BookReservationsController < ApplicationController
 			end
 		end
 		
-		redirect_to "/book_reservations/home"
+		redirect_to "/book_reservations/home/1"
 	end
 
 	def index
-		@book_reservations = current_user.book_reservations
+		@book_reservations = current_user.book_reservations.paginate(:page => params[:page])
 		if @book_reservations.empty?
 			#error message
-			redirect_to '/book_reservations/home'
+			redirect_to '/book_reservations/home/1'
 		end
 	end
 
@@ -41,6 +41,6 @@ class BookReservationsController < ApplicationController
 	def delete
 		book_reservation = BookReservation.find_by_id(params[:book_reservation_id])
 		book_reservation.delete
-		redirect_to '/book_reservations/index'
+		redirect_to '/book_reservations/index/1'
 	end
 end

@@ -4,7 +4,7 @@ BuffaloKids::Application.routes.draw do
   
   post "book_reservations/new/:book_id" => "book_reservations#new"
   post "book_reservations/delete/:book_reservation_id" => "book_reservations#delete"  
-  get "book_reservations/index" => "book_reservations#index"
+  get "book_reservations/index/:page" => "book_reservations#index"
   get "book_reservations/show/:book_reservation_id" => "book_reservations#show"
   get "book_reservations/home/:page" => "book_reservations#home"
 
