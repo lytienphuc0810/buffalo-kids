@@ -13,6 +13,10 @@ book1 = Book.create(:title => "Book1", :book_code => "1234", :image_url => "some
 book2 = Book.create(:title => "Book2", :book_code => "12345", :image_url => "someurl2")
 book3 = Book.create(:title => "Book3", :book_code => "123456", :image_url => "someurl3")
 
+for i in 4..100
+	Book.create(:title => "Book#{i}", :book_code => "#{i}", :image_url => "someurl#{i}")
+end
+
 book_ins1 = BookInstance.create()
 book_ins2 = BookInstance.create()
 book_ins3 = BookInstance.create()
