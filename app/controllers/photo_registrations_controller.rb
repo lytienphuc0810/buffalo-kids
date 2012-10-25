@@ -22,14 +22,14 @@ class PhotoRegistrationsController < ApplicationController
 			end
 		end
 
-		redirect_to "/photo_registrations/home"
+		redirect_to "/photo_registrations/home/1"
 	end
 
 	def index 
 		@photo_registrations = current_user.photo_registrations
 		if @photo_registrations.empty?
 			#error message
-			redirect_to '/photo_registrations/home'
+			redirect_to '/photo_registrations/home/1'
 		end
 	end
 
@@ -41,6 +41,6 @@ class PhotoRegistrationsController < ApplicationController
 	def delete
 		photo_registration = PhotoRegistration.find_by_id(params[:photo_registration_id])
 		photo_registration.delete
-		redirect_to '/photo_registrations/index'
+		redirect_to '/photo_registrations/index/1'
 	end
 end
