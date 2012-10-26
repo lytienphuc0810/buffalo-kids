@@ -26,7 +26,7 @@ class PhotoRegistrationsController < ApplicationController
 	end
 
 	def index 
-		@photo_registrations = current_user.photo_registrations
+		@photo_registrations = current_user.photo_registrations.paginate(:page => params[:page])
 		if @photo_registrations.empty?
 			#error message
 			redirect_to '/photo_registrations/home/1'

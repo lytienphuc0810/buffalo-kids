@@ -1,10 +1,12 @@
 #link= link_to "Continue Regist books", "/photo_registrations/home/1"
-- @photo_registrations.each do |photo_registration|
-	- book = photo_registration.book
-	.content
-		.title= link_to "#{book.title}", "/photo_registrations/show/#{photo_registration.id}"
-		.book_code= book.book_code
-		.description= book.description
-		.author= book.author
-		.finish_date= photo_registration.finish_date.to_s
-		.delete= link_to "Delete it", "/photo_registrations/delete/#{photo_registration.id}", :method => "post"
+.big-content
+	- @photo_registrations.each do |photo_registration|
+		- book = photo_registration.book
+		.small-content
+			.title= link_to "#{book.title}", "/photo_registrations/show/#{photo_registration.id}"
+			.book_code= book.book_code
+			.description= book.description
+			.author= book.author
+			.finish_date= photo_registration.finish_date.to_s
+			.delete= link_to "Delete it", "/photo_registrations/delete/#{photo_registration.id}", :method => "post"
+.paginate= will_paginate @photo_registrations

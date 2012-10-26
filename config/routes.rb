@@ -10,7 +10,7 @@ BuffaloKids::Application.routes.draw do
 
   post "photo_registrations/new/:book_id" => "photo_registrations#new"
   post "photo_registrations/delete/:photo_registration_id" => "photo_registrations#delete"  
-  get "photo_registrations/index" => "photo_registrations#index"
+  get "photo_registrations/index/:page" => "photo_registrations#index"
   get "photo_registrations/show/:photo_registration_id" => "photo_registrations#show"
   get "photo_registrations/home/:page" => "photo_registrations#home"
   # The priority is based upon order of creation:

@@ -3,4 +3,5 @@ class PhotoRegistration < ActiveRecord::Base
   belongs_to :user
   has_one :book_instance
   has_one :book, :through => :book_instance
+  self.per_page = 2
 end
