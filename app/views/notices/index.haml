@@ -1,0 +1,5 @@
+- @notices.each do |notice|
+	.content
+		.h1= notice.title
+		.h2= notice.short_content
+		.h2.link= link_to "View it", "/notices/show/#{notice.id}"

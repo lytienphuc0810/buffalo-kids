@@ -13,6 +13,9 @@ BuffaloKids::Application.routes.draw do
   get "photo_registrations/index/:page" => "photo_registrations#index"
   get "photo_registrations/show/:photo_registration_id" => "photo_registrations#show"
   get "photo_registrations/home/:page" => "photo_registrations#home"
+
+  get "notices/index/:page" => "notices#index"
+  get "notices/show/:notice_id" => "notices#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

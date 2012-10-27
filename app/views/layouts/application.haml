@@ -25,6 +25,7 @@
 							- if current_user.user?	
 								#menu-link.left= link_to "BOOKS", "/book_reservations/home/1"
 								#menu-link.left= link_to "PHOTO", "/photo_registrations/home/1"
+								#menu-link.left= link_to "NOTICES", "/notices/index/1"
 							- if current_user.librarian?
 								#menu-link.left= link_to "BOOKS", ""
 								#menu-link.left= link_to "PHOTO", ""
@@ -34,7 +35,6 @@
 								#menu-link.left= link_to "BOOKS", ""
 								#menu-link.left= link_to "PHOTO", ""	
 								#menu-link.left= link_to "NOTICES", ""
-						#menu-link.left= link_to "NOTICES", ""
 						#menu-link.left= link_to "FAQ", ""
 						#menu-link.left= link_to "CONTACT", ""
 			#main{:class => controller_name}
