@@ -5,6 +5,8 @@ class Notice < ActiveRecord::Base
   validates :title, :content, :date_created, :date_updated, :presence => true
 
   belongs_to :user
+  
+	self.per_page = 12
 
   def short_content
   	self.content.truncate(30)

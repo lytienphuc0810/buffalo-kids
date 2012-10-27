@@ -1,5 +1,12 @@
-- @notices.each do |notice|
-	.content
-		.h1= notice.title
-		.h2= notice.short_content
-		.h2.link= link_to "View it", "/notices/show/#{notice.id}"
+.big-content
+	- i = 0
+	- @notices.each do |notice|
+		- i = i + 1
+		.small-content.left
+			.text-content.left
+				.h1= notice.title
+				.h2= notice.short_content
+				.h2.link= link_to "View it", "/notices/show/#{notice.id}"
+		- if(i%3 == 0)
+			.clearboth
+	.paginate.right= will_paginate @noticess

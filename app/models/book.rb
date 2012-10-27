@@ -13,7 +13,7 @@ class Book < ActiveRecord::Base
 	has_many :book_reservations, :through => :book_instances
 	has_many :photo_registrations, :through => :book_instances
 
-	self.per_page = 10
+	self.per_page = 12
 	def free_instance_to_get
 		result = nil
 		self.book_instances.each do |book_inst|

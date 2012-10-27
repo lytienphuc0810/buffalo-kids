@@ -1,13 +1,19 @@
-#reservation_index= link_to "Reservation Index", "/book_reservations/index/1"
 .big-content
+	.header-link= link_to "Reservation Index", "/book_reservations/index/1"
+	- i = 0
 	- @books.each do |book|
-		.small-content
-			.title= book.title
-			.book_code= book.book_code
-			.description= book.description
-			.author= book.author
-			.image_url= book.image_url
-			.release_date= book.release_date
-			.rating= book.rating
-			.create_new_reservation= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
-.paginate= will_paginate @books
+		- i = i + 1
+		.small-content.left
+			.img.left= image_tag("no_photo.png")
+			.text-content.left
+				.h1= book.title.upcase
+				.h2= book.book_code
+				.h2= book.description
+				.h2= book.author
+				.h2= book.release_date
+				.h2= book.rating
+				.h2.link= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
+		- if(i % 3 == 0)
+			.clearboth
+	.clearboth
+	.paginate.right= will_paginate @books
