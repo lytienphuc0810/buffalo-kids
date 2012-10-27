@@ -111,7 +111,6 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    railroad (0.5.0)
     rails (3.2.8)
       actionmailer (= 3.2.8)
       actionpack (= 3.2.8)
@@ -191,7 +190,6 @@ DEPENDENCIES
   heroku
   jquery-rails (= 2.1.2)
   pg
-  railroad
   rails (= 3.2.8)
   rspec (= 2.11.0)
   rspec-mocks (= 2.11.2)
