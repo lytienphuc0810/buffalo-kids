@@ -9,7 +9,6 @@ gem "heroku"
 gem 'haml', '3.1.7'
 gem 'devise', '2.1.2'
 gem 'jquery-rails', '2.1.2'
-gem 'railroad'
 gem 'will_paginate', '~> 3.0'
 
 # Gems used only for assets and not required
