@@ -30,9 +30,9 @@ book_ins10 = BookInstance.create()
 book_ins11 = BookInstance.create()
 book_ins12 = BookInstance.create()
 
-notice1 = Notice.create(:title => "Notice", :content => "blablabla", :date_created => "2012/4/10", :date_updated => "2012/5/10")
-notice2 = Notice.create(:title => "Notice", :content => "blablabla", :date_created => "2012/4/10", :date_updated => "2012/5/10")
-notice3 = Notice.create(:title => "Notice", :content => "blablabla", :date_created => "2012/4/10", :date_updated => "2012/5/10")
+notice1 = Notice.create(:title => "Notice", :content => "blablabla")
+notice2 = Notice.create(:title => "Notice", :content => "blablabla")
+notice3 = Notice.create(:title => "Notice", :content => "blablabla")
 
 
 book_reserve1 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 1)

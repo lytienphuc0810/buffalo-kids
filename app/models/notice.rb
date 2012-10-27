@@ -2,7 +2,7 @@ class Notice < ActiveRecord::Base
   attr_accessible 	:title,
 				  					:content,
 				  					:user_id
-  validates :title, :content, :date_created, :date_updated, :presence => true
+  validates :title, :content, :presence => true
 
   belongs_to :user
   
