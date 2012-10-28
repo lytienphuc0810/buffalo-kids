@@ -1,18 +1,32 @@
 .big-content {
 	padding: 30px 50px 30px 50px;
 	.header-link {
-		margin-left: 20px;
+		margin-left: 15px;
 		font-weight: bold;
 		font-size: 22px;
 	}
+	.header-link {
+		a, a:visited{
+			font-style: italic;
+			text-decoration: none;
+		}
+	}
+
+	.content {
+		padding: 20px;
+		margin: 14px;
+		height: 500px;
+		background-color: #D3D3D3;
+		border-radius: 5px;
+	}
 
 	.small-content {
-		width: 220px;
-		height: 80px;
+		width: 230px;
+		height: 90px;
 		background-color: #D3D3D3;
 		border-radius: 5px;
 		padding: 10px;
-		margin: 19px;
+		margin: 14px;
 
 		.text-content {
 			margin-left: 10px;
@@ -27,10 +41,32 @@
 
 .h2 {
 	font-size: 12px;
+	line-height: 15px;
+}
+
+.divider {
+	color: #00BCD1;
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.active {
+	a, a:visited {
+		color: #00BCD1;
+	}
+}
+
+.inactive {
+	a, a:visited {
+		color: #D3D3D3;
+	}
 }
 
 .link {
-	a {
+	a, a:visited{
+		color: blue;
+		font-style: italic;
 		text-decoration: none;
 	}
 }

@@ -1,5 +1,8 @@
 .big-content
-	.header-link= link_to "Continue Regist books", "/photo_registrations/home/1"
+	.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1"
+	.divider.left= "|"
+	.header-link.left.active= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
+	.clearboth
 	- i = 0
 	- @photo_registrations.each do |photo_registration|
 		- i = i + 1

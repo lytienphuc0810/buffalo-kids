@@ -1,8 +1,14 @@
-#link= link_to "Back to Photo Registration index", "/photo_registrations/index/1"
-.content
-	.h1= @book.title
-	.h2= @book.book_code
-	.h2= @book.description
-	.h2= @book.author
-	.h2= @photo_registration.finish_date.to_s
-	.delete= link_to "Delete it", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post"
+.big-content
+	.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1", :class => "inactive"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1", :class => "inactive"
+	.divider.left= "|"
+	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/photo_registrations/show/#{@photo_registration.id}"
+	.clearboth
+	.content
+		.h1= @book.title
+		.h2= @book.book_code
+		.h2= @book.description
+		.h2= @book.author
+		.h2= @photo_registration.finish_date.to_s
+		.delete= link_to "Delete it", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post"

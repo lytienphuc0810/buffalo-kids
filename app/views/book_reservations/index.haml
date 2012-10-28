@@ -1,5 +1,8 @@
 .big-content
-	.header-link= link_to "Continue Reserve books", "/book_reservations/home/1"
+	.header-link.left.inactive= link_to "BOOKS", "/book_reservations/home/1"
+	.divider.left= "|"
+	.header-link.left.active= link_to "RESERVATIONS", "/book_reservations/index/1"
+	.clearboth
 	- i = 0
 	- @book_reservations.each do |book_reservation|
 		- i = i + 1

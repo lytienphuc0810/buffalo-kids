@@ -1,4 +1,8 @@
-.header-link= link_to "Back to Notice Index", "/notices/index/1"
-.content
-	.h1= @notice.title
-	.h2= @notice.content
+.big-content
+	.header-link.left.active= link_to "NOTICES", "/notices/index/1"
+	.divider.left= "|"
+	.header-link.left.active= link_to @notice.title.upcase, "/notices/show/#{@notice.id}"
+	.clearboth
+	.content
+		.h1= @notice.title
+		.h2= @notice.content
