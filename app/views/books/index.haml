@@ -1,11 +1,19 @@
-.header-link= link_to "Reservation Index", "/book_reservations/index"
-- @books.each do |book|
-	.big-content
-		.h1= book.title
-		.h2= book.book_code
-		.h2= book.description
-		.h2= book.author
-		.h2= book.image_url
-		.h2= book.release_date
-		.h2= book.rating
-		.h2.link= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
+.big-content
+  .header-link.left.inactive= link_to "CREATE", "/books/new"
+  .divider.left= "|"
+  .header-link.left.active= link_to "BOOKS", "/books/index/1"
+  .clearboth
+  - @books.each do |book|
+    .small-content.left
+      .img.left= image_tag("/assets/no_photo.png")
+      .text-content.left
+        .h1.link= link_to "#{book.title.upcase}", "/books/show/#{book.id}"
+        .h2= book.book_code
+        .h2= book.description
+        .h2= book.author
+        .h2= book.release_date
+        .h2= book.rating
+        .h2.link= link_to "Reservations", ""
+        .h2.link= link_to "Photo Registrations", ""
+  .clearboth
+  .paginate.right= will_paginate @books

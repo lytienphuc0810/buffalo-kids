@@ -8,6 +8,8 @@ PhotoRegistration.delete_all
 user1 = User.create(:email => "user1@vit.com", :password => "123456", :username => "user1")
 user2 = User.create(:email => "user2@vit.com", :password => "123456", :username => "user2")
 user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :username => "user3")
+user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin")
+user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian")
 
 book1 = Book.create(:title => "Book1", :book_code => "1234", :image_url => "someurl1")
 book2 = Book.create(:title => "Book2", :book_code => "12345", :image_url => "someurl2")

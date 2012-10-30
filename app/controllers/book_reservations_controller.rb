@@ -40,7 +40,7 @@ class BookReservationsController < ApplicationController
 
 	def delete
 		book_reservation = BookReservation.find_by_id(params[:book_reservation_id])
-		book_reservation.delete
+		book_reservation.destroy
 		redirect_to '/book_reservations/index/1'
 	end
 end

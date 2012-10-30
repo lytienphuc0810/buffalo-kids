@@ -40,7 +40,7 @@ class PhotoRegistrationsController < ApplicationController
 
 	def delete
 		photo_registration = PhotoRegistration.find_by_id(params[:photo_registration_id])
-		photo_registration.delete
+		photo_registration.destroy
 		redirect_to '/photo_registrations/index/1'
 	end
 end
