@@ -1,0 +1,11 @@
+.big-content	
+	.header-link.left.active= link_to "CREATE", "/books/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.clearboth
+	.content
+		.form
+			= form_for :book, :url => "/books/create" do |f|
+				= f.text_field :title, :id => "title", :placeholder => "title", :autocomplete => "off"
+				= f.submit "Create Book", :id => "submit_btn", :class => "submit_btn"
+				.right.error

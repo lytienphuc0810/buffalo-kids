@@ -20,6 +20,53 @@
 		border-radius: 5px;
 	}
 
+	.devise-content {
+		padding: 20px 40px 20px 40px;
+		margin: 14px;
+		height: 170px;
+		width: 290px;
+		background-color: #D3D3D3;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 15px;
+
+		.email-label {
+			margin: 15px 34px 0px 0px;
+		}
+		.email-field {
+			margin: 12px 0px 0px 0px;
+		}
+		.password-label {
+			margin: 15px 07px 0px 0px;
+		}
+		.password-field {
+			margin: 12px 0px 0px 0px;
+		}
+		.remember-checkbox {
+			margin: 17px 8px 0px 0px;
+		}
+		.remember-label {
+			margin: 16px 5px 0px 0px;
+		}				
+		.submit {
+			width: 70px;
+			height: 28px;
+			margin: 10px 5px 0px 0px;
+		}
+		.links-block {
+			margin: 10px 8px 0px 0px;
+			font-size: 13px;
+			span {
+				margin-right: 10px;
+			}
+			a, a:visited {
+				font-style: italic;
+				color: blue;
+				text-decoration: none;
+			}
+		}
+	}
+
 	.small-content {
 		width: 230px;
 		height: 90px;
@@ -32,6 +79,13 @@
 			margin-left: 10px;
 		}
 	}
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	color: #00BCD1;
+	margin-left: 20px;
 }
 
 .h1 {
@@ -63,10 +117,58 @@
 	}
 }
 
-.link, .pagination{
+.link{
 	a, a:visited{
 		color: blue;
 		font-style: italic;
 		text-decoration: none;
 	}
 }
+
+.pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .pagination a:hover, .pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .pagination {
+    height: 1%; }
+  *:first-child + html .pagination {
+    overflow: hidden; 
+  }
