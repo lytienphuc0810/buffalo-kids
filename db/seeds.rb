@@ -11,12 +11,12 @@ user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456",
 user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin")
 user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian")
 
-book1 = Book.create(:title => "Book1", :book_code => "1234", :image_url => "someurl1")
-book2 = Book.create(:title => "Book2", :book_code => "12345", :image_url => "someurl2")
-book3 = Book.create(:title => "Book3", :book_code => "123456", :image_url => "someurl3")
+book1 = Book.create(:title => "Book1", :book_code => "1234")
+book2 = Book.create(:title => "Book2", :book_code => "12345")
+book3 = Book.create(:title => "Book3", :book_code => "123456")
 
 for i in 4..100
-	Book.create(:title => "Book#{i}", :book_code => "#{i}", :image_url => "someurl#{i}")
+	Book.create(:title => "Book#{i}", :book_code => "#{i}")
 end
 
 book_ins1 = BookInstance.create()
