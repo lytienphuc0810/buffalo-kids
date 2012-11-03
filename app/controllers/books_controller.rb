@@ -14,7 +14,15 @@ class BooksController < ApplicationController
   end
 
   def new
-   
+  end
+
+  def create 
+    book = Book.create(params[:book])
+    if(book.nil?)
+      #send some error message
+    else
+      redirect_to "/books/show/#{book.id}"
+    end
   end
 
   def delete

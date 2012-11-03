@@ -6,8 +6,10 @@ class Book < ActiveRecord::Base
 								  :image_url, 
 								  :release_date, 
 								  :rating
-	validates :title, :book_code, :image_url, :uniqueness => true
-	validates :title, :book_code, :presence => true
+	validates :title, :book_code, :uniqueness => true
+	validates :title, :book_code, :image_url, :presence => true
+
+	before_validation :default_image_url
 
 	has_many :book_instances, :dependent => :destroy
 	has_many :book_reservations, :through => :book_instances
@@ -22,5 +24,11 @@ class Book < ActiveRecord::Base
 			end
 		end
 		result
+	end
+
+	def default_image_url 
+		if self.image_url.blank?
+			self.image_url = "/assets/no_photo.png"
+		end
 	end
 end
