@@ -1,0 +1,9 @@
+.h2.link= link_to "Create user", "/users/new", :method => "post"
+- @users.each do |user|
+	.big-content
+		.h1= user.username
+		.h2= user.email
+		.h2= user.role
+		.h2= user.created_at
+		.h2= link_to "Edit user", "/users/edit/#{user.id}", :method => "post"
+		.h2= link_to "Delete user", "/users/delete/#{user.id}", :method => "get"
