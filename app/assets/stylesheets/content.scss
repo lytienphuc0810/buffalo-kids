@@ -20,10 +20,47 @@
 		border-radius: 5px;
 	}
 
+	.form-content {
+		display: inline-block;
+		padding: 20px 40px 20px 40px;
+		margin: 14px;
+		height: auto;
+		width: auto;
+		background-color: #D3D3D3;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 15px;
+
+		label {
+			min-width: 90px;
+			margin-top: 10px
+		}
+
+		input, #book_description {
+			margin-top: 8px;
+		}
+
+		#book_description {
+			height: 75px;
+			width: 208px;
+			margin-left: 2px;
+		}
+
+		label, input, #book_description {
+			float: left;
+		}
+
+		.submit_btn {
+			float: left;
+			margin-left: 220px;
+			margin-top: 10px;
+		}
+	}
+
 	.devise-content {
 		padding: 20px 40px 20px 40px;
 		margin: 14px;
-		height: 170px;
+		height: auto;
 		width: 290px;
 		background-color: #D3D3D3;
 		border-radius: 5px;
@@ -90,7 +127,6 @@
 
 .h1 {
 	font-size: 18px;
-	font-weight: bold;
 }
 
 .h2 {

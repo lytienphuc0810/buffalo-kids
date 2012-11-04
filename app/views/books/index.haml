@@ -5,7 +5,7 @@
   .clearboth
   - @books.each do |book|
     .small-content.left
-      .img.left= image_tag("/assets/no_photo.png")
+      .img.left= image_tag book.image_url, :size => "60x60"
       .text-content.left
         .h1.link= link_to "#{book.title.upcase}", "/books/show/#{book.id}"
         .h2= book.book_code
