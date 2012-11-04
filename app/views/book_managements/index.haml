@@ -1,0 +1,20 @@
+.big-content
+  .header-link= link_to "CREATE", "/book_managements/new"
+  
+
+  - @vbooks.each do |book|
+ 
+    .small-content.left
+      .img.left= image_tag("/assets/no_photo.png")
+      .text-content.left
+        .h1.link= link_to "#{book.title.upcase}", "/book_managements/show/#{book.id}"
+        .h2= book.book_code
+        .h2= book.description
+        .h2= book.author
+        .h2= book.release_date
+        .h2= book.rating
+        
+       
+   
+  .clearboth
+  .paginate.right= will_paginate @vbooks
