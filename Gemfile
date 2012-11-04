@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'mysql2'
 gem "heroku"
 gem 'haml', '3.1.7'
 gem 'devise', '2.1.2'
@@ -23,9 +23,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test, :development do
-  gem 'debugger', '1.2.0'
-end
+# group :test, :development do
+#   gem 'debugger', '1.2.0'
+# end
 
 group :test do
   gem 'rspec', '2.11.0'

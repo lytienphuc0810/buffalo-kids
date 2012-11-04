@@ -1,0 +1,27 @@
+.big-content	
+	.header-link.left.active= link_to "CREATE", "/books/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.clearboth
+	.form-content
+		.h1= "CREATE A NEW BOOK"
+		.form
+			= form_for :book, :url => "/books/create" do |f|
+				= f.label "Title"
+				= f.text_field :title, :id => "title", :placeholder => "Input book title", :autocomplete => "off"
+				.clearboth
+				= f.label "Book code"
+				= f.text_field :book_code, :id => "book_code", :placeholder => "Input book code", :autocomplete => "off"
+				.clearboth
+				= f.label "Author"
+				= f.text_field :author, :id => "book_author", :placeholder => "Input book desciption"
+				.clearboth
+				= f.label "Image_url"
+				= f.text_field :image_url, :id => "image_url", :placeholder => "Input image url"
+				.clearboth
+				= f.label "Description"
+				= f.text_area :description, :id => "book_description", :placeholder => "Input book desciption"
+				.clearboth
+				= f.submit "Create Book", :id => "submit_btn", :class => "submit_btn"
+				.clearboth
+				.right.error
