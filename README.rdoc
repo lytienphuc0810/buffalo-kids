@@ -1,3 +1,6 @@
+== Our Test Site
+  http://buffalokids.herokuapp.com/
+
 == Git Clone
 To clone this project to your directory, type in
   git clone <repo-http-link>
