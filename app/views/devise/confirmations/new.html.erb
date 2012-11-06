@@ -1,28 +1,32 @@
 <div class="big-content">
 	<div class="title">Resend confirmation instructions</div>
-	<div class="devise-content">
+	<div class="devise-content" style="width:350px">
+		<table width="350px">
+			<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+			  <%= devise_error_messages! %>
 
-		<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-		  <%= devise_error_messages! %>
+			  <tr>
+			  	<td class="left"><%= f.label :email, :class => "left email-label" %></td>
+			  	<td class="right"><%= f.email_field :email, :class => "left email-field" %></td>
+			  </tr>
 
-		  <div class="left">
-		  	<%= f.label :email, :class => "left email-label" %>
-		  	<%= f.email_field :email, :class => "left email-field" %>
-		  </div>
+			  <div class="clearboth"></div>
 
-		  <div class="clearboth"></div>
+			  <tr><td><%= f.submit "Resend confirmation instructions", :class => "right submit", :style => "width: 210px" %></td></tr>
 
-		  <div><%= f.submit "Resend confirmation instructions", :class => "right submit", :style => "width: 250px;" %></div>
-
-		  <div class="clearboth"></div>
-
-		  <div class="links-block">
-  			<span class="left"><%= link_to "Sign in", new_session_path(resource_name), :class => "right"%></span>
-  			<span class="left">|</span>
-  			<span class="left"><%= link_to "Sign up", new_registration_path(resource_name), :class => "right"%></span>
-		  </div>
-		  
-  	  <div class="clearboth"></div>
-		<% end %>
+				  <tr>
+				  	<td>
+						  
+						  <div class="links-block">
+				  			<span class="left"><%= link_to "Sign in", new_session_path(resource_name), :class => "right"%></span>
+				  			<span class="left">|</span>
+				  			<span class="left"><%= link_to "Sign up", new_registration_path(resource_name), :class => "right" %></span>
+						  </div>
+						</td>
+					</tr>
+				  
+		  	  <div class="clearboth"></div>
+			<% end %>
+		</table>
 	</div>
 </div>
