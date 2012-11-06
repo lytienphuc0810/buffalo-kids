@@ -24,11 +24,13 @@ BuffaloKids::Application.routes.draw do
   get "notices/index/:page" => "notices#index"
   get "notices/show/:notice_id" => "notices#show"
 
-  post "users/new" => "users#new"
+  get "users/index/:page" => "users#index"
+  get "users/show/:user_id" => "users#show"
+  get "users/new" => "users#new"
+  post "users/create" => "users#create"
+  post "users/update/:user_id" => "users#update"
   post "users/edit/:user_id" => "users#edit"
-  post "users/save/:user_id" => "users#save"
-  get "users/index" => "users#index"
-  get "users/delete/:user_id" => "users#delete"
+  post "users/delete/:user_id" => "users#delete"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
