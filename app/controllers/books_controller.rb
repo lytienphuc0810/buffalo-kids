@@ -6,11 +6,23 @@ class BooksController < ApplicationController
   end
   
   def show
-	 @book = Book.find_by_id(params[:book_id])
+	  @book = Book.find_by_id(params[:book_id])
   end
 
   def edit
-	 @book = Book.find_by_id(params[:book_id])
+	  @book = Book.find_by_id(params[:book_id])
+  end
+
+  def update
+   book = Book.find(params[:book_id])
+   if book.nil?
+    # error message
+   else
+    if book.update_attributes(params[:book])
+      redirect_to "/books/show/#{book.id}"
+      #error message
+    end
+   end 
   end
 
   def new
