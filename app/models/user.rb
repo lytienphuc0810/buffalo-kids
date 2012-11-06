@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
 	has_many :book_instances, :through => :book_reservations
 	has_many :books, :through => :book_instances
 	has_many :notices
+	self.per_page = 12
 
 	ROLES = [
 		ADMIN = "admin",

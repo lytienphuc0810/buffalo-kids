@@ -1,12 +1,12 @@
 .big-content	
-	.header-link.left.active= link_to "CREATE", "/users/new"
+	.header-link.left.active= link_to "EDIT", "/users/edit"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "USERS", "/users/index/1"
+	.header-link.left.inactive= link_to "USER", "/users/index/1"
 	.clearboth
 	.form-content
-		.h1= "CREATE A NEW USER"
+		.h1= "EDIT A USER"
 		.form
-			= form_for :user, :url => "/users/create" do |f|
+			= form_for :user, :url => "/users/update/#{@user.id}" do |f|
 				= f.label "Username"
 				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
 				.clearboth
@@ -22,6 +22,6 @@
 				= f.label "Role"
 				= f.text_field :role, :id => "role", :placeholder => "Input role"
 				.clearboth
-				= f.submit "Create User", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
