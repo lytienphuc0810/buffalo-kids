@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
 								  :password_confirmation, 
 								  :remember_me,
 								  :username,
-								  :role
+								  :role,
+								  :confirmed_at
 								  							  
 	has_many :book_reservations
 	has_many :photo_registrations
