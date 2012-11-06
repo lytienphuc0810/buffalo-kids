@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 		if(@user.update_attributes(params[:user]).nil?)
 			#send some error messages
 		else
-			redirect_to "users/show/#{user.id}"
+			redirect_to "/users/show/#{@user.id}"
 		end
 	end
 
