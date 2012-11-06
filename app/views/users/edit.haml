@@ -6,16 +6,28 @@
 	.form-content
 		.h1= "EDIT A USER"
 		.form
-			= form_for :user, :url => "/users/update/#{@user.id}" do |f|
-				= f.label "Username"
-				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
-				.clearboth
-				= f.label "Email"
-				= f.text_field :email, :id => "email", :placeholder => "Input email"
-				.clearboth
-				= f.label "Role"
-				= f.text_field :role, :id => "role", :placeholder => "Input role"
-				.clearboth
-				= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
-				.clearboth
+			%table
+				= form_for :user, :url => "/users/update/#{@user.id}" do |f|
+					%tr
+						%td
+							= f.label "Username"
+						%td
+							= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
+						.clearboth
+					%tr
+						%td
+							= f.label "Email"
+						%td
+							= f.text_field :email, :id => "email", :placeholder => "Input email"
+						.clearboth
+					%tr
+						%td
+							= f.label "Role"
+						%td
+							= f.text_field :role, :id => "role", :placeholder => "Input role"
+						.clearboth
+					%tr
+						%td
+							= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
+						.clearboth
 				.right.error
