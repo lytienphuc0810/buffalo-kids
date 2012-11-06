@@ -4,9 +4,10 @@
 			<table width="390" height="100px">
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 				  <%= devise_error_messages! %>
+				  
 				  <tr>
 				  	<td class="left"><%= f.label :email, :class => "left email-label" %></td>
-				  	<td class="right"><%= f.email_field :email, :class => "left email-field" %></td>
+				  	<td class="right"><%= f.email_field :email, :class => "left email-field", :autocomplete => "off" %></td>
 				  </tr>
 				  
 				  <div class="clearboth"></div>
