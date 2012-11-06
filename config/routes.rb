@@ -29,7 +29,7 @@ BuffaloKids::Application.routes.draw do
   get "users/new" => "users#new"
   post "users/create" => "users#create"
   post "users/update/:user_id" => "users#update"
-  post "users/edit/:user_id" => "users#edit"
+  get "users/edit/:user_id" => "users#edit"
   post "users/delete/:user_id" => "users#delete"
   # The priority is based upon order of creation:
   # first created -> highest priority.
