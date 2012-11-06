@@ -1,9 +1,13 @@
-.h2.link= link_to "Create user", "/users/new", :method => "post"
-- @users.each do |user|
-	.big-content
-		.h1= user.username
-		.h2= user.email
-		.h2= user.role
-		.h2= user.created_at
-		.h2= link_to "Edit user", "/users/edit/#{user.id}", :method => "post"
-		.h2= link_to "Delete user", "/users/delete/#{user.id}", :method => "get"
+.big-content
+  .header-link.left.inactive= link_to "CREATE", "/users/new"
+  .divider.left= "|"
+  .header-link.left.active= link_to "USERS", "/users/index/1"
+  .clearboth
+  - @users.each do |user|
+    .small-content.left
+      .text-content.left
+        .h1.link= link_to "#{user.username.upcase}", "/users/show/#{user.id}"
+        .h2= user.email
+        .h2= user.role
+  .clearboth
+  .paginate.right= will_paginate @books
