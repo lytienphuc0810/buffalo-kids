@@ -43,16 +43,20 @@
 		#book_description {
 			height: 75px;
 			width: 208px;
-			margin-left: 2px;
+			margin-right: 2px;
 		}
 
-		label, input, #book_description {
+		label {
+			margin-right: 20px;
 			float: left;
 		}
+
+		 input, #book_description {
+		 	float: right;
+		 }
 
 		.submit_btn {
-			float: left;
-			margin-left: 220px;
+			float: right;
 			margin-top: 10px;
 		}
 	}
