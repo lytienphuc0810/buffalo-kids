@@ -4,7 +4,13 @@
 	.header-link.left.inactive= link_to "USERS", "/users/index/1"
 	.clearboth
 	.form-content
-		.h1= "CREATE A NEW USER"
+		%h1{style: "float:center;color:green;"}= "CREATE A NEW USER"
+		-if @user.errors.any?
+			#error_explanation.errors
+				%h2= pluralize(@user.errors.count, "error") + " prohibited this user from being saved:"
+				%ul
+					-@user.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
 			%table
 				= form_for :user, :url => "/users/create" do |f|
@@ -36,9 +42,10 @@
 						%td
 							= f.label "Role"
 						%td
-							= f.text_field :role, :id => "role", :placeholder => "Input role"
+							= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']]
 						.clearboth
 					%tr
+						%td
 						%td
 							= f.submit "Create User", :id => "submit_btn", :class => "submit_btn"
 						.clearboth
