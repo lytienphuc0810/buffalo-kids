@@ -5,17 +5,18 @@ BookInstance.delete_all
 BookReservation.delete_all
 PhotoRegistration.delete_all
 
-user1 = User.create(:email => "user1@vit.com", :password => "123456", :username => "user1")
-user2 = User.create(:email => "user2@vit.com", :password => "123456", :username => "user2")
-user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :username => "user3")
-user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin")
-user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian")
+user1 = User.create(:email => "user1@vit.com", :password => "123456", :username => "user1", :confirmed_at => Time.now)
+user2 = User.create(:email => "user2@vit.com", :password => "123456", :username => "user2", :confirmed_at => Time.now)
+user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :username => "user3", :confirmed_at => Time.now)
+user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin", :confirmed_at => Time.now)
+user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian", :confirmed_at => Time.now)
 
 book1 = Book.create(:title => "Book1", :book_code => "1234")
 book2 = Book.create(:title => "Book2", :book_code => "12345")
 book3 = Book.create(:title => "Book3", :book_code => "123456")
 
 for i in 4..100
+	User.create(email: "user#{i}@vit.com", password: "123456", username: "user#{i}", :confirmed_at => Time.now)
 	Book.create(:title => "Book#{i}", :book_code => "#{i}")
 end
 

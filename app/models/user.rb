@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email,
@@ -11,13 +11,17 @@ class User < ActiveRecord::Base
 								  :password_confirmation, 
 								  :remember_me,
 								  :username,
-								  :role
+								  :role,
+								  :confirmed_at
+
+	validates :username, presence: true, uniqueness: true, length: { minimum: 5 }
 								  							  
 	has_many :book_reservations
 	has_many :photo_registrations
 	has_many :book_instances, :through => :book_reservations
 	has_many :books, :through => :book_instances
 	has_many :notices
+	self.per_page = 12
 
 	ROLES = [
 		ADMIN = "admin",

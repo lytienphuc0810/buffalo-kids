@@ -10,7 +10,7 @@
 		.h2= @book.book_code
 		.h2= @book.description
 		.h2= @book.author
-		.h2.link= link_to "Edit", "/books/edit/#{@book.id}", :method => "post"
+		.h2.link= link_to "Edit", "/books/edit/#{@book.id}"
 		.h2.link= link_to "Delete", "/books/delete/#{@book.id}", :method => "post"
 		.h2.link= link_to "Reservations", ""
 		.h2.link= link_to "Photo Registrations", ""
