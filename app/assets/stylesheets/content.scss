@@ -20,6 +20,10 @@
 		border-radius: 5px;
 	}
 
+	.errors {
+		color:	red;
+	}
+
 	.form-content {
 		display: inline-block;
 		padding: 20px 40px 20px 40px;
@@ -70,6 +74,13 @@
 		border-radius: 5px;
 		font-size: 14px;
 		font-weight: 15px;
+
+		.username-label {
+			margin: 15px 07px 0px 0px;
+		}
+		.username-field {
+			margin: 12px 0px 0px 0px;
+		}
 
 		.email-label {
 			margin: 15px 34px 0px 0px;

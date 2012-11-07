@@ -4,7 +4,13 @@
 	.header-link.left.inactive= link_to "USER", "/users/index/1"
 	.clearboth
 	.form-content
-		.h1= "EDIT A USER"
+		%h1{style: "float:center;color:green;"}= "EDIT A USER"
+		-if @user.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@user.errors.count, "error") + " prohibited this user from being updated:"
+				%ul.errors
+					-@user.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
 			%table
 				= form_for :user, :url => "/users/update/#{@user.id}" do |f|
@@ -24,9 +30,10 @@
 						%td
 							= f.label "Role"
 						%td
-							= f.text_field :role, :id => "role", :placeholder => "Input role"
+							= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']]
 						.clearboth
 					%tr
+						%td
 						%td
 							= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
 						.clearboth
