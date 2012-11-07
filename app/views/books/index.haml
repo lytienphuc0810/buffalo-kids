@@ -14,6 +14,6 @@
         .h2= book.release_date
         .h2= book.rating
         .h2.link= link_to "Reservations", "/book_reservations/index/1?book_id=#{book.id}"
-        .h2.link= link_to "Photo Registrations", ""
+        .h2.link= link_to "Photo Registrations", "/photo_registrations/index/1?book_id=#{book.id}"
   .clearboth
   .paginate.right= will_paginate @books
