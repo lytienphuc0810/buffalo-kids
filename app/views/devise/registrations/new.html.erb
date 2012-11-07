@@ -2,6 +2,10 @@
 	<div class="title">SIGN UP</div>
 	<div class="devise-content">
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	  	<%= f.label :username%>
+	  	<%= f.email_field :username%>
+		  <div class="clearboth"></div>
+
 	  	<%= f.label :email, :class => " email-label" %>
 	  	<%= f.email_field :email, :class => " email-field" %>
 		  <div class="clearboth"></div>
