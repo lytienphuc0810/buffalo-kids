@@ -32,6 +32,15 @@ BuffaloKids::Application.routes.draw do
   post "users/update/:user_id" => "users#update"
   get "users/edit/:user_id" => "users#edit"
   post "users/delete/:user_id" => "users#delete"
+
+
+  get "book_instances/index/:book_id/:page" => "book_instances#index"
+  get "book_instances/new/:book_id" => "book_instances#new"
+  get "book_instances/edit/:book_instance_id" => "book_instances#edit"
+  post "book_instances/create/:book_id" => "book_instances#create"
+  post "book_instances/update/:book_instance_id" => "book_instances#update"
+  post "book_instances/delete/:book_instance_id" => "book_instances#delete"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

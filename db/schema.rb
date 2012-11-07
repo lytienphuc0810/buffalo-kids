@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "book_instances", :force => true do |t|
-    t.date     "begin_date"
-    t.date     "expired_date"
+    t.string   "book_instance_code"
     t.integer  "user_id"
     t.integer  "book_id"
     t.integer  "book_reservation_id"

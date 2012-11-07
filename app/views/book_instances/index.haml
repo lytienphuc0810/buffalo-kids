@@ -1,0 +1,23 @@
+.big-content
+	.header-link.left.inactive= link_to "CREATE", "/books/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
+	.divider.left= "|"
+	.header-link.left.active= link_to "INSTANCES", "/book_instances/index/#{@book.id}/1"
+	.clearboth
+	- i = 0
+	- @book_instances.each do |book_instance|
+		- i = i + 1
+		.small-content.left
+			.img.left= image_tag(@book.image_url)
+			.text-content.left
+				.h1.link= link_to "#{@book.title}", "/books/show/#{@book.id}"
+				.h2= book_instance.book_instance_code
+				.h2= link_to "Edit", "/book_instances/edit/#{book_instance.id}"
+				.h2= link_to "Delete", "/book_instances/delete/#{book_instance.id}", :method => "post"
+		- if(i % 3 == 0)
+			.clearboth
+	.clearboth
+	.paginate.right= will_paginate @book_instances
