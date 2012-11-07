@@ -2,7 +2,7 @@
 	<div class="title">SIGN IN</div>
 	<div class="devise-content">
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-		  <%= devise_error_messages! %>
+		  <div class="errors"><%= devise_error_messages! %></div>
 		  <div class="left">
 		  	<%= f.label :email, :class => "left email-label" %>
 		  	<%= f.email_field :email, :class => "left email-field" %>

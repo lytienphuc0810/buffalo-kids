@@ -3,7 +3,7 @@
 	<div class="devise-content" style="width:300px">
 		<table width="300px">
 			<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-			  <%= devise_error_messages! %>
+			  <div class="errors"><%= devise_error_messages! %></div>
 
 			  <tr>
 			  	<td class="left"><%= f.label :email, :class => "left email-label" %></td>

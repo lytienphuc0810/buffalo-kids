@@ -14,8 +14,7 @@ class User < ActiveRecord::Base
 								  :role,
 								  :confirmed_at
 
-	validates :username, presence: true
-	validates :username, uniqueness: true
+	validates :username, presence: true, uniqueness: true, length: { minimum: 5 }
 								  							  
 	has_many :book_reservations
 	has_many :photo_registrations
