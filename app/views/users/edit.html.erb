@@ -1,0 +1,14 @@
+<!-- .header-link= link_to "User Index", "/users/index" -->
+<h2>Edit User</h2>
+
+<%= form_for @user, :url => { :action => "edit" } do |f| %>
+<%= f.error_messages %>
+
+  <div><%= f.label :username, "New username" %><br />
+  <%= f.text_field :username %></div>
+
+  <div><%= f.label :password, "New password" %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.submit "Edit" %></div>
+<% end %>
