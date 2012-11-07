@@ -10,4 +10,4 @@
 		.h2= @user.email
 		.h2= @user.role.capitalize
 		.h2.link= link_to "Edit", "/users/edit/#{@user.id}"
-		.h2.link= link_to "Delete", "/users/delete/#{@user.id}", :method => "post"
+		.h2.link= link_to "Delete", "/users/delete/#{@user.id}", :method => "post", :data => {:confirm => "Are you sure?"}

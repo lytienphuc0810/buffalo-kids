@@ -21,7 +21,7 @@
 				.h2= book.author
 				.h2= book_reservation.start_date.to_s
 				.h2= book_reservation.due_date.to_s
-				.h2= link_to "Delete it", "/book_reservations/delete/#{book_reservation.id}", :method => "post"
+				.h2= link_to "Delete it", "/book_reservations/delete/#{book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth
