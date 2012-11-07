@@ -26,7 +26,13 @@ class BookReservationsController < ApplicationController
 	end
 
 	def index
-		@book_reservations = current_user.book_reservations.paginate(:page => params[:page])
+		if current_user.admin?
+			@book_reservations = Book.find_by_id(:book_id).book_reservations.paginate(:page => params[:page])
+		else
+			@book_reservations = current_user.book_reservations.paginate(:page => params[:page])
+		end
+				
+
 		if @book_reservations.empty?
 			#error message
 			redirect_to '/book_reservations/home/1'

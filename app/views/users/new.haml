@@ -5,41 +5,34 @@
 	.clearboth
 	.form-content
 		.h1= "CREATE A NEW USER"
+		-if @user.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@user.errors.count, "error(s)") + " prohibited this user from being saved:"
+				%ul.errors
+					-@user.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
-			%table
-				= form_for :user, :url => "/users/create" do |f|
-					%tr
-						%td
-							= f.label "Username"
-						%td
-							= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
-						.clearboth
-					%tr
-						%td
-							= f.label "Password"
-						%td
-							= f.password_field :password, :id => "password", :placeholder => "Input password", :autocomplete => "off"
-						.clearboth
-					%tr
-						%td
-							= f.label "Confirm password"
-						%td
-							= f.password_field :password_confirmation, :id => "password_confirmation", :placeholder => "Input password confirmation"
-						.clearboth
-					%tr
-						%td
-							= f.label "Email"
-						%td
-							= f.text_field :email, :id => "email", :placeholder => "Input email"
-						.clearboth
-					%tr
-						%td
-							= f.label "Role"
-						%td
-							= f.text_field :role, :id => "role", :placeholder => "Input role"
-						.clearboth
-					%tr
-						%td
-							= f.submit "Create User", :id => "submit_btn", :class => "submit_btn"
-						.clearboth
-					.right.error
+			= form_for :user, :url => "/users/create" do |f|
+				= f.label "Username"
+				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
+				.clearboth
+
+				= f.label "Password"
+				= f.password_field :password, :id => "password", :placeholder => "Input password", :autocomplete => "off"
+				.clearboth
+
+				= f.label "Confirm password"
+				= f.password_field :password_confirmation, :id => "password_confirmation", :placeholder => "Input password confirmation"
+				.clearboth
+
+				= f.label "Email"
+				= f.text_field :email, :id => "email", :placeholder => "Input email"
+				.clearboth
+
+				= f.label "Role"
+				= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']], :id => "role"
+				.clearboth
+
+				= f.submit "Create User", :id => "submit_btn", :class => "submit_btn"
+				.clearboth
+			.right.error

@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
 								  :username,
 								  :role,
 								  :confirmed_at
+
+	validates :username, presence: true
+	validates :username, uniqueness: true
 								  							  
 	has_many :book_reservations
 	has_many :photo_registrations

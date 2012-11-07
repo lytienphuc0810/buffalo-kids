@@ -8,6 +8,6 @@
       .text-content.left
         .h1.link= link_to "#{user.username.upcase}", "/users/show/#{user.id}"
         .h2= user.email
-        .h2= user.role
+        .h2= user.role.capitalize
   .clearboth
   .paginate.right= will_paginate @books

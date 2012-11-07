@@ -31,10 +31,41 @@
 		font-size: 14px;
 		font-weight: 15px;
 
+		.field_with_errors {
+			display: block;
+			height: auto;
+			border: 1px solid red;
+		}
+
+		.small-error #error_explanation{
+			width: auto;
+		}
+
+		.h1 {
+			font-size: 20px;
+			font-weight: thinner;
+			color:	green;
+		}
+
+		#error_explanation {
+			text-align: left;
+			margin-top: 10px;
+			border: solid 1px red;
+			border-radius: 3px;
+			text-align: left;
+			padding-left: 10px;
+			color: red;
+			h2 {
+				font-size: 14px;
+				font-weight: thinner;
+			}
+		}
+
 		label {
 			margin-top: 10px;
 			margin-right: 20px;
 			float: left;
+			color: green;
 		}
 
 		#book_description {
@@ -46,11 +77,25 @@
   	input, #book_description {
 		 	float: right;
 		 	margin-top: 8px;
-		 }
+			background-color : lightyellow;
+			border: 1px solid #008000;
+			width: 230px;
+		}
+
+  	select, #book_description {
+		 	float: right;
+		 	margin-top: 8px;
+			background-color : lightyellow;
+			border: 1px solid #008000;
+			width: 230px;
+		}
 
 		.submit_btn {
 			float: right;
 			margin-top: 10px;
+			background-color : green;
+			border: 1px solid #008000;
+			width: auto;
 		}
 	}
 
