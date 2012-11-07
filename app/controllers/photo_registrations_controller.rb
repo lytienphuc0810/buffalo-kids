@@ -26,10 +26,18 @@ class PhotoRegistrationsController < ApplicationController
 	end
 
 	def index 
-		@photo_registrations = current_user.photo_registrations.paginate(:page => params[:page])
-		if @photo_registrations.empty?
-			#error message
-			redirect_to '/photo_registrations/home/1'
+		if current_user.admin? || current_user.librarian?
+			@photo_registrations = Book.find_by_id(params[:book_id]).photo_registrations.paginate(:page => params[:page])
+			if @photo_registrations.empty?
+				#error message
+				redirect_to '/books/index/1'
+			end
+		else
+			@photo_registrations = current_user.photo_registrations.paginate(:page => params[:page])
+			if @photo_registrations.empty?
+				#error message
+				redirect_to '/photo_registrations/home/1'
+			end
 		end
 	end
 
@@ -41,6 +49,18 @@ class PhotoRegistrationsController < ApplicationController
 	def delete
 		photo_registration = PhotoRegistration.find_by_id(params[:photo_registration_id])
 		photo_registration.destroy
-		redirect_to '/photo_registrations/index/1'
+		if current_user.admin? || current_user.librarian?
+			if (photo_registration.book.photo_registrations.nil?)
+				redirect_to '/books/index/1'
+			else
+				redirect_to "/photo_registrations/index/1?book_id=#{photo_registration.book.id}"
+			end
+		else
+			if (current_user.photo_registrations.nil?)
+				redirect_to '/books/index/1'
+			else
+				redirect_to '/photo_registrations/index/1'
+			end
+		end
 	end
 end
