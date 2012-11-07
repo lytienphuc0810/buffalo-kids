@@ -11,7 +11,7 @@
 	- @book_instances.each do |book_instance|
 		- i = i + 1
 		.small-content.left
-			.img.left= image_tag(@book.image_url)
+			.img.left= image_tag @book.image_url, :size => "60x60"
 			.text-content.left
 				.h1.link= link_to "#{@book.title}", "/books/show/#{@book.id}"
 				.h2= book_instance.book_instance_code

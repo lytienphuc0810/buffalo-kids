@@ -13,7 +13,7 @@
 		- i = i + 1
 		- book = photo_registration.book
 		.small-content.left
-			.img.left= image_tag("/assets/no_photo.png")
+			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
 				.h1= link_to "#{book.title}", "/photo_registrations/show/#{photo_registration.id}"
 				.h2= book.book_code

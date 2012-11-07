@@ -13,7 +13,7 @@
 		- i = i + 1
 		- book = book_reservation.book_instance.book
 		.small-content.left
-			.img.left= image_tag("/assets/no_photo.png")
+			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
 				.h1.link= link_to "#{book.title}", "/book_reservations/show/#{book_reservation.id}"
 				.h2= book.book_code
