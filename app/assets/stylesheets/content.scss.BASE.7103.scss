@@ -20,11 +20,6 @@
 		border-radius: 5px;
 	}
 
-	.errors {
-		color:	red;
-		background-color: aquamarine;
-	}
-
 	.form-content {
 		display: inline-block;
 		padding: 20px 40px 20px 40px;
@@ -37,9 +32,12 @@
 		font-weight: 15px;
 
 		label {
-			margin-top: 10px;
-			margin-right: 20px;
-			float: left;
+			min-width: 90px;
+			margin-top: 10px
+		}
+
+		input, #book_description {
+			margin-top: 8px;
 		}
 
 		#book_description {
@@ -48,9 +46,13 @@
 			margin-right: 2px;
 		}
 
-  	input, #book_description {
+		label {
+			margin-right: 20px;
+			float: left;
+		}
+
+		 input, #book_description {
 		 	float: right;
-		 	margin-top: 8px;
 		 }
 
 		.submit_btn {
@@ -60,78 +62,44 @@
 	}
 
 	.devise-content {
-		display: inline-block;
 		padding: 20px 40px 20px 40px;
 		margin: 14px;
-		min-height: 120px;
+		height: auto;
+		width: 290px;
 		background-color: #D3D3D3;
 		border-radius: 5px;
 		font-size: 14px;
 		font-weight: 15px;
 
-
-		.username-label {
-			margin: 15px 07px 0px 0px;
-		}
-		.username-field {
-			margin: 12px 0px 0px 0px;
-		}
-
 		.email-label {
 			margin: 15px 34px 0px 0px;
-
-		.field_with_errors {
-			display: block;
-			height: auto;
 		}
-
-		.small-error #error_explanation{
-			width: 255px;
+		.email-field {
+			margin: 12px 0px 0px 0px;
 		}
-
-		#error_explanation {
-			text-align: left;
-			margin-top: 10px;
-			border: solid 1px red;
-			border-radius: 3px;
-			text-align: left;
-			padding-left: 10px;
-			color: red;
-			h2 {
-				font-size: 14px;
-				font-weight: thinner;
-			}
+		.password-label {
+			margin: 15px 07px 0px 0px;
 		}
-
-
-		label {
-			margin-top: 10px;
-			margin-right: 20px;
-			float: left;
+		.password-field {
+			margin: 12px 0px 0px 0px;
 		}
-
-		.remember-label {
-			margin-right: 0;
-		}
-
 		.remember-checkbox {
-			float: left;
-			margin-top: 11px;
+			margin: 17px 8px 0px 0px;
 		}
-
-		input {
-			margin-top: 8px;
-			float: right;
-		}
-
+		.remember-label {
+			margin: 16px 5px 0px 0px;
+		}				
 		.submit {
+			width: 70px;
 			height: 28px;
-			margin-top: 10px;
+			margin: 10px 5px 0px 0px;
 		}
 		.links-block {
-			display: inline-block;
 			margin: 10px 8px 0px 0px;
 			font-size: 13px;
+			span {
+				margin-right: 10px;
+			}
 			a, a:visited {
 				font-style: italic;
 				color: blue;
