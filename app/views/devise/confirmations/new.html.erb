@@ -2,15 +2,12 @@
 	<div class="title">RESEND CONFIRMATION EMAIL</div>
 	<div class="devise-content">
 		<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-		  <%= f.label :email %>
+		  <%= f.label :email, "Enter Email" %>
 		  <%= f.email_field :email %>
-
 		  <div class="clearboth"></div>
 
 		  <%= f.submit "Submit", :class => " submit" %>
-		 
 		  <div class="clearboth"></div>
-
 			
 		  <div class="links-block">
   			<span><%= link_to "Sign in", new_session_path(resource_name), :class => ""%></span>
@@ -19,7 +16,6 @@
   			<span>|</span>
   			<span><%= link_to "Forgot password?", new_password_path(resource_name), :class => "" %></span>	
 		  </div>
-
 		  <div class="clearboth"></div>
 		
 		  <div class="small-error">
