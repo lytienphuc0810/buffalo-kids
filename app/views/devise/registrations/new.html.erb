@@ -28,9 +28,10 @@
   			<span >|</span>
   			<span ><%= link_to "Resend confirmation email", new_confirmation_path(resource_name), :class => "" %></span>
 		  </div>
-		  
   	  <div class="clearboth"></div>
-		  <%= devise_error_messages! %>
+		  <div class="small-error">
+		  	<%= devise_error_messages! %>
+		  </div>
 		<% end %>
 	</div>
 </div>
