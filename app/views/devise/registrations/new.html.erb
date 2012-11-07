@@ -2,8 +2,8 @@
 	<div class="title">SIGN UP</div>
 	<div class="devise-content">
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-	  	<%= f.label :username, :class => " username-label" %>
-	  	<%= f.email_field :username, :class => " username-label" %>
+	  	<%= f.label :username%>
+	  	<%= f.text_field :username%>
 		  <div class="clearboth"></div>
 
 	  	<%= f.label :email, :class => " email-label" %>
@@ -29,9 +29,8 @@
   			<span ><%= link_to "Resend confirmation email", new_confirmation_path(resource_name), :class => "" %></span>
 		  </div>
   	  <div class="clearboth"></div>
-		  <div class="small-error">
-		  	<%= devise_error_messages! %>
-		  </div>
+  	  
+	  	<%= devise_error_messages! %>
 		<% end %>
 	</div>
 </div>
