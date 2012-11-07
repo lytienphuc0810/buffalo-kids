@@ -10,6 +10,9 @@ user2 = User.create(:email => "user2@vit.com", :password => "123456", :username 
 user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :username => "user3", :confirmed_at => Time.now)
 user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin", :confirmed_at => Time.now)
 user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian", :confirmed_at => Time.now)
+user5 = User.create(:email => "librarian1@gmail.com", :password => "123456", :username => "librarian1", :role => "librarian", :confirmed_at => Time.now)
+user6 = User.create(:email => "librarian2@gmail.com", :password => "123456", :username => "librarian2", :role => "librarian", :confirmed_at => Time.now)
+user7 = User.create(:email => "librarian3@gmail.com", :password => "123456", :username => "librarian3", :role => "librarian", :confirmed_at => Time.now)
 
 book1 = Book.create(:title => "Book1", :book_code => "1234", :image_url => "http://pixhost.me/avaxhome/f1/01/001e01f1_medium.jpeg")
 book2 = Book.create(:title => "Book2", :book_code => "12345", :image_url => "http://www.ebook3000.com/upimg/userup/0808/2106201610a.jpg")
