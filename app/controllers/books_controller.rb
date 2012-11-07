@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   def create 
     @book = Book.new(params[:book])
     if(@book.save)
-      redirect_to "/books/show/#{book.id}"
+      redirect_to "/books/show/#{@book.id}"
     else
       render action: "new"
     end

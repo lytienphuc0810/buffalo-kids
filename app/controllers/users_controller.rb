@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if(@user.save)
-			redirect_to "/users/show/#{user.id}"
+			redirect_to "/users/show/#{@user.id}"
 		else
 			render action: "new"
 		end
