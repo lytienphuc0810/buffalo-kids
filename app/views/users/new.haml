@@ -7,7 +7,7 @@
 		.h1= "CREATE A NEW USER"
 		-if @user.errors.any?
 			#error_explanation
-				%h2.errors= pluralize(@user.errors.count, "error(s)") + " prohibited this user from being saved:"
+				%h2.errors= pluralize(@user.errors.count, "error") + " prohibited this user from being saved:"
 				%ul.errors
 					-@user.errors.full_messages.each do |msg|
 						%li.errors= msg
