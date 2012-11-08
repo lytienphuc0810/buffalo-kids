@@ -6,28 +6,38 @@ class BooksController < ApplicationController
   end
   
   def show
-	 @book = Book.find_by_id(params[:book_id])
+	  @book = Book.find_by_id(params[:book_id])
   end
 
   def edit
-	 @book = Book.find_by_id(params[:book_id])
+	  @book = Book.find_by_id(params[:book_id])
+  end
+
+  def update
+    @book = Book.find_by_id(params[:book_id])
+    if(@book.update_attributes(params[:book]))
+      redirect_to "/books/show/#{@book.id}"
+    else
+      render action: "edit"
+    end
   end
 
   def new
+    @book = Book.new
   end
 
   def create 
-    book = Book.create(params[:book])
-    if(book.nil?)
-      #send some error message
+    @book = Book.new(params[:book])
+    if(@book.save)
+      redirect_to "/books/show/#{@book.id}"
     else
-      redirect_to "/books/show/#{book.id}"
+      render action: "new"
     end
   end
 
   def delete
 	 book = Book.find_by_id(params[:book_id])
-	 book.destroy
+	 book.delete
 	 redirect_to '/books/index/1'
   end
 end

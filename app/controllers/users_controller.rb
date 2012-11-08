@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 	end
 
 	def new
+		@user = User.new
 	end
 
 	def edit
@@ -20,25 +21,19 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find_by_id(params[:user_id])
-		if(@user.update_attributes(params[:user]).nil?)
-			#send some error messages
+		if(@user.update_attributes(params[:user]))
+			redirect_to "/users/show/#{@user.id}"
 		else
-			redirect_to "users/show/#{user.id}"
+			render action: "edit"
 		end
 	end
 
 	def create
-		user = User.find_by_username(params[:username])
-		if(user.nil?)
-			user = User.new(params[:user])
-			user.save
-			if(user.nil?)
-				#send some error message
-			else
-				redirect_to "/users/show/#{user.id}"
-			end
+		@user = User.new(params[:user])
+		if(@user.save)
+			redirect_to "/users/show/#{@user.id}"
 		else
-			#send 'User exists' error message
+			render action: "new"
 		end
 	end
 
