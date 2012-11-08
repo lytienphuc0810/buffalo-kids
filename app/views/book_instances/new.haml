@@ -1,0 +1,19 @@
+.big-content	
+	.header-link.left.inactive= link_to "CREATE", "/books/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
+	.divider.left= "|"
+	.header-link.left.active= link_to "NEW INSTANCE", "/book_instances/new/#{@book.id}"
+	.clearboth
+	.form-content
+		.h1= "CREATE A NEW BOOK INSTANCE"
+		.form
+			= form_for :book_instance, :url => "/book_instances/create/#{@book.id}" do |f|
+				= f.label "Book code"
+				= f.text_field :book_instance_code, :id => "book_instance_code", :placeholder => "Input book instance code"
+				.clearboth
+				= f.submit "Create", :id => "submit_btn", :class => "submit_btn"
+				.clearboth
+				.right.error

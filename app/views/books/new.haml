@@ -5,6 +5,12 @@
 	.clearboth
 	.form-content
 		.h1= "CREATE A NEW BOOK"
+		-if @book.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@book.errors.count, "error") + " prohibited this book from being saved:"
+				%ul.errors
+					-@book.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
 			= form_for :book, :url => "/books/create" do |f|
 				= f.label "Title"
@@ -22,6 +28,6 @@
 				= f.label "Description"
 				= f.text_area :description, :id => "book_description", :placeholder => "Input book desciption"
 				.clearboth
-				= f.submit "Create Book", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "Create", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
