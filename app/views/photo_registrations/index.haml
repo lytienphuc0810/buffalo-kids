@@ -2,11 +2,11 @@
 	- if current_user.admin? || current_user.librarian?
 		.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
 		.divider.left= "|"
-		.header-link.left.active= link_to "PHOTOCOPY REGISTRATIONS", "/photo_registrations/index/1?book_id=" + @photo_registrations.first.book.id.to_s
+		.header-link.left.active= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1?book_id=" + @photo_registrations.first.book.id.to_s
 	- else
 		.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1"
 		.divider.left= "|"
-		.header-link.left.active= link_to "PHTOCOPY REGISTRATIONS", "/photo_registrations/index/1"
+		.header-link.left.active= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
 	.clearboth
 	- i = 0
 	- @photo_registrations.each do |photo_registration|
