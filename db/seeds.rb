@@ -8,22 +8,21 @@ PhotoRegistration.delete_all
 user1 = User.create(:email => "user1@vit.com", :password => "123456", :username => "user1", :confirmed_at => Time.now)
 user2 = User.create(:email => "user2@vit.com", :password => "123456", :username => "user2", :confirmed_at => Time.now)
 user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :username => "user3", :confirmed_at => Time.now)
-user3 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin", :confirmed_at => Time.now)
-user4 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian", :confirmed_at => Time.now)
+user4 = User.create(:email => "admin@gmail.com", :password => "123456", :username => "admin", :role => "admin", :confirmed_at => Time.now)
+user5 = User.create(:email => "librarian@gmail.com", :password => "123456", :username => "librarian", :role => "librarian", :confirmed_at => Time.now)
+user6 = User.create(:email => "anhvule@yahoo.com", :password => "123456", :username => "user4", :confirmed_at => Time.now)
+user7 = User.create(:email => "kysy@yahoo.com", :password => "123456", :username => "user5", :confirmed_at => Time.now)
 
 book1 = Book.create(:title => "Book1", :book_code => "1234", :image_url => "http://pixhost.me/avaxhome/f1/01/001e01f1_medium.jpeg")
 book2 = Book.create(:title => "Book2", :book_code => "12345", :image_url => "http://www.ebook3000.com/upimg/userup/0808/2106201610a.jpg")
 book3 = Book.create(:title => "Book3", :book_code => "123456", :image_url => "http://ecx.images-amazon.com/images/I/413CBBMP2CL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
-book1 = Book.create(:title => "Book4", :book_code => "1", :image_url => "http://ecx.images-amazon.com/images/I/4152NIXcFgL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
-book2 = Book.create(:title => "Book5", :book_code => "12", :image_url => "http://ecx.images-amazon.com/images/I/51Q6l%2BMyLgL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
-book3 = Book.create(:title => "Book6", :book_code => "123", :image_url => "http://ecx.images-amazon.com/images/I/51EoBfWbafL._AA300_.jpg")
-book1 = Book.create(:title => "Book7", :book_code => "1235", :image_url => "http://ecx.images-amazon.com/images/I/5149oJpa-zL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
-book2 = Book.create(:title => "Book8", :book_code => "125", :image_url => "http://bks0.books.google.com.vn/books?id=hwpqHb5NBSoC&printsec=frontcover&img=1&zoom=1&source=gbs_api")
-book3 = Book.create(:title => "Book9", :book_code => "12456", :image_url => "http://vig-fp.prenhall.com/bigcovers/0131593188.jpg")
+book4 = Book.create(:title => "Book4", :book_code => "1", :image_url => "http://ecx.images-amazon.com/images/I/4152NIXcFgL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
+book5 = Book.create(:title => "Book5", :book_code => "12", :image_url => "http://ecx.images-amazon.com/images/I/51Q6l%2BMyLgL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
+book6 = Book.create(:title => "Book6", :book_code => "123", :image_url => "http://ecx.images-amazon.com/images/I/51EoBfWbafL._AA300_.jpg")
+book7 = Book.create(:title => "Book7", :book_code => "1235", :image_url => "http://ecx.images-amazon.com/images/I/5149oJpa-zL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
+book8 = Book.create(:title => "Book8", :book_code => "125", :image_url => "http://bks0.books.google.com.vn/books?id=hwpqHb5NBSoC&printsec=frontcover&img=1&zoom=1&source=gbs_api")
+book9 = Book.create(:title => "Book9", :book_code => "12456", :image_url => "http://vig-fp.prenhall.com/bigcovers/0131593188.jpg")
 
-for i in 4..100
-	User.create(email: "user#{i}@vit.com", password: "123456", username: "user#{i}", :confirmed_at => Time.now)
-end
 
 book_ins1 = BookInstance.create()
 book_ins2 = BookInstance.create()
