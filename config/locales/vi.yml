@@ -1,0 +1,115 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+	big_header: THƯ VIỆN HCMUT
+
+	pre_welcome:
+  		title:
+  			signin: ĐĂNG NHẬP
+  			signup: ĐĂNG KÝ
+  			forgot_password: QUÊN MẬT KHẨU?
+  			resend_email: GỬI LẠI EMAIL XÁC NHẬN
+  		form:
+  			username: Tên đăng nhập
+  			email: Email
+  			password: Mật khẩu
+  			confirm_password: Đánh lại password
+  			remember: Ghi nhớ tôi
+  		link:
+  			signup: Đăng ký
+  			forgot_password: Quên mật khẩu?
+  			signin: Đăng nhập
+  			resend_email: Gửi lại email xác nhận
+  		button:
+  			signin: Đăng nhập
+  			signup: Đăng ký
+  			submit: Nộp
+
+  	welcome:
+  		Tab:
+	  		b: SÁCH
+  			p: PHOTO
+  			n: THÔNG BÁO
+  			f: HỎI ĐÁP
+  			c: LIÊN HỆ
+  			u: NGƯỜI DÙNG
+  		topleft_corner:
+	  		welcome: chào mừng
+  			signout: Đăng xuất
+  		user:
+  			header_link:
+  				books: SÁCH
+  				reservations: ĐẶT SÁCH
+  				photo_regis: ĐĂNG KÝ PHOTO
+  			link:
+  				regis: Đăng ký
+  				delete:	Xóa sách
+  				reserve: Đặt sách
+  		admin:
+  			header_link:
+  				create: TẠO MỚI
+  				user: NGƯỜI DÙNG
+  				users: NGƯỜI DÙNG
+  				books: SÁCH
+  				edit: CHỈNH SỬA
+  				reservations: ĐẶT SÁCH
+  				photo_regis: ĐĂNG KÝ PHOTO
+  				notice: THÔNG BÁO
+  				notices: THÔNG BÁO
+  			user_form:
+  				create_header: TẠO MỘT NGƯỜI DÙNG MỚI
+  				edit_header: CHỈNH SỬA MỘT NGƯỜI DÙNG
+  				username: Tên đăng nhập
+  				password: Password
+  				confirm_password: Xác nhận Password
+  				email: Email
+  				role: Vai trò
+  				create_button: Tạo người dùng
+  				edit_button: Chỉnh sửa người dùng
+  			book_form:
+  				create_header: TẠO MỘT SÁCH MỚI
+  				edit_header: CHỈNH SỬA
+  				instance_header: TẠO MỘT INSTANCE SÁCH MỚI
+  				title: Tựa đề
+  				code: Mã sách
+  				author: Tác giả
+  				image: Link của hình
+  				description: Mô tả
+  				create_button: Tạo
+  				edit_button: Chỉnh sửa
+  			link:
+  				edit: Chỉnh sửa
+  				delete: Xóa
+  				reserve: Đặt sách
+  				photo_regis: Đăng ký photo
+  				list_instances: Liệt kê tất cả instances của sách này
+  				add_instance: Thêm một instance vào sách này
+  		librarian:
+  			header_link:
+  				books: SÁCH
+  				create: TẠO MỚI
+  				edit: CHỈNH SỬA
+  				instances: INSTANCES
+  				new_instance: INSTANCE MỚI
+  				edit_instance: CHỈNH SỬA INSTANCE
+  			link:
+  				edit: Chỉnh sửa
+  				delete: Xóa
+  				reserve: Đặt sách
+  				photo_regis: Đăng ký photo
+  				list_instances: Liệt kê tất cả instances của sách này
+  				add_instance: Thêm một instance vào sách này
+  			book_form:
+  				create_header: TẠO MỘT SÁCH MỚI
+  				edit_header: CHỈNH SỬA
+  				instance_create_header: TẠO MỘT INSTANCE SÁCH MỚI
+  				instance_edit_header: CHỈNH SỬA MỘT INSTANCE SÁCH
+  				title: Tựa đề
+  				code: Mã sách
+  				author: Tác giả
+  				image: Link hình
+  				description: Mô tả
+  				create_button: Tạo
+  				edit_button: Chỉnh sửa
+  				submit_button: Nộp

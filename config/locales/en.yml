@@ -2,4 +2,115 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+	big_header: HCMUT LIBRARY
+
+	pre_welcome:
+  		title:
+  			signin: SIGN IN
+  			signup: SIGN UP
+  			forgot_password: FORGOT YOUR PASSWORD?
+  			resend_email: RESEND CONFIRMATION EMAIL
+  		form:
+  			username: Username
+  			email: Email
+  			password: Password
+  			confirm_password: Re-enter password
+  			remember: Remember me
+  		link:
+  			signup: Sign up
+  			forgot_password: Forgot password?
+  			signin: Sign in
+  			resend_email: Resend confirmation email
+  		button:
+  			signin: Sign in
+  			signup: Sign up
+  			submit: Submit
+
+  	welcome:
+  		Tab:
+	  		b: BOOKS
+  			p: PHOTO
+  			n: NOTICES
+  			f: FAQ
+  			c: CONTACT
+  			u: USERS
+  		topleft_corner:
+	  		welcome: welcome
+  			signout: Sign out
+  		user:
+  			header_link:
+  				books: BOOKS
+  				reservations: RESERVATIONS
+  				photo_regis: PHOTO REGISTRATIONS
+  			link:
+  				regis: Regist it
+  				delete:	Delete it
+  				regist:	Regist it
+  				reserve: Reserve it
+  		admin:
+  			header_link:
+  				create: CREATE
+  				user: USER
+  				users: USERS
+  				books: BOOKS
+  				edit: EDIT
+  				reservations: RESERVATIONS
+  				photo_regis: PHOTO REGISTRATIONS
+  				notice: NOTICE
+  				notices: NOTICES
+  			user_form:
+  				create_header: CREATE A NEW USER
+  				edit_header: EDIT A USER
+  				username: Username
+  				password: Password
+  				confirm_password: Confirm Password
+  				email: Email
+  				role: Role
+  				create_button: Create User
+  				edit_button: Update User
+  			book_form:
+  				create_header: CREATE A NEW BOOK
+  				edit_header: EDIT
+  				instance_header: CREATE A NEW BOOK INSTANCE
+  				title: Title
+  				code: Book code
+  				author: Author
+  				image: Image url
+  				description: Description
+  				create_button: Create
+  				edit_button: Update
+  			link:
+  				edit: Edit
+  				delete: Delete
+  				reserve: Reservations
+  				photo_regis: Photo Registrations
+  				list_instances: List all instances of this book
+  				add_instance: Add an instance to this book
+  		librarian:
+  			header_link:
+  				books: BOOKS
+  				create: CREATE
+  				edit: EDIT
+  				instances: INSTANCES
+  				new_instance: NEW INSTANCE
+  				edit_instance: EDIT INSTANCE
+  			link:
+  				edit: Edit
+  				delete: Delete
+  				reserve: Reservations
+  				photo_regis: Photo Registrations
+  				list_instances: List all instances of this book
+  				add_instance: Add an instance to this book
+  			book_form:
+  				create_header: CREATE A NEW BOOK
+  				edit_header: EDIT
+  				instance_create_header: CREATE A NEW BOOK INSTANCE
+  				instance_edit_header: EDIT A BOOK INSTANCE
+  				title: Title
+  				code: Book code
+  				author: Author
+  				image: Image url
+  				description: Description
+  				create_button: Create
+  				edit_button: Update
+  				submit_button: Submit
