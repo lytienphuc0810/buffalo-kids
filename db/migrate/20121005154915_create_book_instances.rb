@@ -1,8 +1,7 @@
 class CreateBookInstances < ActiveRecord::Migration
   def change
     create_table :book_instances do |t|
-			t.date :begin_date
-			t.date :expired_date
+			t.string :book_instance_code
 			t.integer :user_id
 			t.integer :book_id
 			t.integer :book_reservation_id

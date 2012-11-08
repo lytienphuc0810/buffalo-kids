@@ -5,29 +5,26 @@
 	.clearboth
 	.form-content
 		.h1= "EDIT A USER"
+		-if @user.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@user.errors.count, "error") + " prohibited this user from being updated:"
+				%ul.errors
+					-@user.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
-			%table
-				= form_for :user, :url => "/users/update/#{@user.id}" do |f|
-					%tr
-						%td
-							= f.label "Username"
-						%td
-							= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
-						.clearboth
-					%tr
-						%td
-							= f.label "Email"
-						%td
-							= f.text_field :email, :id => "email", :placeholder => "Input email"
-						.clearboth
-					%tr
-						%td
-							= f.label "Role"
-						%td
-							= f.text_field :role, :id => "role", :placeholder => "Input role"
-						.clearboth
-					%tr
-						%td
-							= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
-						.clearboth
+			= form_for :user, :url => "/users/update/#{@user.id}" do |f|
+				= f.label "Username"
+				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
+				.clearboth
+
+				= f.label "Email"
+				= f.text_field :email, :id => "email", :placeholder => "Input email"
+				.clearboth
+
+				= f.label "Role"
+				= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']], :id => "role"
+				.clearboth
+
+				= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
+				.clearboth
 				.right.error

@@ -19,7 +19,7 @@ class Book < ActiveRecord::Base
 	def free_instance_to_get
 		result = nil
 		self.book_instances.each do |book_inst|
-			if book_inst.book_reservation.empty? && book_inst.photo_registration.empty?
+			if book_inst.book_reservation.nil? && book_inst.photo_registration.nil?
 				result ||= book_inst
 			end
 		end

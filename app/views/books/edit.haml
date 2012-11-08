@@ -5,6 +5,12 @@
 	.clearboth
 	.form-content
 		.h1= "EDIT #{@book.title.upcase}"
+		-if @book.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@book.errors.count, "error") + " prohibited this book from being updated:"
+				%ul.errors
+					-@book.errors.full_messages.each do |msg|
+						%li.errors= msg
 		.form
 			= form_for :book, :url => "/books/update/#{@book.id}" do |f|
 				= f.label "Title"

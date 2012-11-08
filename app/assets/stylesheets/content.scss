@@ -31,10 +31,40 @@
 		font-size: 14px;
 		font-weight: 15px;
 
+		.field_with_errors {
+			display: block;
+			height: auto;
+		}
+
+		.small-error #error_explanation{
+			width: auto;
+		}
+
+		.h1 {
+			font-size: 20px;
+			font-weight: thinner;
+			color:	green;
+		}
+
+		#error_explanation {
+			text-align: left;
+			margin-top: 10px;
+			border: solid 1px red;
+			border-radius: 3px;
+			text-align: left;
+			padding-left: 10px;
+			color: red;
+			h2 {
+				font-size: 14px;
+				font-weight: thinner;
+			}
+		}
+
 		label {
 			margin-top: 10px;
 			margin-right: 20px;
 			float: left;
+			color: green;
 		}
 
 		#book_description {
@@ -46,11 +76,25 @@
   	input, #book_description {
 		 	float: right;
 		 	margin-top: 8px;
-		 }
+			background-color : lightyellow;
+			border: 1px solid #008000;
+			width: 230px;
+		}
+
+  	select, #book_description {
+		 	float: right;
+		 	margin-top: 8px;
+			background-color : lightyellow;
+			border: 1px solid #008000;
+			width: 230px;
+		}
 
 		.submit_btn {
 			float: right;
 			margin-top: 10px;
+			background-color : green;
+			border: 1px solid #008000;
+			width: auto;
 		}
 	}
 
@@ -70,7 +114,7 @@
 		}
 
 		.small-error #error_explanation{
-			width: 255px;
+			width: 285px;
 		}
 
 		#error_explanation {
@@ -182,7 +226,6 @@
 }
 
 .pagination {
-  background: white;
   cursor: default;
   /* self-clearing method: */ }
   .pagination a, .pagination span, .pagination em {
@@ -191,21 +234,22 @@
     float: left;
     margin-right: 1px; }
   .pagination .disabled {
-    color: #999999;
-    border: 1px solid #dddddd; }
+  	font-size: 85%;
+    font-weight: bold;
+    color: #999999; }
   .pagination .current {
-    font-style: normal;
+  	font-size: 85%;
     font-weight: bold;
     background: #2e6ab1;
-    color: white;
-    border: 1px solid #2e6ab1; }
+    color: white; }
   .pagination a {
+  	font-size: 85%;
+    font-weight: bold;
     text-decoration: none;
-    color: #105cb6;
-    border: 1px solid #9aafe5; }
+    color: #105cb6; }
     .pagination a:hover, .pagination a:focus {
-      color: #000033;
-      border-color: #000033; }
+    	font-style: italic;
+      background-color: #D0D0D0; }
   .pagination .page_info {
     background: #2e6ab1;
     color: white;
