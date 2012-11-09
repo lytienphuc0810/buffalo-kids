@@ -1,5 +1,4 @@
 BuffaloKids::Application.routes.draw do
-  devise_for :users
   get "books/index" => "books#index"
   
   post "book_reservations/new/:book_id" => "book_reservations#new"
