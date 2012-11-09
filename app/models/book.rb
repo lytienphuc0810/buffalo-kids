@@ -6,8 +6,8 @@ class Book < ActiveRecord::Base
 								  :image_url, 
 								  :release_date, 
 								  :rating
-	validates :title, :book_code, :uniqueness => true
-	validates :title, :book_code, :image_url, :presence => true
+	validates_uniqueness_of :title, :book_code
+	validates_presence_of :title, :book_code
 
 	before_validation :default_image_url
 
