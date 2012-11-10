@@ -1,7 +1,10 @@
 .big-content
-	.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1", :class => "inactive"
+	.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1", :class => "inactive"
+	- if current_user.user?
+		.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
+	- else
+		.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1?book_id=#{@book.id}"
 	.divider.left= "|"
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/photo_registrations/show/#{@photo_registration.id}"
 	.clearboth
