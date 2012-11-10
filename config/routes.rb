@@ -23,6 +23,11 @@ BuffaloKids::Application.routes.draw do
 
   get "notices/index/:page" => "notices#index"
   get "notices/show/:notice_id" => "notices#show"
+  get "notices/new" => "notices#new"
+  get "notices/edit/:notice_id" => "notices#edit"  
+  post "notices/create/" => "notices#create"
+  post "notices/update/:notice_id" => "notices#update"
+  post "notices/delete/:notice_id" => "notices#delete" 
 
   get "users/index/:page" => "users#index"
   get "users/show/:user_id" => "users#show"

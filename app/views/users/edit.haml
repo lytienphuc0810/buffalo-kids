@@ -5,12 +5,6 @@
 	.clearboth
 	.form-content
 		.h1= "EDIT A USER"
-		-if @user.errors.any?
-			#error_explanation
-				%h2.errors= pluralize(@user.errors.count, "error") + " prohibited this user from being updated:"
-				%ul.errors
-					-@user.errors.full_messages.each do |msg|
-						%li.errors= msg
 		.form
 			= form_for :user, :url => "/users/update/#{@user.id}" do |f|
 				= f.label "Username"
@@ -28,3 +22,9 @@
 				= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
+		-if @user.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@user.errors.count, "error") + " prohibited this user from being updated:"
+				%ul.errors
+					-@user.errors.full_messages.each do |msg|
+						%li.errors= msg
