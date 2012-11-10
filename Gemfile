@@ -17,8 +17,8 @@ gem 'devise', '2.1.2'
 gem 'jquery-rails', '2.1.2'
 gem 'will_paginate', '~> 3.0'
 gem 'rails-i18n'
+gem 'sunspot_rails'
 gem 'sunspot_solr'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
