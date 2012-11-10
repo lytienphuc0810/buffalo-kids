@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
 	has_many :book_reservations
 	has_many :photo_registrations
 	has_many :book_instances, :through => :book_reservations
+	has_many :book_instances, :through => :photo_registrations
 	has_many :books, :through => :book_instances
 	has_many :notices
 	self.per_page = 12
