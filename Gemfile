@@ -11,7 +11,7 @@ end
 group :production do
   gem 'pg'
 end
-  
+
 gem 'haml', '3.1.7'
 gem 'devise', '2.1.2'
 gem 'jquery-rails', '2.1.2'
