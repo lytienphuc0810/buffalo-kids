@@ -47,10 +47,6 @@ class User < ActiveRecord::Base
 		end		
 	end
 	 
-  searchable do
-    text :username
-  end
-	
 	private
 	  def default_role
 	    self.role = USER if self.role.blank?

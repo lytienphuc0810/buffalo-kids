@@ -235,12 +235,12 @@
   <!-- copyField commands copy one field to another at the time a document
         is added to the index.  It's used either to index the same field differently,
         or to add multiple fields to the same field for easier/faster searching.  -->
-  <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="10" side="front"/>
+     <!-- *** This fieldType is used by Sunspot! *** -->
   <fieldType class="solr.TextField" name="text_pre" positionIncrementGap="100">
     <analyzer type="index">
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
       <filter class="solr.LowerCaseFilterFactory"/>
-      <filter class="solr.EdgeNGramFilterFactory"/>
+      <filter class="solr.NGramFilterFactory"/>
     </analyzer>
     <analyzer type="query">
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>

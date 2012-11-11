@@ -64,9 +64,11 @@ GEM
     factory_girl_rails (4.0.0)
       factory_girl (~> 4.0.0)
       railties (>= 3.0.0)
+    fattr (2.2.1)
     ffi (1.1.5)
     ffi (1.1.5-x86-mingw32)
     haml (3.1.7)
+    highline (1.6.15)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -86,11 +88,16 @@ GEM
     mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
+    options (2.3.0)
+      fattr
     orm_adapter (0.4.0)
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
+    progress_bar (0.4.0)
+      highline (~> 1.6.1)
+      options (~> 2.3.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -186,6 +193,7 @@ DEPENDENCIES
   jquery-rails (= 2.1.2)
   mysql2
   pg
+  progress_bar
   rails (= 3.2.8)
   rails-i18n
   rspec (= 2.11.0)
