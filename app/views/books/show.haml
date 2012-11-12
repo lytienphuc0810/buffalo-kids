@@ -10,8 +10,8 @@
 		.h2= @book.book_code
 		.h2= @book.description
 		.h2= @book.author
-		.h2.link= link_to "List all instances of this boook", "/book_instances/index/#{@book.id}/1"
-		.h2.link= link_to "Add an instances to this boook", "/book_instances/new/#{@book.id}"
+		.h2.link= link_to "List all instances of this book", "/book_instances/index/#{@book.id}/1"
+		.h2.link= link_to "Add an instances to this book", "/book_instances/new/#{@book.id}"
 		.h2.link= link_to "Edit", "/books/edit/#{@book.id}"
 		.h2.link= link_to "Delete", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		.h2.link= link_to "Reservations", ""

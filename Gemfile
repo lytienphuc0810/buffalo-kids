@@ -8,9 +8,9 @@ group :development, :test do
   gem 'mysql2'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
 
 gem 'haml', '3.1.7'
 gem 'devise', '2.1.2'

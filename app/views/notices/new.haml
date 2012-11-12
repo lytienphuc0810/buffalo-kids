@@ -1,5 +1,24 @@
-<h2>CREATE</h2>
-<p>Title</p>
-<input type="text">
-<p>Content</p>
-<input type="text">
+.big-content	
+	.header-link.left.active= link_to "CREATE", "/notices/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "NOTICES", "/notices/index/1"
+	.clearboth
+	.form-content
+		.h1= "CREATE A NEW NOTICE"
+		.form
+			= form_for :notice, :url => "/notices/create" do |f|
+				= f.label "Title"
+				= f.text_field :title, :id => "title", :placeholder => "Input notice title", :autocomplete => "off"
+				.clearboth
+				= f.label "Content"
+				= f.text_area :content, :id => "content", :placeholder => "Input notice content", :autocomplete => "off"
+				.clearboth
+				= f.submit "Create", :id => "submit_btn", :class => "submit_btn"
+				.clearboth
+				.right.error
+		-if @notice.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@notice.errors.count, "error") + " prohibited this notice from being saved:"
+				%ul.errors
+					-@notice.errors.full_messages.each do |msg|
+						%li.errors= msg
