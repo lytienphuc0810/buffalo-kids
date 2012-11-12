@@ -24,6 +24,9 @@ book7 = Book.create(:title => "Book7", :book_code => "1235", :image_url => "http
 book8 = Book.create(:title => "Book8", :book_code => "125", :image_url => "http://bks0.books.google.com.vn/books?id=hwpqHb5NBSoC&printsec=frontcover&img=1&zoom=1&source=gbs_api")
 book9 = Book.create(:title => "Book9", :book_code => "12456", :image_url => "http://vig-fp.prenhall.com/bigcovers/0131593188.jpg")
 
+for i in 10..100 do
+	Book.create(:title => "Book#{i}", :book_code => "1234#{i}")
+end
 
 book_ins1 = BookInstance.create(:book_instance_code => "QCS1")
 book_ins2 = BookInstance.create(:book_instance_code => "CDD1")

@@ -2,6 +2,8 @@
 	.header-link.left.active= link_to "BOOKS", "/photo_registrations/home/1"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
+	.right
+		= render "shared/search_form_registration"
 	.clearboth
 	- i = 0
 	- @books.each do |book|
@@ -9,14 +11,14 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= book.title
+				.h1= book.title.upcase
 				.h2= book.book_code
 				.h2= book.description
 				.h2= book.author
 				.h2= book.release_date
 				.h2= book.rating
-				.h2= link_to "Regist it", "/photo_registrations/new/#{book.id}", :method => "post"
-		- if(i%3 == 0)
+				.h2.link= link_to "Regist it", "/photo_registrations/new/#{book.id}", :method => "post"
+		- if(i % 3 == 0)
 			.clearboth
 	.clearboth
 	.paginate.right= will_paginate @books

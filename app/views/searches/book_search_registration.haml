@@ -1,7 +1,7 @@
 .big-content
 	.search-title.left.active= "BOOKS SEARCH RESULTS"
 	.right
-		= render "shared/search_form_reservation"
+		= render "shared/search_form_registration"
 	.clearboth
 	- i = 0
 	- @books.each do |book|
@@ -15,9 +15,8 @@
 				.h2= book.author
 				.h2= book.release_date
 				.h2= book.rating
-				.h2.link= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
+				.h2.link= link_to "Regist it", "/photo_registrations/new/#{book.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth
 	.paginate.right= will_paginate @books
-	

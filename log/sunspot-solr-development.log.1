@@ -268,3 +268,9 @@ Nov 13, 2012 3:22:11 AM org.apache.solr.core.SolrCore execute
 INFO: [] webapp=/solr path=/select params={fl=*+score&start=0&q=blabla&qf=title_text+book_code_text+description_text+author_text+category_text+rating_text&wt=ruby&fq=type:Book&defType=dismax&rows=30} hits=0 status=0 QTime=3 
 Nov 13, 2012 3:22:15 AM org.apache.solr.core.SolrCore execute
 INFO: [] webapp=/solr path=/select params={fl=*+score&start=0&q=book1&qf=title_text+book_code_text+description_text+author_text+category_text+rating_text&wt=ruby&fq=type:Book&defType=dismax&rows=30} hits=1 status=0 QTime=3 
+Nov 13, 2012 3:54:18 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={fl=*+score&start=0&q=123&qf=title_text+book_code_text+description_text+author_text+category_text+rating_text&wt=ruby&fq=type:Book&defType=dismax&rows=30} hits=1 status=0 QTime=4 
+Nov 13, 2012 3:55:30 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={fl=*+score&start=0&q=123\&qf=title_text+book_code_text+description_text+author_text+category_text+rating_text&wt=ruby&fq=type:Book&defType=dismax&rows=30} hits=1 status=0 QTime=3 
+Nov 13, 2012 3:59:06 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={fl=*+score&start=0&q=123&qf=title_text+book_code_text+description_text+author_text+category_text+rating_text&wt=ruby&fq=type:Book&defType=dismax&rows=30} hits=1 status=0 QTime=1 
