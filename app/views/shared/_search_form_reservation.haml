@@ -1,0 +1,4 @@
+.search_form
+= form_tag("/search/book_search_reservation/1", :method => "get") do
+	= text_field_tag "param", "", :maxlength => 10
+	= submit_tag "SEARCH"

@@ -1,0 +1,24 @@
+.big-content
+	.header-link.left.active= "BOOKS SEARCH"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "RESERVATIONS", "/book_reservations/index/1"
+	.clearboth
+	- i = 0
+	- @books.each do |book|
+		- i = i + 1
+		.small-content.left
+			.img.left= image_tag book.image_url, :size => "60x60"
+			.text-content.left
+				.h1= book.title.upcase
+				.h2= book.book_code
+				.h2= book.description
+				.h2= book.author
+				.h2= book.release_date
+				.h2= book.rating
+				.h2.link= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
+		- if(i % 3 == 0)
+			.clearboth
+	.clearboth
+	.left= render "shared/search_form_reservation"
+	.paginate.right= will_paginate @books
+	

@@ -16,6 +16,20 @@ class Book < ActiveRecord::Base
 	has_many :photo_registrations, :through => :book_instances
 
 	self.per_page = 12
+
+	searchable do
+		text :title
+		text :book_code
+		text :description
+		text :author
+		text :category
+		text :rating
+	end
+
+	def self.book_search parameter
+		Book.search{ fulltext parameter }.results
+	end
+
 	def free_instance_to_get
 		result = nil
 		self.book_instances.each do |book_inst|
