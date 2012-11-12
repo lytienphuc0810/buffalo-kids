@@ -2,6 +2,8 @@
 	.header-link.left.active= link_to "BOOKS", "/book_reservations/home/1"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "RESERVATIONS", "/book_reservations/index/1"
+	.right
+		= render "shared/search_form_reservation"
 	.clearboth
 	- i = 0
 	- @books.each do |book|
@@ -19,5 +21,4 @@
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth
-	.left= render "shared/search_form_reservation"
 	.paginate.right= will_paginate @books
