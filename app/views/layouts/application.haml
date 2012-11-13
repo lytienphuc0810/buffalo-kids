@@ -31,11 +31,13 @@
 								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/books/index/1"
 								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
 							- if current_user.admin?
+
 								#menu-link.left= link_to "#{t 'welcome.Tab.u'}", "/users/index/1"
 								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/books/index/1"
 								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
 						#menu-link.left= link_to "#{t 'welcome.Tab.f'}", "/faq"
 						#menu-link.left= link_to "#{t 'welcome.Tab.c'}", ""
+
 			#main{:class => controller_name}
 				/ .interesting-stuff
 				.container
