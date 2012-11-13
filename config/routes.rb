@@ -45,12 +45,13 @@ BuffaloKids::Application.routes.draw do
   post "book_instances/update/:book_instance_id" => "book_instances#update"
   post "book_instances/delete/:book_instance_id" => "book_instances#delete"
 
-  get "faq" => "etcs#faq"
-
   get "/searches/book_search_reservation/:page" => "searches#book_search_reservation"
   get "/searches/book_search_registration/:page" => "searches#book_search_registration"
   get "/searches/book_search/:page" => "searches#book_search"
   get "/searches/user_search/:page" => "searches#user_search"
+  
+  get "faq" => "etcs#faq"
+  get "contact" => "etcs#contact"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
