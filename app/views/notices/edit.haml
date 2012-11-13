@@ -1,19 +1,19 @@
 .big-content	
-	.header-link.left.active= link_to "EDIT", "/notices/edit/#{@notice.id}"
+	.header-link.left.active= link_to "#{t 'welcome.admin.header_link.edit'}", "/notices/edit/#{@notice.id}"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "NOTICES", "/notices/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.notices'}", "/notices/index/1"
 	.clearboth
 	.form-content
-		.h1= "EDIT #{@notice.title.upcase}"
+		.h1= "#{t 'welcome.admin.header_link.edit'} #{@notice.title.upcase}"
 		.form
 			= form_for :notice, :url => "/notices/update/#{@notice.id}" do |f|
-				= f.label "Title"
+				= f.label "#{t 'welcome.admin.book_form.title'}"
 				= f.text_field :title, :id => "title", :placeholder => "Input notice title", :autocomplete => "off"
 				.clearboth
-				= f.label "Content"
+				= f.label "#{t 'welcome.admin.book_form.content'}"
 				= f.text_area :content, :id => "content", :placeholder => "Input notice content", :autocomplete => "off"
 				.clearboth
-				= f.submit "Update", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "#{t 'welcome.admin.book_form.edit_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @notice.errors.any?

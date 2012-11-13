@@ -1,7 +1,7 @@
 .big-content
-  .header-link.left.inactive= link_to "CREATE", "/users/new"
+  .header-link.left.inactive= link_to "#{t'welcome.admin.header_link.create'}", "/users/new"
   .divider.left= "|"
-  .header-link.left.active= link_to "USERS", "/users/index/1"
+  .header-link.left.active= link_to "#{t'welcome.admin.header_link.users'}", "/users/index/1"
   .clearboth
   - @users.each do |user|
     .small-content.left

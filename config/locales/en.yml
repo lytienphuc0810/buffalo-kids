@@ -57,115 +57,118 @@ en:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
 
-  big_header: HCMUT LIBRARY
+  big_header: THƯ VIỆN ĐH BÁCH KHOA
 
   pre_welcome:
-    title:
-      signin: SIGN IN
-      signup: SIGN UP
-      forgot_password: FORGOT YOUR PASSWORD?
-      resend_email: RESEND CONFIRMATION EMAIL
-    form:
-      username: Username
-      email: Email
-      password: Password
-      confirm_password: Re-enter password
-      remember: Remember me
-    link:
-      signup: Sign up
-      forgot_password: Forgot password?
-      signin: Sign in
-      resend_email: Resend confirmation email
-    button:
-      signin: Sign in
-      signup: Sign up
-      submit: Submit
+      title:
+        signin: ĐĂNG NHẬP
+        signup: ĐĂNG KÝ
+        forgot_password: QUÊN MẬT KHẨU?
+        resend_email: GỬI LẠI EMAIL XÁC NHẬN
+      form:
+        username: Tên đăng nhập
+        email: Email
+        password: Mật khẩu
+        confirm_password: Đánh lại password
+        remember: Ghi nhớ tôi
+      link:
+        signup: Đăng ký
+        forgot_password: Quên mật khẩu?
+        signin: Đăng nhập
+        resend_email: Gửi lại email xác nhận
+      button:
+        signin: Đăng nhập
+        signup: Đăng ký
+        submit: Nộp
 
   welcome:
-    Tab:
-      b: BOOKS
-      p: PHOTO
-      n: NOTICES
-      f: FAQ
-      c: CONTACT
-      u: USERS
-    topleft_corner:
-      welcome: welcome
-      signout: Sign out
-    user:
-      header_link:
-        books: BOOKS
-        reservations: RESERVATIONS
-        photo_regis: PHOTO REGISTRATIONS
-      link:
-        regis: Regist it
-        delete: Delete it
-        regist: Regist it
-        reserve: Reserve it
-    admin:
-      header_link:
-        create: CREATE
-        user: USER
-        users: USERS
-        books: BOOKS
-        edit: EDIT
-        reservations: RESERVATIONS
-        photo_regis: PHOTO REGISTRATIONS
-        notice: NOTICE
-        notices: NOTICES
-      user_form:
-        create_header: CREATE A NEW USER
-        edit_header: EDIT A USER
-        username: Username
-        password: Password
-        confirm_password: Confirm Password
-        email: Email
-        role: Role
-        create_button: Create User
-        edit_button: Update User
-      book_form:
-        create_header: CREATE A NEW BOOK
-        edit_header: EDIT
-        instance_header: CREATE A NEW BOOK INSTANCE
-        title: Title
-        code: Book code
-        author: Author
-        image: Image url
-        description: Description
-        create_button: Create
-        edit_button: Update
-      link:
-        edit: Edit
-        delete: Delete
-        reserve: Reservations
-        photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
-    librarian:
-      header_link:
-        books: BOOKS
-        create: CREATE
-        edit: EDIT
-        instances: INSTANCES
-        new_instance: NEW INSTANCE
-        edit_instance: EDIT INSTANCE
-      link:
-        edit: Edit
-        delete: Delete
-        reserve: Reservations
-        photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
-      book_form:
-        create_header: CREATE A NEW BOOK
-        edit_header: EDIT
-        instance_create_header: CREATE A NEW BOOK INSTANCE
-        instance_edit_header: EDIT A BOOK INSTANCE
-        title: Title
-        code: Book code
-        author: Author
-        image: Image url
-        description: Description
-        create_button: Create
-        edit_button: Update
-        submit_button: Submit
+      Tab:
+        b: SÁCH
+        p: PHOTO
+        n: THÔNG BÁO
+        f: HỎI ĐÁP
+        c: LIÊN HỆ
+        u: NGƯỜI DÙNG
+      topleft_corner:
+        welcome: Chào mừng
+        signout: Đăng xuất
+      user:
+        header_link:
+          books: SÁCH
+          reservations: ĐẶT SÁCH
+          photo_regis: ĐĂNG KÝ PHOTO
+        link:
+          regis: Đăng ký
+          delete:  Xóa sách
+          reserve: Đặt sách
+      admin:
+        header_link:
+          create: TẠO MỚI
+          user: NGƯỜI DÙNG
+          users: CÁC NGƯỜI DÙNG
+          books: SÁCH
+          edit: CHỈNH SỬA
+          reservations: ĐẶT SÁCH
+          photo_regis: ĐĂNG KÝ PHOTO
+          notice: THÔNG BÁO
+          notices: CÁC THÔNG BÁO
+        user_form:
+          create_header: TẠO MỘT NGƯỜI DÙNG MỚI
+          edit_header: CHỈNH SỬA MỘT NGƯỜI DÙNG
+          username: Tên đăng nhập
+          password: Password
+          confirm_password: Xác nhận Password
+          email: Email
+          role: Vai trò
+          create_button: Tạo người dùng
+          edit_button: Chỉnh sửa người dùng
+        book_form:
+          create_header: TẠO MỘT SÁCH MỚI
+          edit_header: CHỈNH SỬA
+          instance_header: TẠO MỘT INSTANCE SÁCH MỚI
+          notice_header: TẠO MỘT THÔNG BÁO MỚI
+          title: Tựa đề
+          code: Mã sách
+          author: Tác giả
+          image: Link của hình
+          description: Mô tả
+          content: Nội dung
+          create_button: Tạo
+          edit_button: Chỉnh sửa
+        link:
+          edit: Chỉnh sửa
+          delete: Xóa
+          reserve: Đặt sách
+          photo_regis: Đăng ký photo
+          list_instances: Liệt kê tất cả instances của sách này
+          add_instance: Thêm một instance vào sách này
+      librarian:
+        header_link:
+          books: SÁCH
+          create: TẠO MỚI
+          edit: CHỈNH SỬA
+          instances: INSTANCES
+          new_instance: INSTANCE MỚI
+          edit_instance: CHỈNH SỬA INSTANCE
+        link:
+          edit: Chỉnh sửa
+          delete: Xóa
+          reserve: Đặt sách
+          photo_regis: Đăng ký photo
+          list_instances: Liệt kê tất cả instances của sách này
+          add_instance: Thêm một instance vào sách này
+        book_form:
+          create_header: TẠO MỘT SÁCH MỚI
+          edit_header: CHỈNH SỬA
+          instance_create_header: TẠO MỘT INSTANCE SÁCH MỚI
+          instance_edit_header: CHỈNH SỬA MỘT INSTANCE SÁCH
+          title: Tựa đề
+          code: Mã sách
+          author: Tác giả
+          image: Link hình
+          description: Mô tả
+          create_button: Tạo
+          edit_button: Chỉnh sửa
+          submit_button: Nộp
+
+  
