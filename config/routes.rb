@@ -1,5 +1,4 @@
 BuffaloKids::Application.routes.draw do
-  devise_for :users
   get "books/index" => "books#index"
   
   post "book_reservations/new/:book_id" => "book_reservations#new"
@@ -24,6 +23,11 @@ BuffaloKids::Application.routes.draw do
 
   get "notices/index/:page" => "notices#index"
   get "notices/show/:notice_id" => "notices#show"
+  get "notices/new" => "notices#new"
+  get "notices/edit/:notice_id" => "notices#edit"  
+  post "notices/create/" => "notices#create"
+  post "notices/update/:notice_id" => "notices#update"
+  post "notices/delete/:notice_id" => "notices#delete" 
 
   get "users/index/:page" => "users#index"
   get "users/show/:user_id" => "users#show"
@@ -41,6 +45,7 @@ BuffaloKids::Application.routes.draw do
   post "book_instances/update/:book_instance_id" => "book_instances#update"
   post "book_instances/delete/:book_instance_id" => "book_instances#delete"
 
+  get "faq" => "etcs#faq"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -47,8 +47,8 @@
 
 		.h1 {
 			font-size: 20px;
-			font-weight: thinner;
-			color:	green;
+			font-weight: bold;
+			//color:	green;
 		}
 
 		#error_explanation {
@@ -69,7 +69,7 @@
 			margin-top: 10px;
 			margin-right: 20px;
 			float: left;
-			color: green;
+			//color: green;
 		}
 
 		#book_description {
@@ -81,24 +81,23 @@
   	input, #book_description {
 		 	float: right;
 		 	margin-top: 8px;
-			background-color : lightyellow;
-			border: 1px solid #008000;
+			//background-color : lightyellow;
+			//border: 1px solid #008000;
 			width: 230px;
 		}
 
   	select, #book_description {
 		 	float: right;
 		 	margin-top: 8px;
-			background-color : lightyellow;
-			border: 1px solid #008000;
-			width: 230px;
+			//background-color : lightyellow;
+			//border: 1px solid #008000;
+			width: 235px;
 		}
 
 		.submit_btn {
 			float: right;
 			margin-top: 10px;
-			background-color : green;
-			border: 1px solid #008000;
+			//border: 1px solid #008000;
 			width: auto;
 		}
 	}

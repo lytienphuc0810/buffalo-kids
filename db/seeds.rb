@@ -25,18 +25,18 @@ book8 = Book.create(:title => "Book8", :book_code => "125", :image_url => "http:
 book9 = Book.create(:title => "Book9", :book_code => "12456", :image_url => "http://vig-fp.prenhall.com/bigcovers/0131593188.jpg")
 
 
-book_ins1 = BookInstance.create()
-book_ins2 = BookInstance.create()
-book_ins3 = BookInstance.create()
-book_ins4 = BookInstance.create()
-book_ins5 = BookInstance.create()
-book_ins6 = BookInstance.create()
-book_ins7 = BookInstance.create()
-book_ins8 = BookInstance.create()
-book_ins9 = BookInstance.create()
-book_ins10 = BookInstance.create()
-book_ins11 = BookInstance.create()
-book_ins12 = BookInstance.create()
+book_ins1 = BookInstance.create(:book_instance_code => "QCS1")
+book_ins2 = BookInstance.create(:book_instance_code => "CDD1")
+book_ins3 = BookInstance.create(:book_instance_code => "SWE1")
+book_ins4 = BookInstance.create(:book_instance_code => "SDW2")
+book_ins5 = BookInstance.create(:book_instance_code => "GFS3")
+book_ins6 = BookInstance.create(:book_instance_code => "SAD2")
+book_ins7 = BookInstance.create(:book_instance_code => "VBF2")
+book_ins8 = BookInstance.create(:book_instance_code => "SAE1")
+book_ins9 = BookInstance.create(:book_instance_code => "ASD2")
+book_ins10 = BookInstance.create(:book_instance_code => "ASD3")
+book_ins11 = BookInstance.create(:book_instance_code => "ASD6")
+book_ins12 = BookInstance.create(:book_instance_code => "ASD7")
 
 notice1 = Notice.create(:title => "Notice", :content => "Dang ky lam the thu vien")
 notice2 = Notice.create(:title => "Notice", :content => "Thong bao nghi")
@@ -88,7 +88,6 @@ user4.photo_registrations = [photo_regist5, photo_regist6]
 user5.photo_registrations = [photo_regist7]
 user6.photo_registrations = [photo_regist8, photo_regist9]
 user7.photo_registrations = [photo_regist10]
-
 
 book_reserve1.book_instance = book_ins7
 book_reserve2.book_instance = book_ins8

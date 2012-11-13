@@ -1,8 +1,12 @@
 .big-content
-	.header-link.left.active= link_to "NOTICES", "/notices/index/1"
+	.header-link.left.inactive= link_to "CREATE", "/notices/new"
 	.divider.left= "|"
-	.header-link.left.active= link_to @notice.title.upcase, "/notices/show/#{@notice.id}"
+	.header-link.left.inactive= link_to "NOTICES", "/notices/index/1"
+	.divider.left= "|"
+	.header-link.left.active= link_to "#{@notice.title.truncate(20).upcase}", "/notices/show/#{@notice.id}"
 	.clearboth
 	.content
 		.h1= @notice.title
 		.h2= @notice.content
+		.h2.link= link_to "Edit", "/notices/edit/#{@notice.id}"
+		.h2.link= link_to "Delete", "/notices/delete/#{@notice.id}", :method => "post", :data => {:confirm => "Are you sure?"}

@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "book_instances", :force => true do |t|
     t.string   "book_instance_code"
-    t.integer  "user_id"
     t.integer  "book_id"
     t.integer  "book_reservation_id"
     t.integer  "photo_registration_id"
@@ -87,4 +86,3 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
-
