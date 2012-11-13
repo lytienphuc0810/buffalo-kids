@@ -12,4 +12,11 @@ class SearchesController < ApplicationController
 			# error page
 		end
 	end
+
+	def book_search
+		@books = Book.search{ fulltext params[:param] }.results.paginate(:page => params[:page], :per_page => 12)
+		if @books.empty?
+			# error page
+		end
+	end
 end

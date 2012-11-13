@@ -2,6 +2,8 @@
   .header-link.left.inactive= link_to "CREATE", "/books/new"
   .divider.left= "|"
   .header-link.left.active= link_to "BOOKS", "/books/index/1"
+  .right
+    = render "shared/search_form_book"
   .clearboth
   - @books.each do |book|
     .small-content.left
