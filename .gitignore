@@ -16,4 +16,5 @@
 
 /config/database.yml
 /.idea
-/solr
+/solr/
+/solr/data/development
