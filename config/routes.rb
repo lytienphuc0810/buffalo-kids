@@ -41,6 +41,7 @@ BuffaloKids::Application.routes.draw do
   post "book_instances/delete/:book_instance_id" => "book_instances#delete"
 
   get "faq" => "etcs#faq"
+  get "contact" => "contact#ct"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
