@@ -2,7 +2,8 @@ class EtcsController < ApplicationController
 	def faq 
 		
 	end
-	def contact 
+
+	def contact
 		
 	end
 end

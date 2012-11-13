@@ -11,10 +11,9 @@
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log
+/log/
 /tmp
 
 /config/database.yml
 /.idea
-/solr/
-/solr/data/development
+/solr
