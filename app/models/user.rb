@@ -25,6 +25,12 @@ class User < ActiveRecord::Base
 	has_many :notices
 	self.per_page = 12
 
+	searchable do
+		text :email
+		text :username
+		text :role
+	end
+
 	ROLES = [
 		ADMIN = "admin",
 		LIBRARIAN = "librarian",

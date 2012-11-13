@@ -50,6 +50,7 @@ BuffaloKids::Application.routes.draw do
   get "/searches/book_search_reservation/:page" => "searches#book_search_reservation"
   get "/searches/book_search_registration/:page" => "searches#book_search_registration"
   get "/searches/book_search/:page" => "searches#book_search"
+  get "/searches/user_search/:page" => "searches#user_search"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

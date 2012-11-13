@@ -19,4 +19,11 @@ class SearchesController < ApplicationController
 			# error page
 		end
 	end
+
+	def user_search
+		@users = User.search{ fulltext params[:param] }.results.paginate(:page => params[:page], :per_page => 12)
+		if @users.empty?
+			# error page
+		end
+	end
 end
