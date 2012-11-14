@@ -23,6 +23,9 @@ book6 = Book.create(:title => "Book6", :book_code => "123", :image_url => "http:
 book7 = Book.create(:title => "Book7", :book_code => "1235", :image_url => "http://ecx.images-amazon.com/images/I/5149oJpa-zL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg")
 book8 = Book.create(:title => "Book8", :book_code => "125", :image_url => "http://bks0.books.google.com.vn/books?id=hwpqHb5NBSoC&printsec=frontcover&img=1&zoom=1&source=gbs_api")
 book9 = Book.create(:title => "Book9", :book_code => "12456", :image_url => "http://vig-fp.prenhall.com/bigcovers/0131593188.jpg")
+book10 = Book.create(:title => "Book10", :book_code => "125", :image_url => "http://bks3.books.google.com.vn/books?id=_1otcB06lWYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+book11 = Book.create(:title => "Book11", :book_code => "15", :image_url => "http://bks4.books.google.com.vn/books?id=SoOvFjTXwA4C&printsec=frontcover&img=1&zoom=1&source=gbs_api")
+book12 = Book.create(:title => "Book12", :book_code => "124567", :image_url => "http://bks8.books.google.com.vn/books?id=oMYQz4_BW48C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
 
 
 book_ins1 = BookInstance.create(:book_instance_code => "QCS1")
@@ -37,17 +40,29 @@ book_ins9 = BookInstance.create(:book_instance_code => "ASD2")
 book_ins10 = BookInstance.create(:book_instance_code => "ASD3")
 book_ins11 = BookInstance.create(:book_instance_code => "ASD6")
 book_ins12 = BookInstance.create(:book_instance_code => "ASD7")
+book_ins13 = BookInstance.create(:book_instance_code => "QCS2")
+book_ins14 = BookInstance.create(:book_instance_code => "CDD2")
+book_ins15 = BookInstance.create(:book_instance_code => "SWE2")
+book_ins16 = BookInstance.create(:book_instance_code => "SDW3")
+book_ins17 = BookInstance.create(:book_instance_code => "GFS4")
+book_ins18 = BookInstance.create(:book_instance_code => "SAD5")
+book_ins19 = BookInstance.create(:book_instance_code => "VBF6")
+book_ins20 = BookInstance.create(:book_instance_code => "SAE2")
+book_ins21 = BookInstance.create(:book_instance_code => "ASD3")
+book_ins22 = BookInstance.create(:book_instance_code => "ASD4")
+book_ins23 = BookInstance.create(:book_instance_code => "ASD7")
+book_ins24 = BookInstance.create(:book_instance_code => "ASD9")
 
-notice1 = Notice.create(:title => "Notice", :content => "Dang ky lam the thu vien")
-notice2 = Notice.create(:title => "Notice", :content => "Thong bao nghi")
-notice3 = Notice.create(:title => "Notice", :content => "Quy dinh moi")
-notice4 = Notice.create(:title => "Notice", :content => "Gia han tra sach")
-notice5 = Notice.create(:title => "Notice", :content => "Danh sach sinh vien chua tra sach")
-notice6 = Notice.create(:title => "Notice", :content => "Hoi thi tuyen truyen gioi thieu sach")
-notice7 = Notice.create(:title => "Notice", :content => "Tuyen nhan su")
-notice8 = Notice.create(:title => "Notice", :content => "Thong bao bo sung tai lieu tham khao")
-notice9 = Notice.create(:title => "Notice", :content => "Thong bao thoi gian phuc vu cua thu vien")
-notice10 = Notice.create(:title => "Notice", :content => "Mo lop huong dan tim tai lieu tren internet")
+notice1 = Notice.create(:title => "Notice", :content => "THÔNG BÁO (Tuyển dụng viên chức): Thư viện thông báo tuyển dụng viên chức sự nghiệp năm 2012:")
+notice2 = Notice.create(:title => "Notice", :content => "THƯ VIỆN TỔNG HỢP PHỐI HỢP VỚI PHÒNG GIÁO DỤC THÀNH PHỐ TỔ CHỨC HỘI THI TUYÊN TRUYỀN GIỚI THIỆU SÁCH CHÚNG EM VỚI DI SẢN VĂN HÓA HUẾ")
+notice3 = Notice.create(:title => "Notice", :content => "Thông báo của Thư viện về các nguồn thông tin khoa học của Viện KHXH Việt nam sẵn sàng phục vụ tra cứu trực tuyến")
+notice4 = Notice.create(:title => "Notice", :content => "Thông báo làm thẻ thư viện năm học 2012-2013: Hạn cuối để đăng ký làm thẻ Thư viện theo lớp là ngày 30/11/2012 (Thứ Sáu).")
+notice5 = Notice.create(:title => "Notice", :content => "Thông báo danh sách sinh viên chưa trả sách")
+notice6 = Notice.create(:title => "Notice", :content => "Thông báo tổ chức bán sách giảm giá của công ty FAHASA")
+notice7 = Notice.create(:title => "Notice", :content => "Quy định nội dung và hình thức đề cương luận văn / luận án sau đại học")
+notice8 = Notice.create(:title => "Notice", :content => "Thông báo bổ sung tài liệu tham khảo tại Thư viện năm học 2012-2013")
+notice9 = Notice.create(:title => "Notice", :content => "Thông báo cung cấp tài khoản dùng thử Cơ sở dữ liệu tạp chí điện tử của NXB InformaHealthCare")
+notice10 = Notice.create(:title => "Notice", :content => "Thông báo về việc thay đổi tài khoản dùng thử CSDL sách điện tử MyiLibrary")
 
 book_reserve1 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 1)
 book_reserve2 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 2)
@@ -103,9 +118,18 @@ photo_regist4.book_instance = book_ins4
 photo_regist5.book_instance = book_ins5
 photo_regist6.book_instance = book_ins6
 
-book1.book_instances = [book_ins1, book_ins2, book_ins7, book_ins8]
-book2.book_instances = [book_ins3, book_ins4, book_ins9, book_ins10]
-book3.book_instances = [book_ins5, book_ins6, book_ins11, book_ins12]
+book1.book_instances = [book_ins1, book_ins2]
+book2.book_instances = [book_ins3, book_ins4]
+book3.book_instances = [book_ins5, book_ins6]
+book1.book_instances = [book_ins7, book_ins8]
+book2.book_instances = [book_ins9, book_ins10]
+book3.book_instances = [book_ins11, book_ins12]
+book1.book_instances = [book_ins13, book_ins14]
+book2.book_instances = [book_ins15, book_ins16]
+book3.book_instances = [book_in17, book_ins18]
+book1.book_instances = [book_ins19, book_ins20]
+book2.book_instances = [book_ins21, book_ins22]
+book3.book_instances = [book_ins23, book_ins24]
 
 user1.notices = [notice1, notice2]
 user2.notices = [notice3]
