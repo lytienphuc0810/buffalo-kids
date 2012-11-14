@@ -1,19 +1,19 @@
 .big-content	
-	.header-link.left.inactive= link_to "CREATE", "/books/new"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.create'}", "/books/new"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "#{@book_instance.book.title.truncate(20).upcase}", "/books/show/#{@book_instance.book.id}"
 	.divider.left= "|"
-	.header-link.left.active= link_to "EDIT INSTANCE", "/book_instances/edit/#{@book_instance.id}"
+	.header-link.left.active= link_to "#{t 'welcome.librarian.header_link.edit_instance'}", "/book_instances/edit/#{@book_instance.id}"
 	.clearboth
 	.form-content
-		.h1= "EDIT A BOOK INSTANCE"
+		.h1= "#{t 'welcome.librarian.book_form.instance_edit_header'}"
 		.form
 			= form_for :book_instance, :url => "/book_instances/update/#{@book_instance.id}" do |f|
-				= f.label "Book code"
+				= f.label "#{t 'welcome.librarian.book_form.code'}"
 				= f.text_field :book_instance_code, :id => "book_instance_code", :placeholder => "Input book instance code"
 				.clearboth
-				= f.submit "Submit", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "#{t 'welcome.librarian.book_form.submit_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error

@@ -1,25 +1,25 @@
 .big-content	
-	.header-link.left.active= link_to "EDIT", "/users/edit/#{@user.id}"
+	.header-link.left.active= link_to "#{t 'welcome.admin.header_link.edit'}", "/users/edit/#{@user.id}"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "USER", "/users/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.user'}", "/users/index/1"
 	.clearboth
 	.form-content
-		.h1= "EDIT A USER"
+		.h1= "#{t'welcome.admin.user_form.edit_header'}"
 		.form
 			= form_for :user, :url => "/users/update/#{@user.id}" do |f|
-				= f.label "Username"
+				= f.label "#{t'welcome.admin.user_form.username'}"
 				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
 				.clearboth
 
-				= f.label "Email"
+				= f.label "#{t'welcome.admin.user_form.email'}"
 				= f.text_field :email, :id => "email", :placeholder => "Input email"
 				.clearboth
 
-				= f.label "Role"
+				= f.label "#{t'welcome.admin.user_form.role'}"
 				= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']], :id => "role"
 				.clearboth
 
-				= f.submit "Update User", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "#{t'welcome.admin.user_form.edit_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @user.errors.any?

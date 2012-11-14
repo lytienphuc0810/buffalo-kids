@@ -1,6 +1,7 @@
 !!!
 %html
 	%head
+		
 		%title Buffalo-Kids
 		= stylesheet_link_tag    "application", :media => "all"
 		= javascript_include_tag "application"
@@ -12,29 +13,29 @@
 					#header-theme
 						#login-info.right
 							- if current_user
-								= "Welcome #{current_user.username}"
+								= " #{t 'welcome.topleft_corner.welcome'} #{current_user.username}"
 								&nbsp | &nbsp
-								= link_to "Signout", destroy_user_session_path, :method => :delete
+								= link_to "#{t 'welcome.topleft_corner.signout'}", destroy_user_session_path, :method => :delete
 							- else
-								= link_to "Signin", new_user_session_path
+								= link_to "#{t 'pre_welcome.button.signin'}", new_user_session_path
 						#hcmut-logo.left= link_to image_tag("hcmut_logo.png", :size => "80x80"), "/"
-						#hcmut-name.left= "HCMUT LIBRARY"
+						#hcmut-name.left= t 'big_header'
 					.clearboth
 					#menu-bar
 						- if current_user
 							- if current_user.user?	
-								#menu-link.left= link_to "BOOKS", "/book_reservations/home/1"
-								#menu-link.left= link_to "PHOTO", "/photo_registrations/home/1"
-								#menu-link.left= link_to "NOTICES", "/notices/index/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/book_reservations/home/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.p'}", "/photo_registrations/home/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
 							- if current_user.librarian?
-								#menu-link.left= link_to "BOOKS", "/books/index/1"
-								#menu-link.left= link_to "NOTICES", "/notices/index/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/books/index/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
 							- if current_user.admin?
-								#menu-link.left= link_to "USERS", "/users/index/1"
-								#menu-link.left= link_to "BOOKS", "/books/index/1"
-								#menu-link.left= link_to "NOTICES", "/notices/index/1"
-						#menu-link.left= link_to "FAQ", "/faq"
-						#menu-link.left= link_to "CONTACT", "/contact"
+								#menu-link.left= link_to "#{t 'welcome.Tab.u'}", "/users/index/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/books/index/1"
+								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
+						#menu-link.left= link_to "#{t 'welcome.Tab.f'}", "/faq"
+						#menu-link.left= link_to "#{t 'welcome.Tab.c'}", ""
 			#main{:class => controller_name}
 				/ .interesting-stuff
 				.container

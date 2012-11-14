@@ -1,12 +1,12 @@
 .big-content
 	- if current_user.admin? || current_user.librarian?
-		.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+		.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.books'}", "/books/index/1"
 		.divider.left= "|"
-		.header-link.left.active= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1?book_id=#{@photo_registrations.first.book.id}"
+		.header-link.left.active= link_to "#{t 'welcome.user.header_link.photo_regis'}", "/photo_registrations/index/1?book_id=#{@photo_registrations.first.book.id}"
 	- else
-		.header-link.left.inactive= link_to "BOOKS", "/photo_registrations/home/1"
+		.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.books'}", "/photo_registrations/home/1"
 		.divider.left= "|"
-		.header-link.left.active= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
+		.header-link.left.active= link_to "#{t 'welcome.user.header_link.photo_regis'}", "/photo_registrations/index/1"
 	.clearboth
 	- i = 0
 	- @photo_registrations.each do |photo_registration|
@@ -20,7 +20,7 @@
 				.h2= book.description
 				.h2= book.author
 				.h2= photo_registration.finish_date.to_s
-				.h2.link= link_to "Delete it", "/photo_registrations/delete/#{photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+				.h2.link= link_to "#{t 'welcome.user.link.delete'}", "/photo_registrations/delete/#{photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		- if(i % 3 == 0)
 			.clearboth
 	.paginate.right= will_paginate @photo_registrations
