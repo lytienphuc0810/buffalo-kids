@@ -8,14 +8,22 @@ class EtcsController < ApplicationController
 	end
 
 	def set_en
-		current_user.locale = "en"
-		current_user.save
+		if current_user.nil?
+			session[:lang] = "en"
+		else	
+			current_user.locale = "en"
+			current_user.save
+		end
 		redirect_to "/"
 	end
 
 	def set_vi
-		current_user.locale = "vi"
-		current_user.save
+		if current_user.nil?
+			session[:lang] = "vi"
+		else	
+			current_user.locale = "vi"
+			current_user.save
+		end
 		redirect_to "/"
 	end
 end
