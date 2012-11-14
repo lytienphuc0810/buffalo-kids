@@ -1,28 +1,28 @@
 .big-content	
-	.header-link.left.active= link_to "EDIT", "/books/edit/#{@book.id}"
+	.header-link.left.active= link_to "#{t 'welcome.librarian.header_link.edit'}", "/books/edit/#{@book.id}"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"
 	.clearboth
 	.form-content
-		.h1= "EDIT #{@book.title.upcase}"
+		.h1= "#{t 'welcome.librarian.book_form.edit_header'} #{@book.title.upcase}"
 		.form
 			= form_for :book, :url => "/books/update/#{@book.id}" do |f|
-				= f.label "Title"
+				= f.label "#{t 'welcome.librarian.book_form.title'}"
 				= f.text_field :title, :id => "title", :placeholder => "Input book title", :autocomplete => "off"
 				.clearboth
-				= f.label "Book code"
+				= f.label "#{t 'welcome.librarian.book_form.code'}"
 				= f.text_field :book_code, :id => "book_code", :placeholder => "Input book code", :autocomplete => "off"
 				.clearboth
-				= f.label "Author"
+				= f.label "#{t 'welcome.librarian.book_form.author'}"
 				= f.text_field :author, :id => "book_author", :placeholder => "Input book desciption"
 				.clearboth
-				= f.label "Image_url"
+				= f.label "#{t 'welcome.librarian.book_form.image'}"
 				= f.text_field :image_url, :id => "image_url", :placeholder => "Input image url"
 				.clearboth
-				= f.label "Description"
+				= f.label "#{t 'welcome.librarian.book_form.description'}"
 				= f.text_area :description, :id => "book_description", :placeholder => "Input book desciption"
 				.clearboth
-				= f.submit "Update", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "#{t 'welcome.librarian.book_form.edit_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @book.errors.any?

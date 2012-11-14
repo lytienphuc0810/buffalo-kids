@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
     t.string   "unconfirmed_email"
     t.string   "username"
     t.string   "role"
+    t.string   "locale"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
   end

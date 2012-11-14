@@ -1,11 +1,11 @@
 .big-content
-	.header-link.left.inactive= link_to "CREATE", "/books/new"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.create'}", "/books/new"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "BOOKS", "/books/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
 	.divider.left= "|"
-	.header-link.left.active= link_to "INSTANCES", "/book_instances/index/#{@book.id}/1"
+	.header-link.left.active= link_to "#{t 'welcome.librarian.header_link.instances'}", "/book_instances/index/#{@book.id}/1"
 	.clearboth
 	- i = 0
 	- @book_instances.each do |book_instance|
@@ -15,8 +15,8 @@
 			.text-content.left
 				.h1.link= link_to "#{@book.title}", "/books/show/#{@book.id}"
 				.h2= book_instance.book_instance_code
-				.h2= link_to "Edit", "/book_instances/edit/#{book_instance.id}"
-				.h2= link_to "Delete", "/book_instances/delete/#{book_instance.id}", :method => "post"
+				.h2= link_to "#{t 'welcome.librarian.link.edit'}", "/book_instances/edit/#{book_instance.id}"
+				.h2= link_to "#{t 'welcome.librarian.link.delete'}", "/book_instances/delete/#{book_instance.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth

@@ -36,6 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       #User attributes
       t.string :username
       t.string :role
+      t.string :locale
 
       t.timestamps
     end
