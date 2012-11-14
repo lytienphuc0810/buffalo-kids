@@ -49,10 +49,10 @@ book_ins17 = BookInstance.create(:book_instance_code => "GFS4")
 book_ins18 = BookInstance.create(:book_instance_code => "SAD5")
 book_ins19 = BookInstance.create(:book_instance_code => "VBF6")
 book_ins20 = BookInstance.create(:book_instance_code => "SAE2")
-book_ins21 = BookInstance.create(:book_instance_code => "ASD3")
+book_ins21 = BookInstance.create(:book_instance_code => "ASD0")
 book_ins22 = BookInstance.create(:book_instance_code => "ASD4")
-book_ins23 = BookInstance.create(:book_instance_code => "ASD7")
-book_ins24 = BookInstance.create(:book_instance_code => "ASD9")
+book_ins23 = BookInstance.create(:book_instance_code => "ASDC")
+book_ins24 = BookInstance.create(:book_instance_code => "ASDH")
 
 notice1 = Notice.create(:title => "Notice", :content => "THÔNG BÁO (Tuyển dụng viên chức): Thư viện thông báo tuyển dụng viên chức sự nghiệp năm 2012:")
 notice2 = Notice.create(:title => "Notice", :content => "THƯ VIỆN TỔNG HỢP PHỐI HỢP VỚI PHÒNG GIÁO DỤC THÀNH PHỐ TỔ CHỨC HỘI THI TUYÊN TRUYỀN GIỚI THIỆU SÁCH CHÚNG EM VỚI DI SẢN VĂN HÓA HUẾ")
@@ -122,15 +122,15 @@ photo_regist6.book_instance = book_ins6
 book1.book_instances = [book_ins1, book_ins2]
 book2.book_instances = [book_ins3, book_ins4]
 book3.book_instances = [book_ins5, book_ins6]
-book1.book_instances = [book_ins7, book_ins8]
-book2.book_instances = [book_ins9, book_ins10]
-book3.book_instances = [book_ins11, book_ins12]
-book1.book_instances = [book_ins13, book_ins14]
-book2.book_instances = [book_ins15, book_ins16]
-book3.book_instances = [book_ins17, book_ins18]
-book1.book_instances = [book_ins19, book_ins20]
-book2.book_instances = [book_ins21, book_ins22]
-book3.book_instances = [book_ins23, book_ins24]
+book4.book_instances = [book_ins7, book_ins8]
+book5.book_instances = [book_ins9, book_ins10]
+book6.book_instances = [book_ins11, book_ins12]
+book7.book_instances = [book_ins13, book_ins14]
+book8.book_instances = [book_ins15, book_ins16]
+book9.book_instances = [book_ins17, book_ins18]
+book10.book_instances = [book_ins19, book_ins20]
+book11.book_instances = [book_ins21, book_ins22]
+book12.book_instances = [book_ins23, book_ins24]
 
 user1.notices = [notice1, notice2]
 user2.notices = [notice3]
