@@ -52,6 +52,9 @@ BuffaloKids::Application.routes.draw do
   
   get "faq" => "etcs#faq"
   get "contact" => "etcs#contact"
+  post "en" => "etcs#set_en"
+  post "vi" => "etcs#set_vi"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

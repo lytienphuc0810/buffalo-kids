@@ -1,7 +1,7 @@
 .big-content
-	.header-link.left.active= link_to "BOOKS", "/photo_registrations/home/1"
+	.header-link.left.active= link_to "#{t 'welcome.user.header_link.books'}", "/photo_registrations/home/1"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "PHOTO REGISTRATIONS", "/photo_registrations/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.photo_regis'}", "/photo_registrations/index/1"
 	.right
 		= render "shared/search_form_registration"
 	.clearboth
@@ -17,8 +17,8 @@
 				.h2= book.author
 				.h2= book.release_date
 				.h2= book.rating
-				.h2.link= link_to "Regist it", "/photo_registrations/new/#{book.id}", :method => "post"
-		- if(i % 3 == 0)
+				.h2= link_to "#{t 'welcome.user.link.regis'}", "/photo_registrations/new/#{book.id}", :method => "post"
+		- if(i%3 == 0)
 			.clearboth
 	.clearboth
 	.paginate.right= will_paginate @books

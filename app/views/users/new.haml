@@ -1,33 +1,33 @@
 .big-content	
-	.header-link.left.active= link_to "CREATE", "/users/new"
+	.header-link.left.active= link_to "#{t'welcome.admin.header_link.create'}", "/users/new"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "USERS", "/users/index/1"
+	.header-link.left.inactive= link_to "#{t'welcome.admin.header_link.users'}", "/users/index/1"
 	.clearboth
 	.form-content
-		.h1= "CREATE A NEW USER"
+		.h1= "#{t'welcome.admin.user_form.create_header'}"
 		.form
 			= form_for :user, :url => "/users/create" do |f|
-				= f.label "Username"
+				= f.label "#{t'welcome.admin.user_form.username'}"
 				= f.text_field :username, :id => "username", :placeholder => "Input username", :autocomplete => "off"
 				.clearboth
 
-				= f.label "Password"
+				= f.label "#{t'welcome.admin.user_form.password'}"
 				= f.password_field :password, :id => "password", :placeholder => "Input password", :autocomplete => "off"
 				.clearboth
 
-				= f.label "Confirm password"
+				= f.label "#{t'welcome.admin.user_form.confirm_password'}"
 				= f.password_field :password_confirmation, :id => "password_confirmation", :placeholder => "Input password confirmation"
 				.clearboth
 
-				= f.label "Email"
+				= f.label "#{t'welcome.admin.user_form.email'}"
 				= f.text_field :email, :id => "email", :placeholder => "Input email"
 				.clearboth
 
-				= f.label "Role"
+				= f.label "#{t'welcome.admin.user_form.role'}"
 				= f.select :role, [['User','user'],['Librarian','librarian'],['Admin','admin']], :id => "role"
 				.clearboth
 
-				= f.submit "Create User", :id => "submit_btn", :class => "submit_btn"
+				= f.submit "#{t'welcome.admin.user_form.create_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @user.errors.any?

@@ -1,7 +1,7 @@
 .big-content
-	.header-link.left.active= link_to "BOOKS", "/book_reservations/home/1"
+	.header-link.left.active= link_to "#{t 'welcome.user.header_link.books'}", "/book_reservations/home/1"
 	.divider.left= "|"
-	.header-link.left.inactive= link_to "RESERVATIONS", "/book_reservations/index/1"
+	.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.reservations'}", "/book_reservations/index/1"
 	.right
 		= render "shared/search_form_reservation"
 	.clearboth
@@ -17,7 +17,7 @@
 				.h2= book.author
 				.h2= book.release_date
 				.h2= book.rating
-				.h2.link= link_to "Reserve it", "/book_reservations/new/#{book.id}", :method => "post"
+				.h2.link= link_to "#{t 'welcome.user.link.reserve'}", "/book_reservations/new/#{book.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth

@@ -13,10 +13,11 @@ class User < ActiveRecord::Base
 								  :username,
 								  :role,
 								  :confirmed_at
+								  :locale
 
 	validates :username, presence: true
-	validates :username, uniqueness: true
-								  							  
+	validates :username, uniqueness: true							  			
+
 	has_many :book_reservations
 	has_many :photo_registrations
 	has_many :book_instances, :through => :book_reservations
@@ -58,4 +59,7 @@ class User < ActiveRecord::Base
 	    self.role = USER if self.role.blank?
 	  end
 
+	  def default_locale
+	  	self.locale = "en"
+	  end
 end
