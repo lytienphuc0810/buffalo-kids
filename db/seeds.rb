@@ -1,3 +1,4 @@
+# encoding: UTF-8
 User.delete_all
 Notice.delete_all
 Book.delete_all
