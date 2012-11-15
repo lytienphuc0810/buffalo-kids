@@ -1,3 +1,4 @@
+# encoding: utf-8
 User.delete_all
 Notice.delete_all
 Book.delete_all
@@ -126,7 +127,7 @@ book2.book_instances = [book_ins9, book_ins10]
 book3.book_instances = [book_ins11, book_ins12]
 book1.book_instances = [book_ins13, book_ins14]
 book2.book_instances = [book_ins15, book_ins16]
-book3.book_instances = [book_in17, book_ins18]
+book3.book_instances = [book_ins17, book_ins18]
 book1.book_instances = [book_ins19, book_ins20]
 book2.book_instances = [book_ins21, book_ins22]
 book3.book_instances = [book_ins23, book_ins24]
