@@ -1,10 +1,10 @@
 
-# encoding: UTF-8
+# encoding: utf-8
 User.delete_all
 Notice.delete_all
 Book.delete_all
 BookInstance.delete_all
-BookReservation.delete_all
+BookReservation.delete_alls
 PhotoRegistration.delete_all
 
 user1 = User.create(:email => "user1@vit.com", :password => "123456", :username => "user1", :confirmed_at => Time.now)
