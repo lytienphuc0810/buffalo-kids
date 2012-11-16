@@ -11,8 +11,10 @@
 		.h2= @book.description
 		.h2= @book.author
 		.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
+		%br
 		.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
+		%br
 		.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/books/edit/#{@book.id}"
+		%br
 		.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
-		.h2.link= link_to "#{t 'welcome.librarian.link.reserve'}", ""
-		.h2.link= link_to "#{t 'welcome.librarian.link.photo_regis'}", ""
+		
