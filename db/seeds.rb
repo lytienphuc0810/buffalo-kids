@@ -6,13 +6,13 @@ BookInstance.delete_all
 BookReservation.delete_all
 PhotoRegistration.delete_all
 
-user1 = User.create(:email => "user1@vit.com", :password => "123456", :password_confirmation => "123456", remember_me => "true", :username => "user1", role => "user", :confirmed_at => Time.now, locale => "HCM")
-user2 = User.create(:email => "user2@vit.com", :password => "123456", :password_confirmation => "123456", remember_me => "true", :username => "user2", role => "user", :confirmed_at => Time.now, locale => "HN")
-user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :password_confirmation => "123456", remember_me => "true", :username => "user3", role => "user", :confirmed_at => Time.now, locale => "HP")
-user4 = User.create(:email => "admin@gmail.com", :password => "123456", :password_confirmation => "123456", remember_me => "false", :username => "admin", :role => "admin", :confirmed_at => Time.now, locale => "DN")
-user5 = User.create(:email => "librarian@gmail.com", :password => "123456", :password_confirmation => "123456", remember_me => "true", :username => "librarian", :role => "librarian", :confirmed_at => Time.now, locale => "NT")
-user6 = User.create(:email => "anhvule@yahoo.com", :password => "123456", :password_confirmation => "123456", remember_me => "false", :username => "user4", role => "user", :confirmed_at => Time.now, locale => "HCM")
-user7 = User.create(:email => "kysy@yahoo.com", :password => "123456", :password_confirmation => "123456", remember_me => "true", :username => "librarian1", role => "librarian", :confirmed_at => Time.now, locale => "HCM")
+user1 = User.create(:email => "user1@vit.com", :password => "123456", :password_confirmation => "123456", :remember_me => "true", :username => "user1", :role => "user", :confirmed_at => Time.now)
+user2 = User.create(:email => "user2@vit.com", :password => "123456", :password_confirmation => "123456", :remember_me => "true", :username => "user2", :role => "user", :confirmed_at => Time.now)
+user3 = User.create(:email => "lytienphuc0810@gmail.com", :password => "123456", :password_confirmation => "123456", :remember_me => "true", :username => "user3", :role => "user", :confirmed_at => Time.now)
+user4 = User.create(:email => "admin@gmail.com", :password => "123456", :password_confirmation => "123456", :remember_me => "false", :username => "admin", :role => "admin", :confirmed_at => Time.now)
+user5 = User.create(:email => "librarian@gmail.com", :password => "123456", :password_confirmation => "123456", :remember_me => "true", :username => "librarian", :role => "librarian", :confirmed_at => Time.now)
+user6 = User.create(:email => "anhvule@yahoo.com", :password => "123456", :password_confirmation => "123456", :remember_me => "false", :username => "user4", :role => "user", :confirmed_at => Time.now)
+user7 = User.create(:email => "kysy@yahoo.com", :password => "123456", :password_confirmation => "123456", :remember_me => "true", :username => "librarian1", :role => "librarian", :confirmed_at => Time.now)
 
 
 book1 = Book.create(:title => "Systems analysis and design", :book_code => "1234",:description => "human-centered book that concisely presents the latest systems development methods, tools, and techniques to readers in an engaging and easy-to-understand manner. ", :author => "Kenneth E. Kendall", :image_url => "http://pixhost.me/avaxhome/f1/01/001e01f1_medium.jpeg", :release_date => "01/11/2012", :rating => "1")
@@ -65,14 +65,14 @@ notice8 = Notice.create(:title => "Notice8", :content => "Thông báo bổ sung 
 notice9 = Notice.create(:title => "Notice9", :content => "Thông báo cung cấp tài khoản dùng thử Cơ sở dữ liệu tạp chí điện tử của NXB InformaHealthCare")
 notice10 = Notice.create(:title => "Notice10", :content => "Thông báo về việc thay đổi tài khoản dùng thử CSDL sách điện tử MyiLibrary")
 
-book_reserve1 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 1, :extention_day => Date.today + 2)
-book_reserve2 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 2, :extention_day => Date.today + 3)
+book_reserve1 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 1)
+book_reserve2 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 2)
 book_reserve3 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 3)
-book_reserve4 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 4, :extention_day => Date.today + 5)
-book_reserve5 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 5, :extention_day => Date.today + 6)
-book_reserve6 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 6, :extention_day => Date.today + 7)
-book_reserve7 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 7, :extention_day => Date.today + 8)
-book_reserve8 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 8, :extention_day => Date.today + 9)
+book_reserve4 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 4)
+book_reserve5 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 5)
+book_reserve6 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 6)
+book_reserve7 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 7)
+book_reserve8 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 8)
 book_reserve9 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 9)
 book_reserve10 = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 10)
 

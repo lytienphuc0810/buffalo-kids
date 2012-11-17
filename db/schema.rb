@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
   create_table "books", :force => true do |t|
     t.string   "title"
     t.string   "book_code"
-    t.string   "description"
+    t.text     "description"
     t.string   "author"
     t.string   "category"
     t.date     "release_date"
