@@ -9,12 +9,9 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= book.title.upcase
-				.h2= book.book_code
-				.h2= book.description
-				.h2= book.author
-				.h2= book.release_date
-				.h2= book.rating
+				.h1= book.title.truncate(16).upcase
+				.h2= book.description.truncate(50)
+				.h2= book.author.truncate(25)
 				.h2.link= link_to "#{t 'welcome.user.link.reserve'}", "/book_reservations/new/#{book.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth

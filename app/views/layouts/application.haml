@@ -1,18 +1,12 @@
 !!!
 %html
 	%head
-		
 		%title Buffalo-Kids
 		= stylesheet_link_tag    "application", :media => "all"
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
 		.body-container
-			#footer
-				#footer-container
-					.right= link_to "Tiếng Việt", "/vi", :method => "post"
-					.right.bar= "|"
-					.right= link_to "English", "/en", :method => "post" 
 			#header
 				#header-container
 					#header-theme
@@ -46,4 +40,8 @@
 				/ .interesting-stuff
 				.container
 					= yield
-			
+			#footer
+				#footer-container
+					.right= link_to "Tiếng Việt", "/vi", :method => "post"
+					.right.bar= "|"
+					.right= link_to "English", "/en", :method => "post" 
