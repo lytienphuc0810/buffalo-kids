@@ -13,9 +13,30 @@
 	.content {
 		padding: 20px;
 		margin: 14px;
-		height: 500px;
+		height: auto;
 		background-color: #D3D3D3;
 		border-radius: 5px;
+
+		.h1 {
+			font-size: 20px;
+			font-weight: bold;
+			color:	#00BCD1;
+		}
+
+		.tit {
+			font-size: 15px;
+			font-weight: bold;
+			padding:  10px 15px 3px 15px;
+		}
+
+		.cont {
+			font-size: 15px;
+			font-style: italic;
+			padding:  3px 15px 10px 15px;
+		}
+		a, a:visited{
+			float: right;
+		}
 	}
 
 	.error {

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :notice do
-		title "Notice Title"
-		content "Notice Content"
+    sequence(:title) {|n| "Title#{n}" }
+    sequence(:content) {|n| "Content#{n}" }
   end
 end

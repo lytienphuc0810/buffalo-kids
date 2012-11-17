@@ -2,11 +2,10 @@
 	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.create'}", "/notices/new"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.notices'}", "/notices/index/1"
-	.divider.left= "|"
-	.header-link.left.active= link_to "#{@notice.title.truncate(20).upcase}", "/notices/show/#{@notice.id}"
 	.clearboth
 	.content
 		.h1= @notice.title
-		.h2= @notice.content
+	.content
+		.cont= @notice.content
 		.h2.link= link_to "#{t 'welcome.admin.link.edit'}", "/notices/edit/#{@notice.id}"
 		.h2.link= link_to "#{t 'welcome.admin.link.delete'}", "/notices/delete/#{@notice.id}", :method => "post", :data => {:confirm => "Are you sure?"}

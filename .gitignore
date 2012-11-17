@@ -18,3 +18,4 @@
 /.idea
 /solr
 /config/database.yml
+/coverage

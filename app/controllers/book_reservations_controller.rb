@@ -50,14 +50,14 @@ class BookReservationsController < ApplicationController
 		book_reservation = BookReservation.find_by_id(params[:book_reservation_id])
 		book_reservation.destroy
 		if current_user.admin? || current_user.librarian?
-			if (book_reservation.book.book_reservations.nil?)
+			if (book_reservation.book.book_reservations.empty?)
 				redirect_to '/books/index/1'
 			else
 				redirect_to "/book_reservations/index/1?book_id=#{book_reservation.book.id}"
 			end
 		else
-			if (current_user.book_reservations.nil?)
-				redirect_to '/books/index/1'
+			if (current_user.book_reservations.empty?)
+				redirect_to '/book_reservations/home/1'
 			else
 				redirect_to '/book_reservations/index/1'
 			end
