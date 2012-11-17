@@ -43,6 +43,7 @@ group :test do
   gem 'shoulda-matchers', '1.3.0'
   gem 'rspec-mocks', '2.11.2'
   gem 'database_cleaner', '0.8.0'
+  gem 'simplecov', :require => false
 end
 
 
