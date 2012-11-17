@@ -21,8 +21,8 @@ class BookInstancesController < ApplicationController
 
 	def create 
 		book_instance = BookInstance.create(params[:book_instance])
-		if book_instance.nil?
-			# send error message
+		if book_instance.invalid?
+			render :action => "new"
 		else
 			book = Book.find(params[:book_id])
 			book.book_instances = book.book_instances << book_instance
@@ -49,7 +49,7 @@ class BookInstancesController < ApplicationController
 			if book_instance.update_attributes(params[:book_instance])
 				redirect_to "/book_instances/index/#{book_instance.book.id}/1"
 			else
-				# send error message
+				render :action => "edit"
 			end
 		end
 	end
