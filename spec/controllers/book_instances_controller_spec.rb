@@ -36,6 +36,7 @@ describe BookInstancesController do
 		it "should find a book with given id" do
 			get :new, :book_id => book.id
 			assigns(:book).should_not be_nil
+			response.should render_template "new"
 		end
 	end
 

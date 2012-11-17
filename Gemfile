@@ -33,6 +33,7 @@ end
 
 # group :test, :development do
 #   gem 'debugger', '1.2.0'
+#   gem 'ruby-debug'
 # end
 
 group :test do
@@ -44,6 +45,7 @@ group :test do
   gem 'rspec-mocks', '2.11.2'
   gem 'database_cleaner', '0.8.0'
   gem 'simplecov', :require => false
+  gem 'debugger', '1.2.0'
 end
 
 
