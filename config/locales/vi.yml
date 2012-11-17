@@ -43,6 +43,7 @@ vi:
           regis: Đăng ký
           delete:  Xóa sách
           reserve: Đặt sách
+          delete_photo: Xóa photo
       admin:
         header_link:
           create: TẠO MỚI
@@ -64,6 +65,13 @@ vi:
           role: Vai trò
           create_button: Tạo người dùng
           edit_button: Chỉnh sửa người dùng
+          signincount: Số lần đăng nhập
+          currentsigninat: Hiện tại đăng nhập lúc
+          lastsigninat: Lần cuối đăng nhập lúc
+          currentsigninip: IP đăng nhập hiện tại
+          lastsigninip: IP đăng nhập lần cuối
+          createdat: Được tạo lúc
+          updatedat: Được chỉnh sửa lúc
         book_form:
           create_header: TẠO MỘT SÁCH MỚI
           edit_header: CHỈNH SỬA

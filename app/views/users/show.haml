@@ -7,7 +7,40 @@
 	.clearboth
 	.content
 		.h1= @user.username
-		.h2= @user.email
-		.h2= @user.role.capitalize
+		.h2
+			%b ID:
+			= @user.id
+		.h2
+			%b= "#{t'welcome.admin.user_form.username'}:"
+			= @user.username
+		.h2
+			%b= "#{t'welcome.admin.user_form.email'}:"
+			= @user.email
+		.h2
+			%b= "#{t'welcome.admin.user_form.role'}:" 
+			= @user.role.capitalize
+		.h2
+			%b= "#{t'welcome.admin.user_form.signincount'}:"
+			= @user.sign_in_count	
+		.h2
+			%b= "#{t'welcome.admin.user_form.currentsigninat'}:"
+			= @user.current_sign_in_at
+		.h2
+			%b= "#{t'welcome.admin.user_form.lastsigninat'}:"
+			= @user.last_sign_in_at
+		.h2
+			%b= "#{t'welcome.admin.user_form.currentsigninip'}:"
+			= @user.current_sign_in_ip
+		.h2
+			%b= "#{t'welcome.admin.user_form.lastsigninip'}:"
+			= @user.last_sign_in_ip
+		.h2
+			%b= "#{t'welcome.admin.user_form.createdat'}:"
+			= @user.created_at
+		.h2
+			%b= "#{t'welcome.admin.user_form.updatedat'}:"
+			= @user.updated_at
+
 		.h2.link= link_to "#{t'welcome.admin.link.edit'}", "/users/edit/#{@user.id}"
+		%br
 		.h2.link= link_to "#{t'welcome.admin.link.delete'}", "/users/delete/#{@user.id}", :method => "post", :data => {:confirm => "Are you sure?"}

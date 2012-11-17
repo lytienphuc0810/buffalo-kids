@@ -14,4 +14,4 @@
 		.h2= @book.description
 		.h2= @book.author
 		.h2= @photo_registration.finish_date.to_s
-		.delete= link_to "#{t 'welcome.user.link.delete'}", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.delete= link_to "#{t 'welcome.user.link.delete_photo'}", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}

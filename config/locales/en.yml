@@ -44,6 +44,7 @@ en:
         delete: Delete it
         regist: Regist it
         reserve: Reserve it
+        delete_photo: Delete it
     admin:
       header_link:
         create: CREATE
@@ -65,6 +66,13 @@ en:
         role: Role
         create_button: Create User
         edit_button: Update User
+        signincount: Sign in count
+        currentsigninat: Current sign in at
+        lastsigninat: Last sign in at
+        currentsigninip: Current sign in IP
+        lastsigninip: Last sign in IP
+        createdat: Created at
+        updatedat: Updated at
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT

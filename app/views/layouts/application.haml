@@ -8,6 +8,11 @@
 		= csrf_meta_tags
 	%body
 		.body-container
+			#footer
+				#footer-container
+					.right= link_to "Tiếng Việt", "/vi", :method => "post"
+					.right.bar= "|"
+					.right= link_to "English", "/en", :method => "post" 
 			#header
 				#header-container
 					#header-theme
@@ -20,6 +25,7 @@
 								= link_to "#{t 'pre_welcome.button.signin'}", new_user_session_path
 						#hcmut-logo.left= link_to image_tag("hcmut_logo.png", :size => "80x80"), "/"
 						#hcmut-name.left= t 'big_header'
+
 					.clearboth
 					#menu-bar
 						- if current_user
@@ -40,8 +46,4 @@
 				/ .interesting-stuff
 				.container
 					= yield
-			#footer
-				#footer-container
-					.right= link_to "Tiếng Việt", "/vi", :method => "post"
-					.right.bar= "|"
-					.right= link_to "English", "/en", :method => "post" 
+			
