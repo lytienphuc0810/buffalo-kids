@@ -8,7 +8,7 @@
 		- i = i + 1
 		.small-content.left
 			.text-content.left
-				.h1.link= link_to "#{notice.title.upcase}", "/notices/show/#{notice.id}"
+				.h1.link= link_to "#{notice.title.truncate(20).upcase}", "/notices/show/#{notice.id}"
 				.h2= notice.short_content
 		- if(i%3 == 0)
 			.clearboth
