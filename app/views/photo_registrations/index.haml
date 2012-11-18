@@ -15,11 +15,9 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= link_to "#{book.title}", "/photo_registrations/show/#{photo_registration.id}"
-				.h2= book.book_code
-				.h2= book.description
-				.h2= book.author
-				.h2= photo_registration.finish_date.to_s
+				.h1= link_to "#{book.title.truncate(25).upcase}", "/photo_registrations/show/#{photo_registration.id}"
+				.h3= book.author.truncate(25)
+				.h2= book.description.truncate(50)
 				.h2.link= link_to "#{t 'welcome.user.link.delete_photo'}", "/photo_registrations/delete/#{photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		- if(i % 3 == 0)
 			.clearboth

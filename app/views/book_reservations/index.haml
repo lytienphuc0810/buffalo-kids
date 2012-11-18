@@ -15,8 +15,8 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= book.title.truncate(16).upcase
-				.h2= book.author.truncate(25)
+				.h1= link_to "#{book.title.truncate(25).upcase}", "/book_reservations/show/#{book_reservation.id}"
+				.h3= book.author.truncate(25)
 				.h2= book_reservation.start_date.to_s
 				.h2= book_reservation.due_date.to_s
 				.h2= link_to "#{t 'welcome.user.link.delete'}", "/book_reservations/delete/#{book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}

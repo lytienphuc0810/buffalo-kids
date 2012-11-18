@@ -1,6 +1,29 @@
 vi:
   big_header: THƯ VIỆN ĐH BÁCH KHOA
 
+  cc: Liên hệ
+
+  faq:
+    title: Câu hỏi thường gặp
+    q1: Là SV Đại học Bách Khoa, tôi có phải làm thẻ thư viện không ?
+    a1: Không. Bạn sử dụng thẻ Sinh viên (thẻ từ) do Trường ĐHBK cấp để mượn tài liệu và sử dụng các tiện ích khác tại Thư viện.
+    q2: Tôi ở ngoài Trường Đại học Bách khoa, tôi muốn đọc tài liệu TV được không ?
+    a2: Đối tượng bạn đọc của TV là Giảng viên, cán bộ nghiên cứu, nghiên cứu sinh, học viên Sau Đại học và sinh viên thuộc Trường Đại học Bách Khoa - Đại học Quốc gia TP.HCM. Bạn mang Giấy giới thiệu và giấy tờ tuỳ thân khi đến liên hệ, để được TV giúp đỡ tìm tư liệu.
+    q3: Thứ bảy và Chủ nhật, TV có làm việc không ? Phòng nào làm việc sau giờ hành chánh ?
+    a3: Phòng đọc Sau Đại học và Phòng Mượn sách Lầu A2 làm việc ngày thứ Bảy. Phòng đọc Sau Đại học và Phòng Đọc Trệt A2 làm việc sau giờ hành chánh đến 18.00 giờ.
+    q4: Thẻ Sinh viên của tôi bị hỏng (Thẻ bị gãy, hình và thông tin cá nhân không rõ,…). Tôi có được mượn sách không ?
+    a4: 'Bạn phải liên hệ phòng Đào tạo để được cấp thẻ mới. Tuy nhiên, trong thời gian chờ nhận thẻ, Bạn sẽ sử dụng “Giấy chứng nhận SV” để đọc, mượn sách (lưu ý giấy chứng nhận SV phải có hình được đóng dấu giáp lai và có chữ ký xác nhận của Trưởng Phòng đào tạo)'
+    q5: Tôi muốn mang túi xách vào trong thư viện. Có được không ?
+    a5: Không.Bạn cần phải Nhận chìa khóa tủ tại Quầy tiếp sinh viên ngay cửa chính Thư viện. Tự cất tư trang và vật dụng tại cất đồ. (Lưu ý không để tiền và các vật dụng có giá trị trong tủ). Trả lại chìa khoá trước khi rời khỏi TV.
+    q6: Tôi muốn mang sách của tôi vào TV đọc.
+    a6: Không. Bạn nên đọc sách của mình ở khu vực tự học (tiền sảnh lầu A2). Hiện nay, TV chưa trang bị được hệ thống cổng từ, nếu bạn mang sách của mình vào, TV sẽ không kiểm soát được
+    q7: TV vui lòng cho tôi biết số trên nhãn ở gáy sách là gì ?
+    a7: 'Đó là chỉ số DDC (Dewey Decimal Classification), còn gọi là chỉ số phân loại của sách. TV sử dụng Khung phân loại thập phân Dewey (DDC) để phân loại tài liệu. Như vậy bạn lưu ý các tài liệu có cùng nội dung sẽ có chung chỉ số phân loại (biểu thị bằng chữ số Ả rập, xếp theo thứ tự tăng dần). Ví dụ Toán học 510, Hoá học 540, Công nghệ hoá học 660.(Bạn vui lòng xem thêm hướng dẫn tại trang Web www.lib.hcmut.edu.vn )'
+    q8: Tôi muốn mượn sách đang trưng bày hoặc đang để ở phòng nghiệp vụ.
+    a8: Được. Bạn liên lạc với cán bộ phòng Nghiệp vụ để được giải quyết yêu cầu của bạn.
+    q9: Tôi muốn mượn sách về nhà.
+    a9: Bạn mượn sách tại phòng đọc lầu A2. Bạn phải trả đúng hạn nếu không muốn bị phạt (Xem Quy định mượn sách về nhà)
+
   pre_welcome:
       title:
         signin: ĐĂNG NHẬP

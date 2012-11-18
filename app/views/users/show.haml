@@ -19,21 +19,7 @@
 		.h2
 			%b= "#{t'welcome.admin.user_form.role'}:" 
 			= @user.role.capitalize
-		.h2
-			%b= "#{t'welcome.admin.user_form.signincount'}:"
-			= @user.sign_in_count	
-		.h2
-			%b= "#{t'welcome.admin.user_form.currentsigninat'}:"
-			= @user.current_sign_in_at
-		.h2
-			%b= "#{t'welcome.admin.user_form.lastsigninat'}:"
-			= @user.last_sign_in_at
-		.h2
-			%b= "#{t'welcome.admin.user_form.currentsigninip'}:"
-			= @user.current_sign_in_ip
-		.h2
-			%b= "#{t'welcome.admin.user_form.lastsigninip'}:"
-			= @user.last_sign_in_ip
+		
 		.h2
 			%b= "#{t'welcome.admin.user_form.createdat'}:"
 			= @user.created_at
