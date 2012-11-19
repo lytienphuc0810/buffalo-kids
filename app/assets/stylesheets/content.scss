@@ -274,6 +274,16 @@
 	}
 }
 
+.error-link{
+		color: red;
+		font-style: italic;
+}
+
+.warning-link{
+		color: orange;
+		font-style: italic;
+}
+
 .pagination {
   cursor: default;
   /* self-clearing method: */ }

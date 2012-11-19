@@ -67,6 +67,8 @@ en:
         regist: Regist it
         reserve: Reserve it
         delete_photo: Delete it
+        unavailable: Unavailable
+        already_reserved: Already Reserved
     admin:
       header_link:
         create: CREATE
