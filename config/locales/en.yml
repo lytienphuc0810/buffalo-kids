@@ -147,6 +147,11 @@ en:
         create_button: Create
         edit_button: Update
         submit_button: Submit
+    notice:
+      form:
+        header: CREATE A NEW NOTICE
+        title: Title
+        content: Content
 
   errors:
       messages:
