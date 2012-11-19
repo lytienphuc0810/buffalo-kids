@@ -62,6 +62,9 @@ vi:
           books: SÁCH
           reservations: ĐẶT SÁCH
           photo_regis: ĐĂNG KÝ PHOTO
+        book_reservations:
+          start: "Bắt đầu:"
+          due: "Hết hạn:"
         link:
           regis: Đăng ký
           delete:  Xóa sách

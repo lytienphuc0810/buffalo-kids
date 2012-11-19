@@ -274,6 +274,13 @@
 	}
 }
 
+.title-link {
+	a, a:visited{
+		color: blue;
+		text-decoration: none;
+	}	
+}
+
 .error-link{
 		color: red;
 		font-style: italic;

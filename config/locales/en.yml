@@ -61,6 +61,9 @@ en:
         books: BOOKS
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
+      book_reservations:
+        start: "Start:"
+        due: "Due:"
       link:
         regis: Regist it
         delete: Delete it
