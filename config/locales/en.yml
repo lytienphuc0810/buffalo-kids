@@ -69,6 +69,7 @@ en:
         delete_photo: Delete it
         unavailable: Unavailable
         already_reserved: Already Reserved
+        already_registed: Already Registed
     admin:
       header_link:
         create: CREATE

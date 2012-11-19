@@ -69,7 +69,7 @@ vi:
           delete_photo: Xóa photo
           unavailable: Hết sách
           already_reserved: Đã đặt sách này
-
+          already_registed: Đã đặt sách này
       admin:
         header_link:
           create: TẠO MỚI
