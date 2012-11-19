@@ -9,11 +9,13 @@
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/photo_registrations/show/#{@photo_registration.id}"
 	.clearboth
 	.content
-		.h1= @book.title.upcase
-		.h3= @book.author
-		.h2= "Code: #{@book.book_code}"
-		.h2= "Rating: #{@book.rating}"
-		.h2= "Due date: #{@photo_registration.finish_date.to_s}"
-		.h2= "Description: #{@book.description}"
-		
-		.delete= link_to "#{t 'welcome.user.link.delete_photo'}", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.img.left= image_tag @book.image_url, :size => "200x200"
+		.text-content.left
+			.h1= @book.title.upcase
+			.h3= @book.author
+			.h2= "Code: #{@book.book_code}"
+			.h2= "Rating: #{@book.rating}"
+			.h2= "Due date: #{@photo_registration.finish_date.to_s}"
+			.h2= "Description: #{@book.description}"
+			.h2.link= link_to "#{t 'welcome.user.link.delete_photo'}", "/photo_registrations/delete/#{@photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.clearboth
