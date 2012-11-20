@@ -1,5 +1,5 @@
 class PhotoRegistrationsController < ApplicationController
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :except => [:home]
 	def home 
 		@books = Book.paginate(:page => params[:page])
 	end

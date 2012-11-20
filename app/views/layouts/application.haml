@@ -34,6 +34,9 @@
 								#menu-link.left= link_to "#{t 'welcome.Tab.u'}", "/users/index/1"
 								#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/books/index/1"
 								#menu-link.left= link_to "#{t 'welcome.Tab.n'}", "/notices/index/1"
+						- else
+							#menu-link.left= link_to "#{t 'welcome.Tab.b'}", "/book_reservations/home/1"
+							#menu-link.left= link_to "#{t 'welcome.Tab.p'}", "/photo_registrations/home/1"
 						#menu-link.left= link_to "#{t 'welcome.Tab.f'}", "/faq"
 						#menu-link.left= link_to "#{t 'welcome.Tab.c'}", "/contact"
 			#main{:class => controller_name}
