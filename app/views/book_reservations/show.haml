@@ -9,10 +9,14 @@
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/book_reservations/show/#{@book_reservation.id}"
 	.clearboth
 	.content
-		.h1= @book.title
-		.h2= @book.book_code
-		.h2= @book.description
-		.h2= @book.author
-		.h2= @book_reservation.start_date.to_s
-		.h2= @book_reservation.due_date.to_s
-		.h2.link= link_to "#{t 'welcome.user.link.delete'}", "/book_reservations/delete/#{@book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.img.left= image_tag @book.image_url, :size => "200x200"
+		.text-content.left
+			.h1= @book.title.upcase
+			.h3= @book.author
+			.h2= "Code: #{@book.book_code}"
+			.h2= "Rating: #{@book.rating}"
+			.h2= "Start date: #{@book_reservation.start_date.to_s}"
+			.h2= "Due date: #{@book_reservation.due_date.to_s}"
+			.h2= "Description: #{@book.description}"
+			.h2.link= link_to "#{t 'welcome.user.link.delete'}", "/book_reservations/delete/#{@book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.clearboth

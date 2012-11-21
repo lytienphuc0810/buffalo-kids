@@ -1,6 +1,7 @@
 .big-content
-	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.create'}", "/notices/new"
-	.divider.left= "|"
+	- unless current_user.user?
+		.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.create'}", "/notices/new"
+		.divider.left= "|"
 	.header-link.left.active= link_to "#{t 'welcome.admin.header_link.notices'}", "/notices/index/1"
 	.clearboth
 	- i = 0

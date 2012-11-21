@@ -6,10 +6,12 @@
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
 	.clearboth
 	.content
-		.h1= @book.title
-		.h2= @book.book_code
-		.h2= @book.description
-		.h2= @book.author
+		.h1= @book.title.upcase
+		.h3= @book.author
+		.h2= "Code: #{@book.book_code}"
+		.h2= "Rating: #{@book.rating}"
+		.h2= "Description: #{@book.description}"
+				
 		.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
 		%br
 		.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
