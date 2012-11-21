@@ -10,8 +10,8 @@
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
 				.h1= book.title.truncate(25).upcase
-				.h3= book.author.truncate(25)
-				.h2= book.description.truncate(50)
+				.h3= book.author.truncate(25) unless book.author.nil?
+				.h2= book.description.truncate(50) unless book.description.nil?
 				- if current_user
 					- if current_user.photo_registrations.map{ |a| a.book }.include? book
 						.h2.warning-link= t('welcome.user.link.already_registed')

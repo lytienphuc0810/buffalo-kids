@@ -65,6 +65,8 @@ vi:
       book_reservations:
         start: "Bắt đầu:"
         due: "Hết hạn:"
+      photo_registration:
+        finish: "Hết hạn:"
       link:
         regis: Đăng ký
         delete:  Xóa sách

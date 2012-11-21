@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
     t.string   "title"
     t.string   "book_code"
     t.text     "description"
-
     t.string   "author"
     t.string   "category"
     t.date     "release_date"
