@@ -140,6 +140,8 @@ vi:
       link:
         edit: Chỉnh sửa
         delete: Xóa
+        no_reservations: Không có đơn đặt sách nào
+        no_reservations: Không có đơn đăng ký photo nào
         reserve: Đặt sách
         photo_regis: Đăng ký photo
         list_instances: Liệt kê tất cả instances của sách này

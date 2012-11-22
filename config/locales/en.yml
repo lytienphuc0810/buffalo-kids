@@ -140,6 +140,8 @@ en:
       link:
         edit: Edit
         delete: Delete
+        no_reservations: There're no reservations
+        no_registrations: There're no registrations
         reserve: Reservations
         photo_regis: Photo Registrations
         list_instances: List all instances of this book
