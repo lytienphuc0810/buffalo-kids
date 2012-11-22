@@ -11,13 +11,17 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= book.title.upcase
-				.h2= book.book_code
-				.h2= book.description
-				.h2= book.author
-				.h2= book.release_date
-				.h2= book.rating
-				.h2= link_to "#{t 'welcome.user.link.regis'}", "/photo_registrations/new/#{book.id}", :method => "post"
+				.h1.link= link_to "#{book.title.truncate(25).upcase}", "/books/show/#{book.id}"
+				.h3= book.author.truncate(25) unless book.author.nil?
+				.h2= book.description.truncate(50) unless book.description.nil?
+				- if current_user
+					- if current_user.photo_registrations.map{ |a| a.book }.include? book
+						.h2.warning-link= t('welcome.user.link.already_registed')
+					- else
+						- if book.free_instance_to_get.nil?
+							.h2.error-link= t('welcome.user.link.unavailable')
+						- else	
+							.h2.link= link_to "#{t 'welcome.user.link.regis'}", "/photo_registrations/new/#{book.id}", :method => "post"
 		- if(i%3 == 0)
 			.clearboth
 	.clearboth

@@ -15,4 +15,12 @@ FactoryGirl.define do
     confirmation_sent_at Time.now
     confirmed_at Time.now
   end
+
+  factory :admin, :parent => :confirmed_user do
+    role "admin"
+  end
+
+  factory :librarian, :parent => :confirmed_user do
+    role "librarian"
+  end
 end

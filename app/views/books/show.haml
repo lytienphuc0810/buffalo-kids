@@ -1,18 +1,26 @@
 .big-content
-	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.create'}", "/books/new"
-	.divider.left= "|"
-	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"
+	- if current_user.librarian?
+		.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.create'}", "/books/new"
+		.divider.left= "|"
+		.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"
+	- else
+		.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.books'}", "/book_reservations/home/1"
 	.divider.left= "|"
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
 	.clearboth
 	.content
-		.h1= @book.title
-		.h2= @book.book_code
-		.h2= @book.description
-		.h2= @book.author
-		.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
-		.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
-		.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/books/edit/#{@book.id}"
-		.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
-		.h2.link= link_to "#{t 'welcome.librarian.link.reserve'}", ""
-		.h2.link= link_to "#{t 'welcome.librarian.link.photo_regis'}", ""
+		.h1= @book.title.upcase
+		.h3= @book.author
+		.h2= "Code: #{@book.book_code}"
+		.h2= "Rating: #{@book.rating}"
+		.h2= "Description: #{@book.description}"
+				
+		- if current_user.librarian?
+			.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
+			%br
+			.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
+			%br
+			.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/books/edit/#{@book.id}"
+			%br
+			.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		

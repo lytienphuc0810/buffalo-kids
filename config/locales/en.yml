@@ -1,6 +1,28 @@
 en:
   big_header: HCMUT LIBRARY
 
+  cc: CONTACT
+
+  faq:
+    title: FREQUENTLY ASKED QUESTIONS
+    q1: Do I have to register a library card when I am a student in HCMUT?
+    a1: No. Just use your student card for everything you need in HCMUT Library.
+    q2: I am not a student in HCMUT, can I use HCMUT Library?
+    a2: For readers of HCMUT Library is Lecturer, research staff, graduate students, postgraduate students and students of the HCMUT. You bring letters of introduction and personal papers to contact us, to library help finding materials.
+    q3: On Saturday and Sunday, does the library work? Room to work after office hours?
+    a3: Postgraduate reading room and Borrow books Floor Room A2 to work on Saturday. After reading the University and Reading Room Ground floor A2 to work after office hours to 18:00 hours.
+    q4: My student card broken (fractured Card, picture and personal information is not clear, ...). I borrow books?
+    a4: 'You have to contact our Training Department to obtain a new card. However, pending the card, you will use the "SV certificate" to read, borrow books (note SV certificate must have been signed sealed and certified by the Head of Training generated) '
+    q5: I want to bring bags into the library. There is not?
+    a5: No. You need to get the key from the counter to students at the Library door. Distilled from the pages and items in the store map. (Note to money and other valuable items in the closet). Return the key before leaving the library.
+    q6: I want to bring my books to read library.
+    a6: No.You should read his books in the study area (first floor lobby A2). Currently, the library is not equipped with a port from the system, if you bring your books, library will not control
+    q7: library please let me know the number on the label at the back of the book?
+    a7: 'It is only the DDC (Dewey Decimal Classification), also known as just the sort of book. library using the Dewey Decimal Classification (DDC) to classify documents. So you note the documents with the same content will have the same classification index (indicated by Arabic numerals, arranged in ascending order). For example, Math 510, Chemistry 540, 660 chemical technology. (Please see instructions at Web www.lib.hcmut.edu.vn) '
+    q8: I want to borrow books or to display in the division.
+    a8: OK.You contact the division staff to resolve your request.
+    q9: I want to borrow books for home.
+    a9: You borrow books at the reading room floor A2. You pay on time if you do not want to be punished (See Regulation borrow for home)
   pre_welcome:
     title:
       signin: SIGN IN
@@ -39,11 +61,28 @@ en:
         books: BOOKS
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
+      book_reservations:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        borrower: "Borrower:"
+        start: "Start:"
+        due: "Due:"
+      photo_registration:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        owner: "Owner:"
+        finish: "Finish:"
       link:
         regis: Regist it
         delete: Delete it
         regist: Regist it
         reserve: Reserve it
+        delete_photo: Delete it
+        unavailable: Unavailable
+        already_reserved: Already Reserved
+        already_registed: Already Registed
     admin:
       header_link:
         create: CREATE
@@ -65,6 +104,13 @@ en:
         role: Role
         create_button: Create User
         edit_button: Update User
+        signincount: Sign in count
+        currentsigninat: Current sign in at
+        lastsigninat: Last sign in at
+        currentsigninip: Current sign in IP
+        lastsigninip: Last sign in IP
+        createdat: Created at
+        updatedat: Updated at
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
@@ -94,10 +140,13 @@ en:
       link:
         edit: Edit
         delete: Delete
+        unavailable: No instances
+        no_reservations: No reservations
+        no_registrations: No registrations
         reserve: Reservations
         photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
+        list_instances: List all instances
+        add_instance: Add an instance
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
@@ -111,6 +160,11 @@ en:
         create_button: Create
         edit_button: Update
         submit_button: Submit
+    notice:
+      form:
+        header: CREATE A NEW NOTICE
+        title: Title
+        content: Content
 
   errors:
       messages:

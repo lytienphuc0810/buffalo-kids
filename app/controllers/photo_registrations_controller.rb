@@ -1,5 +1,6 @@
 class PhotoRegistrationsController < ApplicationController
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :except => [:home]
+
 	def home 
 		@books = Book.paginate(:page => params[:page])
 	end
@@ -50,14 +51,14 @@ class PhotoRegistrationsController < ApplicationController
 		photo_registration = PhotoRegistration.find_by_id(params[:photo_registration_id])
 		photo_registration.destroy
 		if current_user.admin? || current_user.librarian?
-			if (photo_registration.book.photo_registrations.nil?)
+			if (photo_registration.book.photo_registrations.empty?)
 				redirect_to '/books/index/1'
 			else
 				redirect_to "/photo_registrations/index/1?book_id=#{photo_registration.book.id}"
 			end
 		else
-			if (current_user.photo_registrations.nil?)
-				redirect_to '/books/index/1'
+			if (current_user.photo_registrations.empty?)
+				redirect_to '/photo_registrations/home/1'
 			else
 				redirect_to '/photo_registrations/index/1'
 			end
