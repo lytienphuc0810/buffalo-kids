@@ -140,6 +140,7 @@ en:
       link:
         edit: Edit
         delete: Delete
+        unavailable: There're no instances
         no_reservations: There're no reservations
         no_registrations: There're no registrations
         reserve: Reservations
