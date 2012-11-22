@@ -13,10 +13,23 @@
 		.text-content.left
 			.h1= @book.title.upcase
 			.h3= @book.author
-			.h2= "Code: #{@book.book_code}"
-			.h2= "Rating: #{@book.rating}"
-			.h2= "Start date: #{@book_reservation.start_date.to_s}"
-			.h2= "Due date: #{@book_reservation.due_date.to_s}"
-			.h2= "Description: #{@book.description}"
+			.h2
+				%b= t 'welcome.user.book_reservation.code'
+				= @book.book_code
+			.h2
+				%b= t 'welcome.user.book_reservation.rating'
+				= @book.rating
+			.h2 
+				%b= t 'welcome.user.book_reservation.borrower'
+				= @book_reservation.user.username.to_s
+			.h2 
+				%b= t 'welcome.user.book_reservation.start'
+				= @book_reservation.start_date.to_s
+			.h2 
+				%b= t 'welcome.user.book_reservation.due'
+				= @book_reservation.due_date.to_s
+			.h2
+				%b= t 'welcome.user.book_reservation.description'
+				= @book.description
 			.h2.link= link_to "#{t 'welcome.user.link.delete'}", "/book_reservations/delete/#{@book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		.clearboth

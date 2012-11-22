@@ -18,10 +18,13 @@
 				.h1.title-link= link_to "#{book.title.truncate(25).upcase}", "/book_reservations/show/#{book_reservation.id}"
 				.h3= book.author.truncate(25) unless book.author.nil?        
 				.h2 
-					%b= t 'welcome.user.book_reservations.start'
+					%b= t 'welcome.user.book_reservation.borrower'
+					= book_reservation.user.username.to_s
+				.h2 
+					%b= t 'welcome.user.book_reservation.start'
 					= book_reservation.start_date.to_s
 				.h2 
-					%b= t 'welcome.user.book_reservations.due'
+					%b= t 'welcome.user.book_reservation.due'
 					= book_reservation.due_date.to_s
 				.h2.link= link_to "#{t 'welcome.user.link.delete'}", "/book_reservations/delete/#{book_reservation.id}", :method => "post", :data => {:confirm => "Are you sure?"}
 		- if(i % 3 == 0)

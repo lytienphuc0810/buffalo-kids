@@ -62,10 +62,18 @@ vi:
         books: SÁCH
         reservations: ĐẶT SÁCH
         photo_regis: ĐĂNG KÝ PHOTO
-      book_reservations:
+      book_reservation:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        borrower: "Người mượn:"
         start: "Bắt đầu:"
         due: "Hết hạn:"
       photo_registration:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        owner: "Người đăng ký:"
         finish: "Hết hạn:"
       link:
         regis: Đăng ký

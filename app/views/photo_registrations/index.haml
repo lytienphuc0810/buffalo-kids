@@ -18,6 +18,9 @@
 				.h1.title-link= link_to "#{book.title.truncate(25).upcase}", "/photo_registrations/show/#{photo_registration.id}"
 				.h3= book.author.truncate(25) unless book.author.nil?
 				.h2 
+					%b= t 'welcome.user.photo_registration.owner'
+					= photo_registration.user.username.to_s
+				.h2 
 					%b= t 'welcome.user.photo_registration.finish'
 					= photo_registration.finish_date.to_s   
 				.h2.link= link_to "#{t 'welcome.user.link.delete_photo'}", "/photo_registrations/delete/#{photo_registration.id}", :method => "post", :data => {:confirm => "Are you sure?"}

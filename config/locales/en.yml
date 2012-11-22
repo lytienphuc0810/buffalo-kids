@@ -62,10 +62,18 @@ en:
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
       book_reservations:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        borrower: "Borrower:"
         start: "Start:"
         due: "Due:"
       photo_registration:
-        finish: "Due:"
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        owner: "Owner:"
+        finish: "Finish:"
       link:
         regis: Regist it
         delete: Delete it
