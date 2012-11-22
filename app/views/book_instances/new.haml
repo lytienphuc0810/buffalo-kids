@@ -16,4 +16,9 @@
 				.clearboth
 				= f.submit "#{t 'welcome.librarian.book_form.create_button'}", :id => "submit_btn", :class => "submit_btn"
 				.clearboth
-				.right.error
+		-if @book_instance.errors.any?
+			#error_explanation
+				%h2.errors= pluralize(@book_instance.errors.count, "error") + " prohibited this from being saved:"
+				%ul.errors
+					-@book_instance.errors.full_messages.each do |msg|
+						%li.errors= msg

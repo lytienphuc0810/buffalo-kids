@@ -14,20 +14,21 @@ class BookInstancesController < ApplicationController
 
 	def new
 		@book = Book.find(params[:book_id])
+		@book_instance = BookInstance.new(params[:book_instance])
 		if @book.nil?
 			# send error message
 		end
 	end
 
 	def create 
-		book_instance = BookInstance.create(params[:book_instance])
-		if book_instance.invalid?
+		@book = Book.find(params[:book_id])
+		@book_instance = BookInstance.create(params[:book_instance])
+		if @book_instance.invalid?
 			render :action => "new"
 		else
-			book = Book.find(params[:book_id])
-			book.book_instances = book.book_instances << book_instance
-			if book.save
-				redirect_to "/book_instances/index/#{book.id}/1"
+			@book.book_instances = @book.book_instances << @book_instance
+			if @book.save
+				redirect_to "/book_instances/index/#{@book.id}/1"
 			else
 				# send error message
 			end
