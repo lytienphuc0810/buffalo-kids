@@ -1,9 +1,5 @@
 class PhotoRegistrationsController < ApplicationController
-	before_filter :authenticate_user!, :authorized_user?, :except => [:home]
-
-	def authorized_user?
-		redirect_to(root_path) unless current_user && current_user.user?
-	end
+	before_filter :authenticate_user!, :except => [:home]
 
 	def home 
 		@books = Book.paginate(:page => params[:page])

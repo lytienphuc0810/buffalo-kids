@@ -10,14 +10,14 @@
         .h1.link= link_to "#{book.title.truncate(15).upcase}", "/books/show/#{book.id}"
         .h3= book.author.truncate(25)
         .h2= book.description.truncate(50)
-        - if book.book_instances.first.nil?
+        - if book.book_instances.blank?
           .h2.error-link= t('welcome.librarian.link.unavailable')
         - else
-          - if book.book_reservations.first.nil?
+          - if book.book_reservations.blank?
             .h2.warning-link= t('welcome.librarian.link.no_reservations')
           - else
             .h2.link= link_to "#{t 'welcome.librarian.link.reserve'}", "/book_reservations/index/1?book_id=#{book.id}"
-          - if book.photo_registrations.first.nil?
+          - if book.photo_registrations.blank?
             .h2.warning-link= t('welcome.librarian.link.no_registrations')
           - else
             .h2.link= link_to "#{t 'welcome.librarian.link.photo_regis'}", "/photo_registrations/index/1?book_id=#{book.id}"
