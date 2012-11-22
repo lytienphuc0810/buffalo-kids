@@ -62,10 +62,18 @@ vi:
         books: SÁCH
         reservations: ĐẶT SÁCH
         photo_regis: ĐĂNG KÝ PHOTO
-      book_reservations:
+      book_reservation:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        borrower: "Người mượn:"
         start: "Bắt đầu:"
         due: "Hết hạn:"
       photo_registration:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        owner: "Người đăng ký:"
         finish: "Hết hạn:"
       link:
         regis: Đăng ký
@@ -132,10 +140,13 @@ vi:
       link:
         edit: Chỉnh sửa
         delete: Xóa
+        unavailable: Không có instance
+        no_reservations: Không có đặt sách
+        no_registrations: Không đăng ký photo
         reserve: Đặt sách
         photo_regis: Đăng ký photo
-        list_instances: Liệt kê tất cả instances của sách này
-        add_instance: Thêm một instance vào sách này
+        list_instances: Liệt kê tất cả instances
+        add_instance: Thêm một instance
       book_form:
         create_header: TẠO MỘT SÁCH MỚI
         edit_header: CHỈNH SỬA

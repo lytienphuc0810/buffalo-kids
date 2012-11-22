@@ -62,10 +62,18 @@ en:
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
       book_reservations:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        borrower: "Borrower:"
         start: "Start:"
         due: "Due:"
       photo_registration:
-        finish: "Due:"
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        owner: "Owner:"
+        finish: "Finish:"
       link:
         regis: Regist it
         delete: Delete it
@@ -132,10 +140,13 @@ en:
       link:
         edit: Edit
         delete: Delete
+        unavailable: No instances
+        no_reservations: No reservations
+        no_registrations: No registrations
         reserve: Reservations
         photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
+        list_instances: List all instances
+        add_instance: Add an instance
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
