@@ -8,4 +8,5 @@
 	.content
 		.cont= @notice.content
 		.h2.link= link_to "#{t 'welcome.admin.link.edit'}", "/notices/edit/#{@notice.id}"
+		%br
 		.h2.link= link_to "#{t 'welcome.admin.link.delete'}", "/notices/delete/#{@notice.id}", :method => "post", :data => {:confirm => "Are you sure?"}
