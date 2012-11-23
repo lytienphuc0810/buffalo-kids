@@ -54,7 +54,7 @@ en:
       c: CONTACT
       u: USERS
     topleft_corner:
-      welcome: welcome
+      welcome: Welcome
       signout: Sign out
     user:
       header_link:

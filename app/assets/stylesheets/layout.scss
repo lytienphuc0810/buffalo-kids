@@ -53,22 +53,7 @@ body  {
 	#locale-info {
 		a{
 			margin-right: 10px;
-			font-family: Helvetica;
-			font-size: 15px;
-			text-decoration: none;
-			color: #76D3DE;
 		}
-		.bar {
-			margin-right: 10px;
-			font-family: Helvetica;
-			font-size: 18px;
-			text-decoration: none;
-			color: #76D3DE;
-		}
-		a:hover {
-			color: #00BCD1;
-		}
-		text-align: right;
 		min-width: 400px
 	}
 	#menu-bar {
@@ -160,8 +145,4 @@ body  {
 
 .clearboth {
 	clear: both;
-}
-
-.clearright {
-	clear: right;
 }
