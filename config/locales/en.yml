@@ -147,6 +147,10 @@ en:
         photo_regis: Photo Registrations
         list_instances: List all instances
         add_instance: Add an instance
+      book:
+        code: "Book code:"
+        rating: "Rating:"
+        description: "Description:"
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
@@ -154,6 +158,7 @@ en:
         instance_edit_header: EDIT A BOOK INSTANCE
         title: Title
         code: Book code
+        rating: Rating
         author: Author
         image: Image url
         description: Description
