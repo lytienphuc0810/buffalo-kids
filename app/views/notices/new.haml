@@ -4,16 +4,16 @@
 	.header-link.left.inactive= link_to "#{t 'welcome.admin.header_link.notices'}", "/notices/index/1"
 	.clearboth
 	.form-content
-		.h1= "#{t 'welcome.admin.book_form.notice_header'}"
+		.h1= "#{t 'welcome.notice.form.header'}"
 		.form
 			= form_for :notice, :url => "/notices/create" do |f|
-				= f.label "#{t 'welcome.admin.book_form.title'}"
+				= f.label t 'welcome.notice.form.title'
 				= f.text_field :title, :id => "title", :placeholder => "Input notice title", :autocomplete => "off"
 				.clearboth
-				= f.label "#{t 'welcome.admin.book_form.content'}"
+				= f.label t 'welcome.notice.form.content'
 				= f.text_area :content, :id => "content", :placeholder => "Input notice content", :autocomplete => "off"
 				.clearboth
-				= f.submit "#{t 'welcome.admin.book_form.create_button'}", :id => "submit_btn", :class => "submit_btn"
+				= f.submit t 'welcome.admin.book_form.create_button', :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @notice.errors.any?

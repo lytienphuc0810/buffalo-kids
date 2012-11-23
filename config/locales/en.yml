@@ -1,10 +1,10 @@
 en:
   big_header: HCMUT LIBRARY
 
-  cc: Contact
+  cc: CONTACT
 
   faq:
-    title: Common questions
+    title: FREQUENTLY ASKED QUESTIONS
     q1: Do I have to register a library card when I am a student in HCMUT?
     a1: No. Just use your student card for everything you need in HCMUT Library.
     q2: I am not a student in HCMUT, can I use HCMUT Library?
@@ -61,12 +61,28 @@ en:
         books: BOOKS
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
+      book_reservations:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        borrower: "Borrower:"
+        start: "Start:"
+        due: "Due:"
+      photo_registration:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        owner: "Owner:"
+        finish: "Finish:"
       link:
         regis: Regist it
         delete: Delete it
         regist: Regist it
         reserve: Reserve it
         delete_photo: Delete it
+        unavailable: Unavailable
+        already_reserved: Already Reserved
+        already_registed: Already Registed
     admin:
       header_link:
         create: CREATE
@@ -124,10 +140,13 @@ en:
       link:
         edit: Edit
         delete: Delete
+        unavailable: No instances
+        no_reservations: No reservations
+        no_registrations: No registrations
         reserve: Reservations
         photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
+        list_instances: List all instances
+        add_instance: Add an instance
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
@@ -141,6 +160,11 @@ en:
         create_button: Create
         edit_button: Update
         submit_button: Submit
+    notice:
+      form:
+        header: CREATE A NEW NOTICE
+        title: Title
+        content: Content
 
   errors:
       messages:

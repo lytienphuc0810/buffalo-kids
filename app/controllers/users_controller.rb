@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!,:authorized_user?
+
+	def authorized_user?
+		redirect_to(root_path) unless current_user && current_user.admin?
+	end
 
 	def index
 		@users = User.paginate(:page => params[:page])

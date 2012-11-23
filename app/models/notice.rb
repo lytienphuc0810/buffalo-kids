@@ -9,6 +9,6 @@ class Notice < ActiveRecord::Base
 	self.per_page = 12
 
   def short_content
-  	self.content.truncate(30)
+  	self.content.truncate(90)
   end
 end

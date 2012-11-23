@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 								  :remember_me,
 								  :username,
 								  :role,
-								  :confirmed_at
+								  :confirmed_at,
 								  :locale
 
 	validates :username, presence: true

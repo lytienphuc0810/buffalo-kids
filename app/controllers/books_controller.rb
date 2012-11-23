@@ -1,6 +1,12 @@
 class BooksController < ApplicationController
 	# phan cua Viet
 	before_filter :authenticate_user!
+  before_filter :authorized_user?, :except => [:show]
+
+  def authorized_user?
+    redirect_to(root_path) unless current_user && (current_user.librarian? || current_user.admin?)
+  end
+
   def index
     @books = Book.paginate(:page => params[:page])
   end

@@ -9,10 +9,17 @@
 		.small-content.left
 			.img.left= image_tag book.image_url, :size => "60x60"
 			.text-content.left
-				.h1= book.title.truncate(25).upcase
-				.h3= book.author.truncate(25)
-				.h2= book.description.truncate(50)
-				.h2.link= link_to "#{t 'welcome.user.link.reserve'}", "/book_reservations/new/#{book.id}", :method => "post"
+				.h1.link= link_to "#{book.title.truncate(25).upcase}", "/books/show/#{book.id}"
+				.h3= book.author.truncate(25) unless book.author.nil?
+				.h2= book.description.truncate(50) unless book.description.nil?
+				- if current_user
+					- if current_user.book_reservations.map{ |a| a.book }.include? book
+						.h2.warning-link= t('welcome.user.link.already_reserved')
+					- else
+						- if book.free_instance_to_get.nil?
+							.h2.error-link= t('welcome.user.link.unavailable')
+						- else	
+							.h2.link= link_to "#{t 'welcome.user.link.reserve'}", "/book_reservations/new/#{book.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth
