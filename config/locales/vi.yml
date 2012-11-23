@@ -117,6 +117,7 @@ vi:
         instance_header: TẠO MỘT INSTANCE SÁCH MỚI
         title: Tựa đề
         code: Mã sách
+        rating: Đánh giá
         author: Tác giả
         image: Link của hình
         description: Mô tả
@@ -147,6 +148,10 @@ vi:
         photo_regis: Đăng ký photo
         list_instances: Liệt kê tất cả instances
         add_instance: Thêm một instance
+      book:
+        code: "Mã sách:"
+        rating: "Đánh giá:"
+        description: "Mô tả:"
       book_form:
         create_header: TẠO MỘT SÁCH MỚI
         edit_header: CHỈNH SỬA
