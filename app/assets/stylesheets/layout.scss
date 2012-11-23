@@ -17,7 +17,7 @@ body  {
 	border-radius: 5px;
 	padding: 12px 18px 12px 18px;
 	#header-theme {
-		height: 80px;
+		height: 90px;
 		width: auto;
 		padding: 10px;
 		background-color: #FEF9F0;
@@ -48,6 +48,27 @@ body  {
 	#login-info {
 		text-align: right;
 		margin-right: 15px;
+		min-width: 400px
+	}
+	#locale-info {
+		a{
+			margin-right: 10px;
+			font-family: Helvetica;
+			font-size: 15px;
+			text-decoration: none;
+			color: #76D3DE;
+		}
+		.bar {
+			margin-right: 10px;
+			font-family: Helvetica;
+			font-size: 18px;
+			text-decoration: none;
+			color: #76D3DE;
+		}
+		a:hover {
+			color: #00BCD1;
+		}
+		text-align: right;
 		min-width: 400px
 	}
 	#menu-bar {

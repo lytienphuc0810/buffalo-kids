@@ -9,18 +9,27 @@
 	.header-link.left.active= link_to "#{@book.title.truncate(20).upcase}", "/books/show/#{@book.id}"
 	.clearboth
 	.content
-		.h1= @book.title.upcase
-		.h3= @book.author
-		.h2= "Code: #{@book.book_code}"
-		.h2= "Rating: #{@book.rating}"
-		.h2= "Description: #{@book.description}"
-				
-		- if current_user.librarian?
-			.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
-			%br
-			.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
-			%br
-			.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/books/edit/#{@book.id}"
-			%br
-			.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.img.left= image_tag @book.image_url, :size => "200x200"
+		.text-content.left
+			.h1= @book.title.upcase
+			.h3= @book.author
+			.h2
+				%b= t 'welcome.librarian.book.code'
+				= @book.book_code
+			.h2
+				%b= t 'welcome.librarian.book.rating'
+				= @book.rating
+			.h2
+				%b= t 'welcome.librarian.book.description'
+				= @book.description
+					
+			- if current_user.librarian?
+				.h2.link= link_to "#{t 'welcome.librarian.link.list_instances'}", "/book_instances/index/#{@book.id}/1"
+				%br
+				.h2.link= link_to "#{t 'welcome.librarian.link.add_instance'}", "/book_instances/new/#{@book.id}"
+				%br
+				.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/books/edit/#{@book.id}"
+				%br
+				.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/books/delete/#{@book.id}", :method => "post", :data => {:confirm => "Are you sure?"}
+		.clearboth
 		

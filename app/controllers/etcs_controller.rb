@@ -14,7 +14,7 @@ class EtcsController < ApplicationController
 			current_user.locale = "en"
 			current_user.save
 		end
-		redirect_to "/"
+		redirect_to params[:path]
 	end
 
 	def set_vi
@@ -24,6 +24,6 @@ class EtcsController < ApplicationController
 			current_user.locale = "vi"
 			current_user.save
 		end
-		redirect_to "/"
+		redirect_to params[:path]
 	end
 end

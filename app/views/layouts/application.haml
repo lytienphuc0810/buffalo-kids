@@ -19,6 +19,9 @@
 								= link_to "#{t 'pre_welcome.button.signin'}", new_user_session_path
 						#hcmut-logo.left= link_to image_tag("hcmut_logo.png", :size => "80x80"), "/"
 						#hcmut-name.left= t 'big_header'
+						#locale-info.right
+							.right= link_to image_tag("vi.png", :size => "24x24"), "/vi?path=#{request.url}", :method => "post"
+							.right= link_to image_tag("en.png", :size => "24x24"), "/en?path=#{request.url}", :method => "post"
 
 					.clearboth
 					#menu-bar
@@ -42,8 +45,3 @@
 				/ .interesting-stuff
 				.container
 					= yield
-			#footer
-				#footer-container
-					.right= link_to "Tiếng Việt", "/vi", :method => "post"
-					.right.bar= "|"
-					.right= link_to "English", "/en", :method => "post" 
