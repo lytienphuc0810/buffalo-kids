@@ -13,7 +13,7 @@
 				= f.label t 'welcome.notice.form.content'
 				= f.text_area :content, :id => "content", :placeholder => "Input notice content", :autocomplete => "off"
 				.clearboth
-				= f.submit t 'welcome.admin.book_form.create_button', :id => "submit_btn", :class => "submit_btn"
+				= f.submit (t 'welcome.admin.book_form.create_button'), :id => "submit_btn", :class => "submit_btn"
 				.clearboth
 				.right.error
 		-if @notice.errors.any?
