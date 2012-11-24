@@ -24,7 +24,7 @@ class SearchesController < ApplicationController
 	end
 
 	def user_search
-		Book.reindex
+		User.reindex
 		@users = User.search{ fulltext params[:param] }.results.paginate(:page => params[:page], :per_page => 12)
 		if @users.empty?
 			# error page
