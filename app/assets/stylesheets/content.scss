@@ -95,33 +95,29 @@
 			//color: green;
 		}
 
-		#book_description {
-			height: 75px;
-			width: 208px;
-			margin-right: 2px;
-		}
-
-  	input, #book_description {
+  	input {
 		 	float: right;
 		 	margin-top: 8px;
-			//background-color : lightyellow;
-			//border: 1px solid #008000;
 			width: 230px;
 		}
 
-  	select, #book_description {
+		textarea {
+			float: right;
+			margin-top: 8px;
+			height: 100px;
+			width: 228px;
+		}
+
+  	select {
 		 	float: right;
 		 	margin-top: 8px;
-			//background-color : lightyellow;
-			//border: 1px solid #008000;
 			width: 235px;
 		}
 
 		.submit_btn {
 			float: right;
 			margin-top: 10px;
-			//border: 1px solid #008000;
-			width: auto;
+			width: 90px;
 		}
 	}
 
