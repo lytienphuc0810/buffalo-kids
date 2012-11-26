@@ -6,7 +6,10 @@
 	.content
 		.h1= @notice.title
 	.content
-		.cont= @notice.content
+		%p
+			- @notice.content.split("\n").each do |str|
+				= str
+				%br
 		.h2.link= link_to "#{t 'welcome.admin.link.edit'}", "/notices/edit/#{@notice.id}"
 		%br
 		.h2.link= link_to "#{t 'welcome.admin.link.delete'}", "/notices/delete/#{@notice.id}", :method => "post", :data => {:confirm => "Are you sure?"}
