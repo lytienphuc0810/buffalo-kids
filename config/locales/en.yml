@@ -1,7 +1,13 @@
 en:
   big_header: HCMUT LIBRARY
 
-  cc: CONTACT
+  cc: 
+    contact: CONTACT
+    director: Board of directors
+    info: Information Analysts
+    it: It Team
+    reader: Reader Service
+    ref: Reference Service    
 
   faq:
     title: FREQUENTLY ASKED QUESTIONS
@@ -75,14 +81,14 @@ en:
         owner: "Owner:"
         finish: "Finish:"
       link:
-        regis: Regist it
+        regis: Register it
         delete: Delete it
         regist: Regist it
         reserve: Reserve it
         delete_photo: Delete it
         unavailable: Unavailable
         already_reserved: Already Reserved
-        already_registed: Already Registed
+        already_registed: Already Registered
     admin:
       header_link:
         create: CREATE
@@ -91,7 +97,7 @@ en:
         books: BOOKS
         edit: EDIT
         reservations: RESERVATIONS
-        photo_regis: PHOTO REGISTRATIONS
+        photo_regis: PHOTOCOPY REGISTRATIONS
         notice: NOTICE
         notices: NOTICES
       user_form:
