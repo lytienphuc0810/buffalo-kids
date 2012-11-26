@@ -7,7 +7,7 @@ $(window).load(function() {
 	}
 	else {
 		$('html, body').animate({
-			    scrollTop: $("#main").offset().top
+			    scrollTop: $("#menu-bar").offset().top
 			}, 250);	
 	}
 });
