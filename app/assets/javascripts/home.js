@@ -5,4 +5,9 @@ $(document).ready(function() {
 		    scrollTop: $(".big-content").offset().top
 		}, 500);
 	}
+	else {
+		$('html, body').animate({
+			    scrollTop: $("#main").offset().top
+			}, 250);	
+	}
 });
