@@ -16,8 +16,8 @@
 				.h1.link= link_to "#{@book.title.truncate(25).upcase}", "/books/show/#{@book.id}"
 				.h3= @book.author
 				.h2= "Code: #{book_instance.book_instance_code}"
-				.h2= link_to "#{t 'welcome.librarian.link.edit'}", "/book_instances/edit/#{book_instance.id}"
-				.h2= link_to "#{t 'welcome.librarian.link.delete'}", "/book_instances/delete/#{book_instance.id}", :method => "post"
+				.h2.link= link_to "#{t 'welcome.librarian.link.edit'}", "/book_instances/edit/#{book_instance.id}"
+				.h2.link= link_to "#{t 'welcome.librarian.link.delete'}", "/book_instances/delete/#{book_instance.id}", :method => "post"
 		- if(i % 3 == 0)
 			.clearboth
 	.clearboth

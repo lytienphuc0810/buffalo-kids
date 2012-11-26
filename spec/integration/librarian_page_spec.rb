@@ -12,6 +12,7 @@ describe "librarian page" do
 	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1, book_instance4]) }
 	let!(:book2) { create(:book, :author => "abcdef", :book_instances => [book_instance2]) }
 	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3]) }
+	let!(:user) { create(:confirmed_user, :book_reservations => [book_reservation1, book_reservation2], :photo_registrations => [photo_registration2]) }
 	let!(:librarian) { create(:librarian) }
 
 	before do
@@ -51,8 +52,8 @@ describe "librarian page" do
 					it "should display detailed information of the book reservation" do
 						page.should have_content book1.title.truncate(15).upcase
 						page.should have_link "Delete"
-						page.should have_content "Start date"
-						page.should have_content "Due date"
+						page.should have_content "Start"
+						page.should have_content "Due"
 					end
 				end
 			end
@@ -77,7 +78,7 @@ describe "librarian page" do
 					it "should display detailed information of the photo registration" do
 						page.should have_content book1.title.truncate(15).upcase
 						page.should have_link "Delete"
-						page.should have_content "Due date"
+						page.should have_content "Finish"
 					end
 				end
 			end
@@ -93,8 +94,8 @@ describe "librarian page" do
 				page.should have_link "CREATE"
 				page.should have_link "BOOKS"
 				page.should have_link book1.title.truncate(20).upcase
-				page.should have_link "List all instances of this book"
-				page.should have_link "Add an instance to this book"
+				page.should have_link "List all instances"
+				page.should have_link "Add an instance"
 				page.should have_link "Edit"
 				page.should have_link "Delete"
 			end
@@ -102,7 +103,7 @@ describe "librarian page" do
 			context "book instance" do
 				context "index" do
 					before do
-						click_on "List all instances of this book"
+						click_on "List all instances"
 					end
 					it "should display all the book instance" do
 						page.should have_content book_instance1.book_instance_code
@@ -114,7 +115,7 @@ describe "librarian page" do
 
 				context "create" do
 					before do 
-						click_on "Add an instance to this book"
+						click_on "Add an instance"
 					end
 
 					context "successfully add the instance" do

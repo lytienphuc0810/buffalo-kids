@@ -22,7 +22,7 @@ describe EtcsController do
 	describe "#set_en" do
 		context "there is no user" do
 			it "should set the language session to en" do
-				post :set_en
+				post :set_en, :path => "/"
 				session[:lang].should == "en"
 				response.should redirect_to "/"
 			end
@@ -34,7 +34,7 @@ describe EtcsController do
 				sign_in user
 			end	
 			it "should set the language attribute of the current user to en" do
-				post :set_en
+				post :set_en, :path => "/"
 				user.reload.locale.should == "en"
 				response.should redirect_to "/"
 			end	
@@ -44,7 +44,7 @@ describe EtcsController do
 	describe "#set_vi" do
 		context "there is no user" do
 			it "should set the language session to vi" do
-				post :set_vi
+				post :set_vi, :path => "/"
 				session[:lang].should == "vi"
 				response.should redirect_to "/"
 			end
@@ -56,7 +56,7 @@ describe EtcsController do
 				sign_in user
 			end	
 			it "should set the language attribute of the current user to en" do
-				post :set_vi
+				post :set_vi, :path => "/"
 				user.reload.locale.should == "vi"
 				response.should redirect_to "/"
 			end	
