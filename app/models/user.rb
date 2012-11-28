@@ -39,8 +39,8 @@ class User < ActiveRecord::Base
 	]
 
 	before_validation :default_role
-	# validates :username, :role, :presence => true
-	# validates :username, :uniqueness => true
+	before_validation :default_locale
+
 	validates :role, :inclusion => {:in => ROLES}
 
 	ROLES.each do |role|
@@ -60,6 +60,6 @@ class User < ActiveRecord::Base
 	  end
 
 	  def default_locale
-	  	self.locale = "en"
+	  	self.locale = "en" if self.locale.blank?
 	  end
 end
