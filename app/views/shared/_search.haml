@@ -1,0 +1,24 @@
+.form-content
+	.h1= "SEARCH FOR BOOKS"
+	.form
+		= form_tag "/searches/book_advance_search/1", :method => "get" do
+			= hidden_field_tag 'reservation', (request.fullpath.include?("book_reservations") ? "true" : "false")
+			= label_tag "#{t 'welcome.librarian.book_form.title'}"
+			= search_field_tag :title, "", :placeholder => "Input book title"
+			.clearboth
+			= label_tag "#{t 'welcome.librarian.book_form.code'}"
+			= search_field_tag :book_code, "", :placeholder => "Input book code"
+			.clearboth
+			= label_tag "#{t 'welcome.librarian.book_form.rating'}"
+			= search_field_tag :rating, "", :placeholder => "Input rating"
+			.clearboth
+			= label_tag "#{t 'welcome.librarian.book_form.author'}"
+			= search_field_tag :author, "", :placeholder => "Input book desciption"
+			.clearboth
+			= label_tag "#{t 'welcome.librarian.book_form.image'}"
+			= search_field_tag :image_url, "", :placeholder => "Input image url"
+			.clearboth
+			= label_tag "#{t 'welcome.librarian.book_form.description'}"
+			= text_area_tag :description, "", :placeholder => "Input book desciption"
+			.clearboth
+			= submit_tag "Search", :class => "submit_btn"

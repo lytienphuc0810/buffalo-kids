@@ -30,6 +30,8 @@ vi:
     q9: Tôi muốn mượn sách về nhà.
     a9: Bạn mượn sách tại phòng đọc lầu A2. Bạn phải trả đúng hạn nếu không muốn bị phạt (Xem Quy định mượn sách về nhà)
 
+  search: Tìm Kiếm
+
   pre_welcome:
       title:
         signin: ĐĂNG NHẬP
@@ -165,6 +167,7 @@ vi:
         instance_edit_header: CHỈNH SỬA MỘT INSTANCE SÁCH
         title: Tựa đề
         code: Mã sách
+        rating: Hạng
         author: Tác giả
         image: Link hình
         description: Mô tả

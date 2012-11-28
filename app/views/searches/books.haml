@@ -1,0 +1,8 @@
+.big-content
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.create'}", "/books/new"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "#{t 'welcome.librarian.header_link.books'}", "/books/index/1"  
+	.divider.left= "|"
+	.header-link.left.active= link_to "#{t 'search'}", "/searches/books"
+	.clearboth
+	= render "shared/search"

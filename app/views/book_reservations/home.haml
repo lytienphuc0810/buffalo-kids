@@ -2,6 +2,8 @@
 	.header-link.left.active= link_to "#{t 'welcome.user.header_link.books'}", "/book_reservations/home/1"
 	.divider.left= "|"
 	.header-link.left.inactive= link_to "#{t 'welcome.user.header_link.reservations'}", "/book_reservations/index/1"
+	.divider.left= "|"
+	.header-link.left.inactive= link_to "#{t 'search'}", "/searches/book_reservations"
 	.right
 		= render "shared/search_form_reservation"
 	.clearboth

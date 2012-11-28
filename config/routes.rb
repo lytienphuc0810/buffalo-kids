@@ -49,6 +49,8 @@ BuffaloKids::Application.routes.draw do
   get "/searches/book_search_registration/:page" => "searches#book_search_registration"
   get "/searches/book_search/:page" => "searches#book_search"
   get "/searches/user_search/:page" => "searches#user_search"
+  get "/searches/book_advance_search/:page" => "searches#book_advance_search"
+  get "/searches/:type" => "searches#search"    
   
   get "faq" => "etcs#faq"
   get "contact" => "etcs#contact"

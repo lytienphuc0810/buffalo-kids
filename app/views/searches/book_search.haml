@@ -7,12 +7,9 @@
     .small-content.left
       .img.left= image_tag book.image_url, :size => "60x60"
       .text-content.left
-        .h1.link= link_to "#{book.title.upcase}", "/books/show/#{book.id}"
-        .h2= book.book_code
-        .h2= book.description
-        .h2= book.author
-        .h2= book.release_date
-        .h2= book.rating
+        .h1.link= link_to "#{book.title.truncate(15).upcase}", "/books/show/#{book.id}"
+        .h3= book.author.truncate(25) unless book.author.nil?
+        .h2= book.description.truncate(50) unless book.description.nil?
         .h2.link= link_to "Reservations", "/book_reservations/index/1?book_id=#{book.id}"
         .h2.link= link_to "Photo Registrations", "/photo_registrations/index/1?book_id=#{book.id}"
   .clearboth

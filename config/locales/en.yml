@@ -29,6 +29,9 @@ en:
     a8: OK.You contact the division staff to resolve your request.
     q9: I want to borrow books for home.
     a9: You borrow books at the reading room floor A2. You pay on time if you do not want to be punished (See Regulation borrow for home)
+  
+  search: SEARCH
+
   pre_welcome:
     title:
       signin: SIGN IN

@@ -17,6 +17,8 @@ class Book < ActiveRecord::Base
 
 	self.per_page = 12
 
+	ATTRS = [:title, :book_code, :description, :author, :category, :rating]
+
 	searchable do
 		text :title
 		text :book_code
@@ -26,8 +28,17 @@ class Book < ActiveRecord::Base
 		text :rating
 	end
 
-	def self.book_search parameter
-		Book.search{ fulltext parameter }.results
+	def self.my_search params
+		Book.reindex
+		Book.search do
+      ATTRS.each do |element|
+        if params[element]
+          fulltext params[element] do
+            fields(element)
+          end
+        end
+      end
+		end.results
 	end
 
 	def free_instance_to_get
