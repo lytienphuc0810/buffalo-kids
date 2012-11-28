@@ -1,7 +1,13 @@
 vi:
   big_header: THƯ VIỆN ĐH BÁCH KHOA
 
-  cc: Liên hệ
+  cc: 
+    contact: Liên hệ
+    director: Ban giám đốc
+    info: Xử lý thông tin
+    it: Nhóm CNTT
+    reader: Phục vụ bạn đọc
+    ref: Dịch vụ tham khảo   
 
   faq:
     title: Câu hỏi thường gặp
@@ -34,8 +40,8 @@ vi:
         username: Tên đăng nhập
         email: Email
         password: Mật khẩu
-        confirm_password: Đánh lại password
-        remember: Ghi nhớ tôi
+        confirm_password: Xác nhận mật khẩu
+        remember: Ghi nhớ
       link:
         signup: Đăng ký
         forgot_password: Quên mật khẩu?
@@ -44,12 +50,12 @@ vi:
       button:
         signin: Đăng nhập
         signup: Đăng ký
-        submit: Nộp
+        submit: Hoàn tất
 
   welcome:
     Tab:
       b: SÁCH
-      p: PHOTO
+      p: PHOTOCOPY
       n: THÔNG BÁO
       f: HỎI ĐÁP
       c: LIÊN HỆ
@@ -61,7 +67,7 @@ vi:
       header_link:
         books: SÁCH
         reservations: ĐẶT SÁCH
-        photo_regis: ĐĂNG KÝ PHOTO
+        photo_regis: ĐĂNG KÝ PHOTOCOPY
       book_reservation:
         rating: "Đánh giá:"
         code: "Mã sách:"
@@ -77,9 +83,9 @@ vi:
         finish: "Hết hạn:"
       link:
         regis: Đăng ký
-        delete:  Xóa sách
+        delete:  Hủy
         reserve: Đặt sách
-        delete_photo: Xóa photo
+        delete_photo: Hủy
         unavailable: Hết sách
         already_reserved: Đã đặt sách này
         already_registed: Đã đặt sách này

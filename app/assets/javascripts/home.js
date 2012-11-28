@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
 	$('#slider').nivoSlider();
 	if(window.location.pathname == "/" || window.location.pathname == "/users/sign_in" ){
 		$('html, body').animate({
@@ -7,7 +7,7 @@ $(document).ready(function() {
 	}
 	else {
 		$('html, body').animate({
-			    scrollTop: $("#main").offset().top
+			    scrollTop: $("#menu-bar").offset().top
 			}, 250);	
 	}
 });
