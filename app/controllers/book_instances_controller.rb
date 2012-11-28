@@ -12,7 +12,6 @@ class BookInstancesController < ApplicationController
 		else
 			@book_instances = @book.book_instances.paginate(:page => params[:page])
 			if @book_instances.empty?
-				# error message 
 				redirect_to "/books/show/#{params[:book_id]}"
 			end
 		end

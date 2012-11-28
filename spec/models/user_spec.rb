@@ -63,10 +63,22 @@ describe User do
   		end
 
   		it "should return false" do
-	  			user1.admin?.should be_false
-	  			admin1.librarian?.should be_false
-	  			librarian1.user?.should be_false
+  			user1.admin?.should be_false
+  			admin1.librarian?.should be_false
+  			librarian1.user?.should be_false
   		end
   	end
+	end
+
+	describe "default locale" do
+
+  	context "user created with no locale" do
+			let!(:user1) {create(:user)}
+
+  		it "should create the user with the en locale" do
+  			user1.should be_valid
+  			user1.locale.should == "en"
+    	end
+    end
 	end
 end
