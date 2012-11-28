@@ -56,4 +56,13 @@ RSpec.configure do |config|
   config.color_enabled = true
 
   ActionMailer::Base.delivery_method = :test
+
+  config.before(:all) do
+    system 'rake sunspot:solr:start RAILS_ENV=test'
+    sleep(1)
+  end
+  config.after(:all) do
+    system 'rake sunspot:solr:stop RAILS_ENV=test'
+  end 
 end
+
