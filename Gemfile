@@ -31,10 +31,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# group :test, :development do
-#   gem 'debugger', '1.2.0'
-#   gem 'ruby-debug'
-# end
+group :test, :development do
+  gem 'debugger', '1.2.0'
+  # gem 'ruby-debug'
+end
 
 group :test do
   gem 'rspec', '2.11.0'

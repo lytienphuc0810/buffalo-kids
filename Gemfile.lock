@@ -30,7 +30,6 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -72,7 +71,6 @@ GEM
       factory_girl (~> 4.0.0)
       railties (>= 3.0.0)
     ffi (1.2.0)
-    ffi (1.2.0-x86-mingw32)
     haml (3.1.7)
     hike (1.2.1)
     i18n (0.6.1)
@@ -90,9 +88,7 @@ GEM
     mime-types (1.19)
     multi_json (1.3.7)
     mysql2 (0.3.11)
-    mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.5)
-    nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -110,8 +106,7 @@ GEM
       activesupport (= 3.2.8)
       bundler (~> 1.0)
       railties (= 3.2.8)
-    rails-i18n (0.7.0)
-      i18n (~> 0.5)
+    rails-i18n (0.7.1)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -167,14 +162,13 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
-    websocket (1.0.3)
+    websocket (1.0.4)
     will_paginate (3.0.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   capybara (= 1.1.2)
