@@ -1,9 +1,9 @@
 class NoticesController < ApplicationController
 	before_filter :authenticate_user!
 
-  def authorized_user?
-    redirect_to(root_path) unless current_user && (current_user.librarian? || current_user.admin?)
-  end
+  # def authorized_user?
+  #   redirect_to(root_path) unless current_user && (current_user.librarian? || current_user.admin?)
+  # end
 
 	def index
 		@notices = Notice.paginate(:page => params[:page])
