@@ -5,10 +5,11 @@ class BookReservation < ActiveRecord::Base
   has_one :book, :through => :book_instance
   self.per_page = 12
 
-  def timeout
+  def self.timeout
   	book_reservations = BookReservation.all
-  	book_reservations.each do |book_reservation|
-  		if book_reservation.receive.nil? || book_reservation.receive == false
+      debugger
+    book_reservations.each do |book_reservation|
+  		if Date.today >= book_reservation.due_date && book_reservation.receive == false
   			book_reservation.destroy
   		end
   	end
