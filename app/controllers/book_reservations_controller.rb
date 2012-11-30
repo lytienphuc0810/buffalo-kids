@@ -13,9 +13,13 @@ class BookReservationsController < ApplicationController
 		else
 			book_instance = book.free_instance_to_get
 			if !book_instance.nil?
-				br = BookReservation.create(:start_date => Date.today, :due_date => Date.today + 3) 
+				br = BookReservation.new(:start_date => Date.today, :due_date => Date.today + 3) 
+				br.receive = false
+				br.save
+
 				book_instance.book_reservation = br
 				current_user.book_reservations = current_user.book_reservations << br
+				
 				book_instance.save
 				current_user.save
 			else
