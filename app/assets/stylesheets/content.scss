@@ -270,6 +270,7 @@
 		color: blue;
 		font-style: italic;
 		text-decoration: none;
+		bottom: 10px;
 	}
 }
 
@@ -281,11 +282,11 @@
 }
 
 .error-link{
-		color: red;
+		color: #FF0066;
 		font-style: italic;
 }
 
 .warning-link{
-		color: orange;
+		color:  #FF6600;
 		font-style: italic;
 }
