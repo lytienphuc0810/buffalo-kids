@@ -1,7 +1,13 @@
 en:
   big_header: HCMUT LIBRARY
 
-  cc: CONTACT
+  cc: 
+    contact: CONTACT
+    director: Board of directors
+    info: Information Analysts
+    it: It Team
+    reader: Reader Service
+    ref: Reference Service    
 
   faq:
     title: FREQUENTLY ASKED QUESTIONS
@@ -54,7 +60,7 @@ en:
       c: CONTACT
       u: USERS
     topleft_corner:
-      welcome: welcome
+      welcome: Welcome
       signout: Sign out
     user:
       header_link:
@@ -62,19 +68,27 @@ en:
         reservations: RESERVATIONS
         photo_regis: PHOTO REGISTRATIONS
       book_reservations:
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        borrower: "Borrower:"
         start: "Start:"
         due: "Due:"
       photo_registration:
-        finish: "Due:"
+        rating: "Rating:"
+        code: "Code:"
+        description: "Description:"
+        owner: "Owner:"
+        finish: "Finish:"
       link:
-        regis: Regist it
+        regis: Register it
         delete: Delete it
         regist: Regist it
         reserve: Reserve it
         delete_photo: Delete it
         unavailable: Unavailable
         already_reserved: Already Reserved
-        already_registed: Already Registed
+        already_registed: Already Registered
     admin:
       header_link:
         create: CREATE
@@ -83,7 +97,7 @@ en:
         books: BOOKS
         edit: EDIT
         reservations: RESERVATIONS
-        photo_regis: PHOTO REGISTRATIONS
+        photo_regis: PHOTOCOPY REGISTRATIONS
         notice: NOTICE
         notices: NOTICES
       user_form:
@@ -132,10 +146,17 @@ en:
       link:
         edit: Edit
         delete: Delete
+        unavailable: No instances
+        no_reservations: No reservations
+        no_registrations: No registrations
         reserve: Reservations
         photo_regis: Photo Registrations
-        list_instances: List all instances of this book
-        add_instance: Add an instance to this book
+        list_instances: List all instances
+        add_instance: Add an instance
+      book:
+        code: "Book code:"
+        rating: "Rating:"
+        description: "Description:"
       book_form:
         create_header: CREATE A NEW BOOK
         edit_header: EDIT
@@ -143,6 +164,7 @@ en:
         instance_edit_header: EDIT A BOOK INSTANCE
         title: Title
         code: Book code
+        rating: Rating
         author: Author
         image: Image url
         description: Description

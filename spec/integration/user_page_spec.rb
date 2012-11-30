@@ -86,6 +86,7 @@ describe "user page" do
 						click_on 	"Delete it"
 					end
 					it "should redirect to book reservation index" do
+						page.driver.browser.switch_to.alert.accept
 						page.current_path.should == "/book_reservations/index/1"
 					end
 				end
@@ -146,6 +147,7 @@ describe "user page" do
 						click_on 	"Delete it"
 					end
 					it "should redirect to photo registration index" do
+						page.driver.browser.switch_to.alert.accept
 						page.current_path.should == "/photo_registrations/index/1"
 					end
 				end

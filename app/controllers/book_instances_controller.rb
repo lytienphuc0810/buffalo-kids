@@ -1,4 +1,10 @@
 class BookInstancesController < ApplicationController
+	before_filter :authenticate_user!,:authorized_user?
+
+	def authorized_user?
+		redirect_to(root_path) unless current_user && (current_user.librarian? || current_user.admin?)
+	end
+
 	def index
 		@book = Book.find(params[:book_id])
 		if @book.nil?
@@ -6,7 +12,6 @@ class BookInstancesController < ApplicationController
 		else
 			@book_instances = @book.book_instances.paginate(:page => params[:page])
 			if @book_instances.empty?
-				# error message 
 				redirect_to "/books/show/#{params[:book_id]}"
 			end
 		end
@@ -14,20 +19,21 @@ class BookInstancesController < ApplicationController
 
 	def new
 		@book = Book.find(params[:book_id])
+		@book_instance = BookInstance.new(params[:book_instance])
 		if @book.nil?
 			# send error message
 		end
 	end
 
 	def create 
-		book_instance = BookInstance.create(params[:book_instance])
-		if book_instance.invalid?
+		@book = Book.find(params[:book_id])
+		@book_instance = BookInstance.create(params[:book_instance])
+		if @book_instance.invalid?
 			render :action => "new"
 		else
-			book = Book.find(params[:book_id])
-			book.book_instances = book.book_instances << book_instance
-			if book.save
-				redirect_to "/book_instances/index/#{book.id}/1"
+			@book.book_instances = @book.book_instances << @book_instance
+			if @book.save
+				redirect_to "/book_instances/index/#{@book.id}/1"
 			else
 				# send error message
 			end

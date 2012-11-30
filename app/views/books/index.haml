@@ -8,9 +8,18 @@
       .img.left= image_tag book.image_url, :size => "60x60"
       .text-content.left
         .h1.link= link_to "#{book.title.truncate(15).upcase}", "/books/show/#{book.id}"
-        .h3= book.author.truncate(25)
-        .h2= book.description.truncate(50)
-        .h2.link= link_to "#{t 'welcome.librarian.link.reserve'}", "/book_reservations/index/1?book_id=#{book.id}"
-        .h2.link= link_to "#{t 'welcome.librarian.link.photo_regis'}", "/photo_registrations/index/1?book_id=#{book.id}"
+        .h3= book.author.truncate(25) unless book.author.nil?
+        .h2= book.description.truncate(50) unless book.description.nil?
+        - if book.book_instances.blank?
+          .h2.error-link= t('welcome.librarian.link.unavailable')
+        - else
+          - if book.book_reservations.blank?
+            .h2.warning-link= t('welcome.librarian.link.no_reservations')
+          - else
+            .h2.link= link_to "#{t 'welcome.librarian.link.reserve'}", "/book_reservations/index/1?book_id=#{book.id}"
+          - if book.photo_registrations.blank?
+            .h2.warning-link= t('welcome.librarian.link.no_registrations')
+          - else
+            .h2.link= link_to "#{t 'welcome.librarian.link.photo_regis'}", "/photo_registrations/index/1?book_id=#{book.id}"
   .clearboth
   .paginate.right= will_paginate @books

@@ -17,7 +17,7 @@ body  {
 	border-radius: 5px;
 	padding: 12px 18px 12px 18px;
 	#header-theme {
-		height: 80px;
+		height: 90px;
 		width: auto;
 		padding: 10px;
 		background-color: #FEF9F0;
@@ -48,6 +48,12 @@ body  {
 	#login-info {
 		text-align: right;
 		margin-right: 15px;
+		min-width: 400px
+	}
+	#locale-info {
+		a{
+			margin-right: 10px;
+		}
 		min-width: 400px
 	}
 	#menu-bar {
@@ -86,12 +92,6 @@ body  {
 	margin-top: 15px;
 	border-radius: 5px;
 	padding: 12px;
-	.interesting-stuff {
-		height: 300px;
-		width: auto;
-		background-color: #FEF9F0;
-		margin-bottom: 10px;
-	}
 	.container {
 		height: auto;
 		width: auto;
@@ -100,33 +100,6 @@ body  {
 		background-color: #FEF9F0;
 	}
 
-}
-
-#footer {
-	height: auto;
-	width: 938px;
-	background-color: #76D3DE; 	
-	margin: 0 auto;
-	margin-top: 5px;
-	border-radius: 5px;
-	padding: 8px 12px 8px 12px;
-	#footer-container {
-		height: 20px;
-		width: auto;
-		border-radius: 5px;
-		background-color: #FEF9F0;
-		padding: 5px 10px 5px 10px;
-		a, .bar {
-			margin-right: 10px;
-			font-family: Helvetica;
-			font-size: 15px;
-			text-decoration: none;
-			color: #76D3DE;
-		}
-		a:hover {
-			color: #00BCD1;
-		}
-	}
 }
 
 .right {
@@ -139,8 +112,4 @@ body  {
 
 .clearboth {
 	clear: both;
-}
-
-.clearright {
-	clear: right;
 }

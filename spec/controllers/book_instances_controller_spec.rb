@@ -11,6 +11,15 @@ describe BookInstancesController do
 	end
 
 	describe "#index" do
+		context "there are no book instances" do
+			let!(:book1) { create(:book) }
+
+			it "should redirect to book show page" do
+				get :index, :page => 1, :book_id => book1.id
+				response.should redirect_to "/books/show/#{book1.id}"
+			end
+		end
+
 		context "there are less than 12 book instances" do
 			it "should return all book instances" do
 				get :index, :page => 1, :book_id => book.id

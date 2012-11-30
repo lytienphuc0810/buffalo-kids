@@ -1,7 +1,13 @@
 vi:
   big_header: THƯ VIỆN ĐH BÁCH KHOA
 
-  cc: Liên hệ
+  cc: 
+    contact: Liên hệ
+    director: Ban giám đốc
+    info: Xử lý thông tin
+    it: Nhóm CNTT
+    reader: Phục vụ bạn đọc
+    ref: Dịch vụ tham khảo   
 
   faq:
     title: Câu hỏi thường gặp
@@ -34,8 +40,8 @@ vi:
         username: Tên đăng nhập
         email: Email
         password: Mật khẩu
-        confirm_password: Đánh lại password
-        remember: Ghi nhớ tôi
+        confirm_password: Xác nhận mật khẩu
+        remember: Ghi nhớ
       link:
         signup: Đăng ký
         forgot_password: Quên mật khẩu?
@@ -44,12 +50,12 @@ vi:
       button:
         signin: Đăng nhập
         signup: Đăng ký
-        submit: Nộp
+        submit: Hoàn tất
 
   welcome:
     Tab:
       b: SÁCH
-      p: PHOTO
+      p: PHOTOCOPY
       n: THÔNG BÁO
       f: HỎI ĐÁP
       c: LIÊN HỆ
@@ -61,17 +67,25 @@ vi:
       header_link:
         books: SÁCH
         reservations: ĐẶT SÁCH
-        photo_regis: ĐĂNG KÝ PHOTO
-      book_reservations:
+        photo_regis: ĐĂNG KÝ PHOTOCOPY
+      book_reservation:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        borrower: "Người mượn:"
         start: "Bắt đầu:"
         due: "Hết hạn:"
       photo_registration:
+        rating: "Đánh giá:"
+        code: "Mã sách:"
+        description: "Mô tả:"
+        owner: "Người đăng ký:"
         finish: "Hết hạn:"
       link:
         regis: Đăng ký
-        delete:  Xóa sách
+        delete:  Hủy
         reserve: Đặt sách
-        delete_photo: Xóa photo
+        delete_photo: Hủy
         unavailable: Hết sách
         already_reserved: Đã đặt sách này
         already_registed: Đã đặt sách này
@@ -109,6 +123,7 @@ vi:
         instance_header: TẠO MỘT INSTANCE SÁCH MỚI
         title: Tựa đề
         code: Mã sách
+        rating: Đánh giá
         author: Tác giả
         image: Link của hình
         description: Mô tả
@@ -132,10 +147,17 @@ vi:
       link:
         edit: Chỉnh sửa
         delete: Xóa
+        unavailable: Không có instance
+        no_reservations: Không có đặt sách
+        no_registrations: Không đăng ký photo
         reserve: Đặt sách
         photo_regis: Đăng ký photo
-        list_instances: Liệt kê tất cả instances của sách này
-        add_instance: Thêm một instance vào sách này
+        list_instances: Liệt kê tất cả instances
+        add_instance: Thêm một instance
+      book:
+        code: "Mã sách:"
+        rating: "Đánh giá:"
+        description: "Mô tả:"
       book_form:
         create_header: TẠO MỘT SÁCH MỚI
         edit_header: CHỈNH SỬA
