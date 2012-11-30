@@ -9,7 +9,6 @@
 		.header-link.left.active= link_to "#{t 'welcome.admin.header_link.reservations'}", "/book_reservations/index/1"
 	.clearboth
 	- i = 0
-	- debugger
 	- @book_reservations.each do |book_reservation|
 		- i = i + 1
 		- book = book_reservation.book_instance.book
