@@ -99,7 +99,7 @@ vi:
         books: SÁCH
         edit: CHỈNH SỬA
         reservations: ĐẶT SÁCH
-        photo_regis: ĐĂNG KÝ PHOTO
+        photo_regis: ĐĂNG KÝ PHOTOCOPY
         notice: THÔNG BÁO
         notices: CÁC THÔNG BÁO
       user_form:
@@ -120,9 +120,9 @@ vi:
         createdat: Được tạo lúc
         updatedat: Được chỉnh sửa lúc
       book_form:
-        create_header: TẠO MỘT SÁCH MỚI
+        create_header: TẠO MỘT TỰA SÁCH MỚI
         edit_header: CHỈNH SỬA
-        instance_header: TẠO MỘT INSTANCE SÁCH MỚI
+        instance_header: THÊM MỘT QUYỂN SÁCH MỚI
         title: Tựa đề
         code: Mã sách
         rating: Đánh giá
@@ -135,27 +135,27 @@ vi:
         edit: Chỉnh sửa
         delete: Xóa
         reserve: Đặt sách
-        photo_regis: Đăng ký photo
-        list_instances: Liệt kê tất cả instances của sách này
-        add_instance: Thêm một instance vào sách này
+        photo_regis: Đăng ký photocopy
+        list_instances: Liệt kê tất cả các quyển sách của tựa sách này
+        add_instance: Thêm một quyển sách mới
     librarian:
       header_link:
         books: SÁCH
         create: TẠO MỚI
         edit: CHỈNH SỬA
-        instances: INSTANCES
-        new_instance: INSTANCE MỚI
-        edit_instance: CHỈNH SỬA INSTANCE
+        instances: SÁCH CÙNG LOẠI
+        new_instance: QUYỂN SÁCH MỚI
+        edit_instance: CHỈNH SỬA QUYỂN SÁCH NÀY
       link:
         edit: Chỉnh sửa
         delete: Xóa
-        unavailable: Không có instance
+        unavailable: Không có quyền nào
         no_reservations: Không có đặt sách
-        no_registrations: Không đăng ký photo
+        no_registrations: Không đăng ký photocopy
         reserve: Đặt sách
-        photo_regis: Đăng ký photo
-        list_instances: Liệt kê tất cả instances
-        add_instance: Thêm một instance
+        photo_regis: Đăng ký photocopy
+        list_instances: Liệt kê tất cả các quyển sách của tựa sách này
+        add_instance: Thêm một quyển sách mới
       book:
         code: "Mã sách:"
         rating: "Đánh giá:"
@@ -163,9 +163,10 @@ vi:
       book_form:
         create_header: TẠO MỘT SÁCH MỚI
         edit_header: CHỈNH SỬA
-        instance_create_header: TẠO MỘT INSTANCE SÁCH MỚI
-        instance_edit_header: CHỈNH SỬA MỘT INSTANCE SÁCH
+        instance_create_header: THÊM MỘT QUYỂN SÁCH MỚI
+        instance_edit_header: CHỈNH SỬA MỘT QUYỂN SÁCH
         title: Tựa đề
+        rating: Đánh giá
         code: Mã sách
         rating: Hạng
         author: Tác giả
