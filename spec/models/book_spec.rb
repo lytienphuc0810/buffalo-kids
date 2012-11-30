@@ -34,12 +34,17 @@ describe Book do
 		let!(:book1){ create(:book, :book_instances => [book_instance1]) }
 		let!(:book2){ create(:book, :book_instances => [book_instance2]) }
 		let!(:book_reservation) { create(:book_reservation, :book_instance => book_instance1) }
-		let!(:photo_registration) { create(:photo_registration, :book_instance => book_instance2) }
+		let!(:photo_registration) { create(:photo_registration, :book => book2) }
 
 		context "there is no free book instance to get" do
 			it "should return nil" do
 				book1.free_instance_to_get.should be_nil
-				book2.free_instance_to_get.should be_nil
+			end
+		end
+
+		context "there is free book instance with photo registration" do
+			it "should return the instance" do
+				book2.free_instance_to_get.should == book_instance2
 			end
 		end
 

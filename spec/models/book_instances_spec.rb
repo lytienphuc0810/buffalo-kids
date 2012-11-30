@@ -6,5 +6,4 @@ describe BookInstance do
 
 	it { should belong_to :book }
 	it { should belong_to :book_reservation }
-	it { should belong_to :photo_registration}
 end
