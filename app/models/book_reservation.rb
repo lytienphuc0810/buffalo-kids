@@ -7,7 +7,6 @@ class BookReservation < ActiveRecord::Base
 
   def self.timeout
   	book_reservations = BookReservation.all
-      debugger
     book_reservations.each do |book_reservation|
   		if Date.today >= book_reservation.due_date && book_reservation.receive == false
   			book_reservation.destroy
