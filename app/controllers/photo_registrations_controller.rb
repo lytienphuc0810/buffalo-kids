@@ -11,16 +11,11 @@ class PhotoRegistrationsController < ApplicationController
 		if current_user.photo_registrations.map{ |a| a.book }.include? book
 			#send some error message
 		else
-			book_instance = book.free_instance_to_get
-			if !book_instance.nil?
-				pr = PhotoRegistration.create(:finish_date => Date.today + 3) 
-				book_instance.photo_registration =  pr
-				current_user.photo_registrations = current_user.photo_registrations << pr
-				book_instance.save
-				current_user.save
-			else
-				#send some error message
-			end
+			pr = PhotoRegistration.create(:finish_date => Date.today + 3) 
+			book.photo_registrations = book.photo_registrations <<  pr
+			current_user.photo_registrations = current_user.photo_registrations << pr
+			book.save
+			current_user.save
 		end
 
 		redirect_to "/photo_registrations/home/1"
