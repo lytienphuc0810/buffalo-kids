@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "book_reservations", :force => true do |t|
     t.integer  "user_id"
+    t.boolean  "receive"
     t.date     "start_date"
     t.date     "due_date"
     t.integer  "extention_days"

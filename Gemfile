@@ -20,6 +20,8 @@ gem 'rails-i18n'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
+gem 'whenever', :require => false
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
