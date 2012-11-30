@@ -122,17 +122,6 @@ book_reserve8.book_instance = book_ins14
 book_reserve9.book_instance = book_ins15
 book_reserve10.book_instance = book_ins16
 
-photo_regist1.book_instance = book_ins1
-photo_regist2.book_instance = book_ins2
-photo_regist3.book_instance = book_ins3
-photo_regist4.book_instance = book_ins4
-photo_regist5.book_instance = book_ins5
-photo_regist6.book_instance = book_ins6
-photo_regist7.book_instance = book_ins17
-photo_regist8.book_instance = book_ins18
-photo_regist9.book_instance = book_ins19
-photo_regist10.book_instance = book_ins20
-
 book1.book_instances = [book_ins1, book_ins2]
 book2.book_instances = [book_ins3, book_ins4]
 book3.book_instances = [book_ins5, book_ins6]
@@ -145,6 +134,12 @@ book9.book_instances = [book_ins17, book_ins18]
 book10.book_instances = [book_ins19, book_ins20]
 book11.book_instances = [book_ins21, book_ins22]
 book12.book_instances = [book_ins23, book_ins24]
+
+book1.photo_registrations = [photo_regist1, photo_regist2]
+book2.photo_registrations = [photo_regist3, photo_regist4]
+book3.photo_registrations = [photo_regist5, photo_regist6]
+book9.photo_registrations = [photo_regist7, photo_regist8]
+book10.photo_registrations = [photo_regist9, photo_regist10]
 
 user1.notices = [notice1, notice2]
 user2.notices = [notice3]

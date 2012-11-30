@@ -20,10 +20,7 @@
 					- if current_user.photo_registrations.map{ |a| a.book }.include? book
 						.h2.warning-link= t('welcome.user.link.already_registed')
 					- else
-						- if book.free_instance_to_get.nil?
-							.h2.error-link= t('welcome.user.link.unavailable')
-						- else	
-							.h2.link= link_to "#{t 'welcome.user.link.regis'}", "/photo_registrations/new/#{book.id}", :method => "post"
+						.h2.link= link_to "#{t 'welcome.user.link.regis'}", "/photo_registrations/new/#{book.id}", :method => "post"
 		- if(i%3 == 0)
 			.clearboth
 	.clearboth
