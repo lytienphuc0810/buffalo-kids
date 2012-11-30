@@ -30,7 +30,11 @@ vi:
     q9: Tôi muốn mượn sách về nhà.
     a9: Bạn mượn sách tại phòng đọc lầu A2. Bạn phải trả đúng hạn nếu không muốn bị phạt (Xem Quy định mượn sách về nhà)
 
-  search: Tìm Kiếm
+  search: TìM KIếM
+  
+  will_paginate:
+    next_label: Sau
+    previous_label: Trước 
 
   pre_welcome:
       title:

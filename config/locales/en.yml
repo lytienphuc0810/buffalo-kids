@@ -32,6 +32,10 @@ en:
   
   search: SEARCH
 
+  will_paginate:
+    next_label: Next
+    previous_label: Prev 
+    
   pre_welcome:
     title:
       signin: SIGN IN
