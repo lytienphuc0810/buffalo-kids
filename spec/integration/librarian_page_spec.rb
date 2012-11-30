@@ -41,7 +41,7 @@ describe "librarian page" do
 					page.current_path.should == "/book_reservations/index/1"
 					URI.parse(current_url).query = "book_id=#{book1.id}"
 					page.should have_link book1.title.truncate(15).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "show book reservation" do
@@ -67,7 +67,7 @@ describe "librarian page" do
 					page.current_path.should == "/photo_registrations/index/1"
 					URI.parse(current_url).query = "book_id=#{book1.id}"
 					page.should have_link book1.title.truncate(15).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "show photo registration" do
@@ -171,9 +171,9 @@ describe "librarian page" do
 		end
 	end
 
-	context "NOTICES" do
+	context "NOTICE" do
 		before do
-			click_on "NOTICES"
+			click_on "NOTICE"
 		end
 
 		context "Create" do
