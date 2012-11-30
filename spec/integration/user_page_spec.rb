@@ -7,12 +7,12 @@ describe "user page" do
 	let!(:photo_registration2) { create(:photo_registration) }
 	let!(:book_instance1) { create(:book_instance, :book_reservation => book_reservation1) }
 	let!(:book_instance2) { create(:book_instance, :book_reservation => book_reservation2) }
-	let!(:book_instance3) { create(:book_instance, :photo_registration => photo_registration1) }
-	let!(:book_instance4) { create(:book_instance, :photo_registration => photo_registration2) }
+	let!(:book_instance3) { create(:book_instance) }
+	let!(:book_instance4) { create(:book_instance) }
 	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1]) }
 	let!(:book2) { create(:book, :author => "abcdef", :book_instances => [book_instance2]) }
-	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3]) }
-	let!(:book4) { create(:book, :author => "abcdef", :book_instances => [book_instance4]) }
+	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3], :photo_registrations => [photo_registration1]) }
+	let!(:book4) { create(:book, :author => "abcdef", :book_instances => [book_instance4], :photo_registrations => [photo_registration2]) }
 	let!(:user) { create(:confirmed_user, :book_reservations => [book_reservation1, book_reservation2], :photo_registrations => [photo_registration1, photo_registration2]) }
 
 	let!(:notice1) { create (:notice) }
@@ -95,7 +95,7 @@ describe "user page" do
 
 		context "Photo Reservation" do
 			before do
-				click_on "PHOTO"
+				click_on "PHOTOCOPY"
 			end
 
 			context "photo registrations home" do

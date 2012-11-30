@@ -7,11 +7,11 @@ describe "librarian page" do
 	let!(:photo_registration2) { create(:photo_registration) }
 	let!(:book_instance1) { create(:book_instance, :book_reservation => book_reservation1) }
 	let!(:book_instance2) { create(:book_instance, :book_reservation => book_reservation2) }
-	let!(:book_instance3) { create(:book_instance, :photo_registration => photo_registration1) }
-	let!(:book_instance4) { create(:book_instance, :photo_registration => photo_registration2) }
-	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1, book_instance4]) }
+	let!(:book_instance3) { create(:book_instance) }
+	let!(:book_instance4) { create(:book_instance) }
+	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1, book_instance4], :photo_registrations => [photo_registration2]) }
 	let!(:book2) { create(:book, :author => "abcdef", :book_instances => [book_instance2]) }
-	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3]) }
+	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3], :photo_registrations => [photo_registration1] ) }
 	let!(:user) { create(:confirmed_user, :book_reservations => [book_reservation1, book_reservation2], :photo_registrations => [photo_registration2]) }
 	let!(:librarian) { create(:librarian) }
 
