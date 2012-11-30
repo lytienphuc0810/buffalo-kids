@@ -26,6 +26,22 @@ describe Book do
 		end
 	end
 
+	describe "my_search" do
+		context "there is a book which has the given value" do 
+			let!(:book1){ create(:book) }
+
+			it "should return the book" do
+				Book.my_search({:title => book1.title}).first.should == book1
+			end
+		end
+
+		context "there is no book which has the given value" do 
+			it "should not return the book" do
+				Book.my_search({:title => "123"}).should be_empty
+			end
+		end
+	end
+
 	describe "free_instance_to_get" do
 
 		let!(:book_instance1) { create(:book_instance) }

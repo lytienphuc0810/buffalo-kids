@@ -6,18 +6,19 @@ class SearchesController < ApplicationController
 	end
 
 	def book_advance_search
-		@books = Book.my_search(params).paginate(:page => params[:page], :per_page => 12)
 		case current_user.role
 			when "user"
+				@books = Book.my_search(params).paginate(:page => params[:page], :per_page => 12)
 				if params[:reservation] == "true"
 					render "searches/book_search_reservation"
 				else
 					render "searches/book_search_registration"
 				end
 			when "librarian"
-				render "searches/book_search.haml"
+				@books = Book.my_search(params).paginate(:page => params[:page], :per_page => 12)
+				render "searches/book_search"
 			else
-			redirect_to root_path
+				redirect_to root_path
 		end
 	end
 
