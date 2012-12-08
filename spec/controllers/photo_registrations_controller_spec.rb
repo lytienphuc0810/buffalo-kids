@@ -4,12 +4,8 @@ describe PhotoRegistrationsController do
 	let!(:photo_registration1) { create(:photo_registration) }
 	let!(:photo_registration2) { create(:photo_registration) }
 	let!(:photo_registration3) { create(:photo_registration) }
-	let!(:book_instance1) { create(:book_instance, :photo_registration => photo_registration1) }
-	let!(:book_instance2) { create(:book_instance, :photo_registration => photo_registration2) }
-	let!(:book_instance3) { create(:book_instance, :photo_registration => photo_registration3) }
-	let!(:book_instance4) { create(:book_instance) }
-	let!(:book1) { create(:book, :book_instances => [book_instance1, book_instance2, book_instance3]) }
-	let!(:book2) { create(:book, :book_instances => [book_instance4]) }
+	let!(:book1) { create(:book, :photo_registrations => [photo_registration1, photo_registration2, photo_registration3]) }
+	let!(:book2) { create(:book) }
 	let!(:book3) { create(:book) }
 	let!(:user1) { create(:confirmed_user, :photo_registrations => [photo_registration1]) }
 	let!(:user2) { create(:confirmed_user) }
@@ -104,21 +100,12 @@ describe PhotoRegistrationsController do
 		before do
 			sign_in user2
 		end
-		context "there are free book instances" do
-			it "should create a new book resvation" do
-				expect {
-					get :new, :book_id => book2.id
-				}.to change{PhotoRegistration.count}.by(1)
-				response.should redirect_to "/photo_registrations/home/1"
-			end
-		end
 
-		context "there is no free book instance" do
-			it "should create a new book resvation" do
-				expect {
-					get :new, :book_id => book1.id
-				}.to change{PhotoRegistration.count}.by(0)
-			end
+		it "should create a new book registration" do
+			expect {
+				get :new, :book_id => book2.id
+			}.to change{PhotoRegistration.count}.by(1)
+			response.should redirect_to "/photo_registrations/home/1"
 		end
 	end
 

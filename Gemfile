@@ -17,6 +17,7 @@ gem 'devise', '2.1.2'
 gem 'jquery-rails', '2.1.2'
 gem 'will_paginate', '~> 3.0'
 gem 'rails-i18n'
+gem 'whenever', :require => false
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,10 +27,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# group :test, :development do
-#   gem 'debugger', '1.2.0'
-#   gem 'ruby-debug'
-# end
+group :test, :development do
+  gem 'debugger', '1.2.0'
+  # gem 'ruby-debug'
+end
 
 group :test do
   gem 'rspec', '2.11.0'

@@ -7,11 +7,11 @@ describe "librarian page" do
 	let!(:photo_registration2) { create(:photo_registration) }
 	let!(:book_instance1) { create(:book_instance, :book_reservation => book_reservation1) }
 	let!(:book_instance2) { create(:book_instance, :book_reservation => book_reservation2) }
-	let!(:book_instance3) { create(:book_instance, :photo_registration => photo_registration1) }
-	let!(:book_instance4) { create(:book_instance, :photo_registration => photo_registration2) }
-	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1, book_instance4]) }
+	let!(:book_instance3) { create(:book_instance) }
+	let!(:book_instance4) { create(:book_instance) }
+	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1, book_instance4], :photo_registrations => [photo_registration2]) }
 	let!(:book2) { create(:book, :author => "abcdef", :book_instances => [book_instance2]) }
-	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3]) }
+	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3], :photo_registrations => [photo_registration1] ) }
 	let!(:user) { create(:confirmed_user, :book_reservations => [book_reservation1, book_reservation2], :photo_registrations => [photo_registration2]) }
 	let!(:librarian) { create(:librarian) }
 
@@ -41,7 +41,7 @@ describe "librarian page" do
 					page.current_path.should == "/book_reservations/index/1"
 					URI.parse(current_url).query = "book_id=#{book1.id}"
 					page.should have_link book1.title.truncate(15).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "show book reservation" do
@@ -67,7 +67,7 @@ describe "librarian page" do
 					page.current_path.should == "/photo_registrations/index/1"
 					URI.parse(current_url).query = "book_id=#{book1.id}"
 					page.should have_link book1.title.truncate(15).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "show photo registration" do
@@ -171,9 +171,9 @@ describe "librarian page" do
 		end
 	end
 
-	context "NOTICES" do
+	context "NOTICE" do
 		before do
-			click_on "NOTICES"
+			click_on "NOTICE"
 		end
 
 		context "Create" do

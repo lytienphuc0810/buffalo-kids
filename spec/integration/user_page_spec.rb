@@ -7,12 +7,12 @@ describe "user page" do
 	let!(:photo_registration2) { create(:photo_registration) }
 	let!(:book_instance1) { create(:book_instance, :book_reservation => book_reservation1) }
 	let!(:book_instance2) { create(:book_instance, :book_reservation => book_reservation2) }
-	let!(:book_instance3) { create(:book_instance, :photo_registration => photo_registration1) }
-	let!(:book_instance4) { create(:book_instance, :photo_registration => photo_registration2) }
+	let!(:book_instance3) { create(:book_instance) }
+	let!(:book_instance4) { create(:book_instance) }
 	let!(:book1) { create(:book, :author => "abcdef", :book_instances => [book_instance1]) }
 	let!(:book2) { create(:book, :author => "abcdef", :book_instances => [book_instance2]) }
-	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3]) }
-	let!(:book4) { create(:book, :author => "abcdef", :book_instances => [book_instance4]) }
+	let!(:book3) { create(:book, :author => "abcdef", :book_instances => [book_instance3], :photo_registrations => [photo_registration1]) }
+	let!(:book4) { create(:book, :author => "abcdef", :book_instances => [book_instance4], :photo_registrations => [photo_registration2]) }
 	let!(:user) { create(:confirmed_user, :book_reservations => [book_reservation1, book_reservation2], :photo_registrations => [photo_registration1, photo_registration2]) }
 
 	let!(:notice1) { create (:notice) }
@@ -28,7 +28,7 @@ describe "user page" do
 
 		it "should redirect the user to book reservation page and display the layout correctly" do
 			page.should have_link "BOOKS"
-			page.should have_link "NOTICES"
+			page.should have_link "NOTICE"
 			page.should have_link "PHOTO"
 			page.should have_link "FAQ"
 			page.should have_link "CONTACT"
@@ -59,7 +59,7 @@ describe "user page" do
 					page.should have_link "RESERVATIONS"
 					page.should have_content book1.title.upcase
 					page.should have_link book1.title.truncate(25).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 			end
 
@@ -78,12 +78,12 @@ describe "user page" do
 					page.should have_content book1.author
 					page.should have_content book_reservation1.start_date.to_s
 					page.should have_content book_reservation1.due_date.to_s
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "delete a book reservation" do
 					before do
-						click_on 	"Delete it"
+						click_on 	"Delete"
 					end
 					it "should redirect to book reservation index" do
 						page.driver.browser.switch_to.alert.accept
@@ -95,14 +95,14 @@ describe "user page" do
 
 		context "Photo Reservation" do
 			before do
-				click_on "PHOTO"
+				click_on "PHOTOCOPY"
 			end
 
 			context "photo registrations home" do
 				it "should display all the book" do
 					page.current_path.should == "/photo_registrations/home/1"
 					page.should have_link "BOOKS"
-					page.should have_link "PHOTO REGISTRATIONS"
+					page.should have_link "PHOTOCOPY REGISTRATIONS"
 					page.should have_content book1.title.upcase
 					page.should have_content book2.title.upcase
 					page.should have_content book3.title.upcase
@@ -112,39 +112,39 @@ describe "user page" do
 
 			context "photo registrations index" do
 				before do
-					click_on "PHOTO REGISTRATIONS"
+					click_on "PHOTOCOPY REGISTRATIONS"
 				end
 
 				it "should display all the photo registration of the user" do
 					page.current_path.should == "/photo_registrations/index/1"
 					page.should have_link "BOOKS"
-					page.should have_link "PHOTO REGISTRATIONS"
+					page.should have_link "PHOTOCOPY REGISTRATIONS"
 					page.should have_content book3.title.upcase
 					page.should have_link book3.title.truncate(25).upcase
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 			end
 
 			context "photo registrations show" do
 				before do
-					click_on "PHOTO REGISTRATIONS"
+					click_on "PHOTOCOPY REGISTRATIONS"
 					click_on book3.title.truncate(25).upcase
 				end
 
 				it "should display detailed content of the photo registration" do
 					page.current_path.should == "/photo_registrations/show/#{photo_registration1.id}"
 					page.should have_link "BOOKS"
-					page.should have_link "PHOTO REGISTRATIONS"
+					page.should have_link "PHOTOCOPY REGISTRATIONS"
 					page.should have_link  book3.title.upcase
 					page.should have_content book3.title.upcase
 					page.should have_content book3.author
 					page.should have_content photo_registration1.finish_date.to_s
-					page.should have_link "Delete it"
+					page.should have_link "Delete"
 				end
 
 				context "delete a photo registration" do
 					before do
-						click_on 	"Delete it"
+						click_on 	"Delete"
 					end
 					it "should redirect to photo registration index" do
 						page.driver.browser.switch_to.alert.accept
@@ -156,11 +156,11 @@ describe "user page" do
 
 		context "Notice" do
 			before do
-				click_on "NOTICES"
+				click_on "NOTICE"
 			end
 
-			it "should display all the notices" do
-				page.should have_link "NOTICES"
+			it "should display all the NOTICE" do
+				page.should have_link "NOTICE"
 				page.should have_content notice1.title.truncate(20).upcase
 				page.should have_content notice1.short_content
 			end

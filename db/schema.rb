@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "book_reservations", :force => true do |t|
     t.integer  "user_id"
+    t.boolean  "receive"
     t.date     "start_date"
     t.date     "due_date"
     t.integer  "extention_days"
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20121015163700) do
 
   create_table "photo_registrations", :force => true do |t|
     t.integer  "user_id"
+    t.integer  "book_id"
     t.date     "finish_date"
     t.string   "quantity"
     t.datetime "created_at",  :null => false
